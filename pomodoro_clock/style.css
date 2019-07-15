@@ -1,0 +1,132 @@
+/*
+
+The tones of this project
+
+sky: #7CDBD5
+
+Bright coral (red): #F53240
+
+golden : #F9BE02
+
+aquamarine (green): #02C8A7
+
+*/
+
+#wrapper {
+    background-color: #7CDBD5;
+    font-family: 'Roboto', serif;
+    margin-top: 0 !important;
+    padding: 0;
+    height: 100vh !important;
+}
+
+#wrapper form input {
+    color: white;
+    background-color: #F9BE02;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    width: 100px;
+    height: 50px;
+    position: relative;
+    font-size: 15px;
+}
+
+#wrapper form input:hover {
+    background-color: #02C8A7;
+    transition: 0.9s;
+}
+
+#wrapper button:hover {
+    background-color: #02C8A7;
+    transition: 0.9s ease;
+}
+
+#header {
+    margin-top: 100px;
+    color: white;
+    padding-top: 30px;
+    height: 100px;
+}
+
+#header h1 {
+    margin-top: 0px;
+    font-size: 38px
+}
+
+#clock {
+    font-size: 100px;
+    margin: 40px;
+    color: white;
+}
+
+#pomodoro-button {
+    background-color: #A4D555 !important;
+    color: white;
+}
+
+#pomodoro-button:hover {
+  background-color: #02C8A7 !important;
+  transition: 0.9s ease;
+}
+
+#short-button {
+    background-color: #F53240 !important;
+    color: white;
+}
+
+#short-button:hover {
+  background-color: #02C8A7 !important;
+  transition: 0.9s ease;
+}
+
+#long-button {
+  background-color: #F53240 !important;
+  color: white;
+}
+
+#long-button:hover {
+  background-color: #02C8A7 !important;
+  transition: 0.9s ease;
+}
+
+#faq_button {
+  position: relative;
+  display: inline-block;
+  color: white;
+  background-color: #F9BE02;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 10px;
+  width: 100px;
+  height: 50px;
+  font-size: 15px;
+}
+
+#faq_button_text {
+  visibility: hidden;
+  width: 520px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  position: absolute;
+  z-index: 1;
+  left: -10%;
+  top: -300%;
+
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+#faq_button:hover #faq_button_text{
+  transition: 0.9s;
+  visibility: visible;
+  opacity: 1;
+}
+
+#faq_button_text a{
+  color: #A4D555;
+}

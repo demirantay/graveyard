@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Pomodoro Clock</title>
+  <!-- MY CSS LINKS -->
+  <link rel="stylesheet" href="style.css">
+  <!-- META INFO -->
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- BOOTSTRAP JQUERY CDNS -->
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+</head>
+
+<!-- =============== -->
+
+<body>
+  <div class="container-fluid" id="wrapper">
+    <!--header -->
+    <div id="header">
+      <h1 class="text-center">Pomodoro Clock</h1>
+
+    </div>
+
+    <!--Session buttons to toggle between the length of the sessions -->
+    <form name="sessions" id="sessions" class="text-center">
+      <input type="button" value="Pomodoro" name="Pomodoro" id="pomodoro-button">
+      <input type="button" value="Short" name="Short" id="short-button">
+      <input type="button" value="Long" name="Long" id="long-button">
+    </form>
+
+    <!-- The Giant CLock -->
+    <h1 id="clock" class="text-center"><span id="minute-span">25</span>:<span id="second-span">00</span></h1>
+
+    <!-- Decison buttons for starting stopping and resetting the timer -->
+    <form name="decisions" id="decisions" class="text-center">
+      <input type="button" value="Reset" name="Reset" id="reset-button">
+      <button id="faq_button">FAQ
+              <span id="faq_button_text">
+                Q: What is Pomodoro Technique?<br />
+                A: The time management technique created by Francesco Crillo for a more productive way to work and study.<br />
+                <br />
+                Q: Can you tell me the story without having to research the technique? <br />
+                A: 1) Decide on the task at hand. <br />
+                   2) Start <b>Pomodoro</b> and study 25minutes on the task with a 100% focus.<br />
+                   3) Take a <b>Short Break</b> (5 minutes)<br />
+                   4) Every four <i>'pomodoros'</i> take a <b>Long Break</b> (20 Minutes) <br />
+                <br />
+                Q: Who built this app?<br />
+                A: <a href="https://github.com/demirantay">Demir Antay</a>
+
+              </span>
+      </button>
+    </form>
+  </div>
+
+  <!-- JAVASCRIPT LINKS -->
+  <script type="text/javascript" src="pomodoro.js"></script>
+
+</body>
+
+</html>

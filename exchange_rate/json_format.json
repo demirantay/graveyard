@@ -1,0 +1,8 @@
+// 20180523165125
+// https://free.currencyconverterapi.com/api/v5/convert?q=USD_PHP&compact=y
+
+{
+  "USD_PHP": {
+    "val": 52.459999
+  }
+}
