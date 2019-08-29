@@ -1,0 +1,66 @@
+/*
+    Color Pallette
+    --------------
+    yellow: #F1DB4F
+    black : #323330
+
+    red: #E74C3C
+    light purple: #9B59B6
+    dark purple: #7D3C98
+    dark blue: #2980B9
+    light blue: #3498DB
+    light green: #2ECC71
+    dark green: #27AE60
+    light orange: #F39C12
+    dark orange: #D35400
+    lightgrey: #D0D3D4
+    dark grey: #95A5A6
+    navy : #34495E
+
+*/
+
+body {
+  font-family: 'Lato';
+  font-weight: 300;
+  color: #323330;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lato', serif;
+  color: #323330;
+  text-align: center;
+  font-weight: 600;
+}
+
+p {
+  font-size: 18px;
+}
+
+#welcome-banner {
+  background-color: #F1DB4F;
+  padding: 30px 40px;
+  margin-bottom: 100px;
+}
+
+#welcome-banner h1 {
+  font-weight: 900;
+}
+
+#project-box {
+  display: inline-block;
+  margin-right: 20px;
+  background-color: #F1DB4F;
+  border-radius: 15px;
+  padding: 20px 40px;
+  text-align: left;
+  color: #323330;
+  height: auto;
+  width: 400px;
+}
+
+#project-box:hover {
+  transition: 0.5s;
+  -webkit-box-shadow: 1px -1px 24px 5px rgba(0,0,0,0.75);
+  -moz-box-shadow: 1px -1px 24px 5px rgba(0,0,0,0.75);
+  box-shadow: 1px -1px 24px 5px rgba(0,0,0,0.75);
+}

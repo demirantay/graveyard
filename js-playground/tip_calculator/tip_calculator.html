@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Tip Calculator</title>
+
+  <!-- Meta Info -->
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="template, html, css, javascript, bootstrap4" />
+  <meta name="description" content="A template built by demirantay" />
+  <meta name="author" content="demir antay, Demir Antay, @demirantay" />
+
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,700|Prata" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Literata&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+
+  <!-- FONT AWSOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Jquery CDN -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+  <!-- MY CSS LINKS -->
+  <link rel="stylesheet" href="tip_calculator.css" />
+
+
+
+</head>
+
+<body>
+
+  <div id="wrapper">
+    <h1>Tip Calculator</h1>
+
+    <form>
+      <label>How much was the bill: </label>
+      <br />
+      <input type="text" placeholder="Bill Amount $" id="bill_amount" />
+
+      <br />
+      <br />
+
+      <label>How was your service: </label>
+      <br />
+      <select id="service_type">
+        <option value="0.05">Bad (%5 tip)</option>
+        <option value="0.10">Medium (%10 tip)</option>
+        <option value="0.20">Good (%20 tip)</option>
+      </select>
+
+      <br />
+      <br />
+
+      <label>How many people are sharing the bill:</label>
+      <br />
+      <input id="amount_of_people" type="text" name="amount_of_people" placeholder="Amount of People" />
+
+    </form>
+
+    <button type="button" id="calculate_button">Calculate</button>
+
+
+    <br />
+    <br />
+    <h2>Amount: $<span id="amount_you_have_to_pay"></span></h2>
+
+  </div><!-- /wrapper -->
+
+  <!-- JAVASCRIPT LINKS ------------------------------------------------>
+  <script type="text/javascript" src="tip_calculator.js"></script>
+
+</body>
+
+</html>

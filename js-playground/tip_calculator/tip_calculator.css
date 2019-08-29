@@ -1,0 +1,38 @@
+
+body {
+  font-family: 'Lato';
+  font-weight: 400;
+  color: white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lato', serif;
+  color: white;
+  text-align: center;
+  font-weight: 600;
+}
+
+p {
+  font-size: 18px;
+}
+
+#wrapper {
+  text-align: center;
+  width: 400px;
+  background-color: #E74C3C;
+  height: auto;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 15px;
+  margin-top: 50px;
+  -webkit-box-shadow: 1px -1px 24px 5px rgba(0,0,0,0.75);
+  -moz-box-shadow: 1px -1px 24px 5px rgba(0,0,0,0.75);
+  box-shadow: 1px -1px 24px 5px rgba(0,0,0,0.75);
+}
+
+#wrapper input {
+  padding: 5px 10px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  margin-top: 5px;
+}

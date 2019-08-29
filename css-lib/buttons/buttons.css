@@ -1,0 +1,169 @@
+body {
+  background-color: black;
+  color: #B3C1DC;
+}
+
+body, h1 {
+  font-family: 'Roboto';
+}
+
+#welcome-box {
+  height: auto;
+  width: 600px;
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+  margin: 0 auto;
+  margin-top: 10px;
+  padding: 30px 30px;
+  text-align: center;
+}
+
+#welcome-box h1 {
+  text-align: center;
+  font-size: 50px;
+  font-weight: 900;
+  transition: 0.5s ease;
+}
+
+#welcome-box a {
+  color:white;
+  font-size: 30px;
+  transition: 0.5s ease;
+}
+
+#welcome-box a:hover {
+  transition: 0.5s ease;
+  color: #8D65FE;
+}
+
+.info-card {
+  background-color: #8D65FE;
+  color: black;
+  border-radius: 10px;
+  border: 1px solid #8D65FE;
+  width: 400px;
+  height: auto;
+  margin: 0 auto;
+  -webkit-box-shadow: 0px 0px 12px 0px #8D65FE;
+  -moz-box-shadow: 0px 0px 12px 0px #8D65FE;
+  box-shadow: 0px 0px 12px 0px #8D65FE;
+  transition: 0.5s ease;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.info-card #info-card-top-part h1 {
+  font-size: 25px;
+  color: white;
+}
+
+.id {
+  background-color: #F7DC6F;
+  border-radius: 4px;
+  font-size: 18px;
+  color: #363434;
+  padding: 5px;
+}
+
+#info-card-bottom-part {
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+/* -------------------------------- */
+
+#neon-button {
+  background-color: #FE0368;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: 0.5s ease;
+  border: 3px solid #FE0368;
+  font-weight: 600;
+}
+#neon-button:hover {
+  transition: 0.5s ease;
+  background-color: white;
+  -webkit-box-shadow: 0px 0px 20px 0px #FE0368;
+  -moz-box-shadow: 0px 0px 20px 0px #FE0368;
+  box-shadow: 0px 0px 20px 0px #FE0368;
+  color: #FE0368;
+}
+
+#neon-button-2 {
+  background-color: white;
+  padding: 10px 20px;
+  color: #FE0368;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: 0.5s ease;
+  border: 3px solid #FE0368;
+  font-weight: 600;
+}
+#neon-button-2:hover {
+  transition: 0.5s ease;
+  background-color: #FE0368;
+  -webkit-box-shadow: 0px 0px 20px 0px #FE0368;
+  -moz-box-shadow: 0px 0px 20px 0px #FE0368;
+  box-shadow: 0px 0px 20px 0px #FE0368;
+  color: white;
+}
+
+#three-d-shadow-button {
+  background-color: white;
+  border: 1px solid black;
+  padding: 10px 20px;
+  color: black;
+  text-decoration: none;
+  transition: 0.5s ease;
+}
+#three-d-shadow-button:hover {
+  box-shadow:
+                2px 2px #53a7ea,
+                3px 3px #53a7ea,
+                4px 4px #53a7ea;
+  -webkit-transform: translateX(-3px);
+  transform: translateX(-3px);
+  color: #53a7ea;
+  border-color: #53a7ea;
+}
+
+#grow-border-outside-button {
+  background-color: #F7DC6F;
+  color: black;
+  padding: 15px 25px;
+  border: 0px solid transparent;
+  text-decoration: none;
+  transition: 0.5s ease;
+  border-radius: 3px;
+}
+#grow-border-outside-button:hover {
+  border: 5px solid black;
+  font-weight: 900;
+  transition: 0.5s;
+}
+
+#grow-border-inside-button {
+  background-color: #F7DC6F;
+  color: black;
+  padding: 15px 25px;
+  border: 5px solid transparent;
+  text-decoration: none;
+  transition: 0.5s ease;
+  border-radius: 3px;
+}
+#grow-border-inside-button:hover {
+  border: 5px solid black;
+  font-weight: 900;
+  transition: 0.5s;
+}
+
+#documentation-code {
+  background-color: white;
+  padding: 0px;
+  text-align: left;
+  overflow-x: scroll;
+}

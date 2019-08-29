@@ -1,0 +1,183 @@
+/*
+
+    Color Pallette:
+    --------------
+
+    Black:      #363434
+    Purple:     #8D65FE
+    Light Grey: #B3C1DC
+    Grey:       #6B7384
+    Pink:       #FE0368
+    action-color:
+    background-image: linear-gradient( 91.1deg,
+      rgba(57,31,105,1) -2.3%,
+      rgba(115,43,155,1) 44.4%,
+      rgba(231,75,184,1) 103.4%
+      );
+
+
+
+*/
+
+body {
+  background-color: black;
+  color: #B3C1DC;
+}
+
+body, h1 {
+  font-family: 'Roboto';
+}
+
+#welcome-box {
+  height: auto;
+  width: 500px;
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+  margin: 0 auto;
+  margin-top: 10px;
+  padding: 30px 30px;
+}
+
+#welcome-box h1 {
+  text-align: center;
+  font-size: 50px;
+  font-weight: 700;
+  transition: 0.5s ease;
+}
+
+/* -------------------------------- */
+
+#color-palette {
+  height: auto;
+  width: 500px;
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  margin: 0 auto;
+  padding: 30px;
+  transition: 0.5s ease;
+  text-align: center;
+}
+
+.color {
+  height: auto;
+  width: 50px;
+  border-radius: 6px;
+  padding: 30px 25px;
+  display: inline-block;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-right: 5px;
+  margin-left: 5px;
+  font-size: 10px;
+}
+
+.color-dark-red {
+  background-color: #C0392B;
+}
+
+.color-light-red {
+  background-color: #E74C3C;
+}
+
+.color-dark-purple {
+  background-color: #8E44AD;
+}
+
+.color-light-purple {
+  background-color: #9B59B6;
+}
+
+.color-dark-blue {
+  background-color: #2980B9;
+}
+
+.color-light-blue {
+  background-color: #3498DB;
+}
+
+.color-dark-green {
+  background-color: #27AE60;
+}
+
+.color-light-green {
+  background-color: #2ECC71;
+}
+
+.color-dark-yellow {
+  background-color: #F1C40F;
+}
+
+.color-light-yellow {
+  background-color: #F7DC6F;
+}
+
+.color-dark-orange {
+  background-color: #E67E22;
+}
+
+.color-light-orange {
+  background-color: #F39C12;
+}
+
+.color-dark-grey {
+  background-color: #7F8C8D;
+}
+
+.color-light-grey {
+  background-color: #CACFD2;
+}
+
+.color-dark-navy {
+  background-color: #2C3E50;
+}
+
+.color-light-navy {
+  background-color: #34495E;
+}
+
+
+/* -------------------------------- */
+
+#navigation-box {
+  height: auto;
+  width: 520px;
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+  margin: 0 auto;
+  margin-top: 10px;
+  padding: 30px 30px;
+  transition: 0.5s ease;
+}
+
+#navigation-box a {
+  background-color: #8D65FE;
+  padding: 10px 15px;
+  color: white;
+  border-radius: 10px;
+  border: 1px solid #8D65FE;
+  display: inline-block;
+  width: 200px;
+  margin-right: 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  -webkit-box-shadow: 0px 0px 12px 0px #8D65FE;
+  -moz-box-shadow: 0px 0px 12px 0px #8D65FE;
+  box-shadow: 0px 0px 12px 0px #8D65FE;
+  transition: 0.5s ease;
+  margin-bottom: 25px;
+}
+
+#navigation-box a:hover {
+  transition: 0.5s ease;
+  background-color: #FE0368;
+  -webkit-box-shadow: 0px 0px 40px 0px #FE0368;
+  -moz-box-shadow: 0px 0px 40px 0px #FE0368;
+  box-shadow: 0px 0px 40px 0px #FE0368;
+  border-color: #FE0368;
+  z-index: 99;
+}
