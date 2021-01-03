@@ -1,0 +1,15 @@
+html body {
+    color: limegreen;
+    background-color: white !important;
+}
+#thanks-container {
+  background-color: white !important;
+}
+
+#thanks-box {
+    margin-top: 100px!important;
+}
+
+#thanks-box h3 a {
+    color: #1997F0
+}

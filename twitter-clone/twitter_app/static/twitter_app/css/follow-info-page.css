@@ -1,0 +1,130 @@
+#follow-info-container {
+  padding: 0px !important;
+}
+
+/* FOLLOWERS PART ------- */
+
+#followers-part {
+  width: 46%;
+  height: auto;
+  background-color: white;
+  float: left;
+  margin: 2% !important;
+  margin-top: 80px !important;
+  overflow-y: scroll;
+  padding: 25px !important;
+}
+
+#followers-part h4 {
+  font-size: 25px;
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 15px !important;
+  margin-bottom: 15px !important;
+}
+
+#followers-part div {
+  height: 70px !important;
+  width: 100%;
+  border: 1px solid lightgray;
+  margin-bottom: 5px !important;
+  border-radius: 3px;
+  padding: 10px 30px !important;
+}
+
+#followers-part div img {
+  height: 50px;
+  border-radius: 50%;
+  display: inline;
+  margin-right: 15px !important;
+}
+
+#followers-part div h3 {
+  display: inline;
+  font-size: 21px;
+}
+
+#followers-part div h3 a {
+  color: black;
+}
+
+#followers-part div h3 a:hover {
+  transition: 0.2s;
+  color: #1997F0;
+}
+
+#followers-part div h5 {
+  display: inline;
+  color: gray;
+  margin-left: 5px !important;
+}
+
+/* FOllWOING PART ---------- */
+
+#following-part {
+  width: 46%;
+  height: auto;
+  background-color: white;
+  float: right;
+  margin: 2% !important;
+  margin-top: 80px !important;
+  overflow-y: scroll;
+  padding: 25px !important;
+}
+
+#following-part h4 {
+  font-size: 25px;
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 15px !important;
+  margin-bottom: 15px !important;
+}
+
+#following-part div {
+  height: 70px !important;
+  width: 100%;
+  border: 1px solid lightgray;
+  margin-bottom: 5px !important;
+  border-radius: 3px;
+  padding: 10px 30px !important;
+}
+
+#following-part div img {
+  height: 50px;
+  border-radius: 50%;
+  display: inline;
+  margin-right: 15px !important;
+}
+
+#following-part div h3 {
+  display: inline;
+  font-size: 21px;
+}
+
+#following-part div h3 a {
+  color: black;
+}
+
+#following-part div h3 a:hover {
+  transition: 0.2s;
+  color: #1997F0;
+}
+
+#following-part div h5 {
+  display: inline;
+  color: gray;
+  margin-left: 5px !important;
+}
+
+@media only screen and (max-width:1000px) {
+  #followers-part {
+    width: 100% !important;
+    height: auto !important;
+    float: none !important;
+    margin-bottom: 10px !important;
+  }
+  #following-part {
+    width: 100% !important;
+    height: auto !important;
+    float: none !important;
+    margin-top: 10px !important;
+  }
+}

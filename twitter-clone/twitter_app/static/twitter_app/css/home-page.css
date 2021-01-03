@@ -1,0 +1,225 @@
+html body {
+  height: auto;
+}
+
+#home-main-content-container {
+    padding-left: 9% !important;
+    padding-right: 9% !important;
+    padding-top: 5% !important;
+}
+
+/* Left PArt --------- */
+#home-left-part {
+    background-color: transparent;
+    height: 100vh;
+    padding: 10px !important;
+}
+
+#home-personal-info {
+    height: auto;
+    background-color: white;
+    width: 100%;
+    padding: 20px !important;
+
+}
+
+#home-personal-info img {
+    border-radius: 50%;
+    height: 80px;
+    display: inline;
+}
+
+#home-personal-info h3{
+    margin-left:10px !important;
+    display: inline-block !important;
+}
+
+#home-personal-info h3 a {
+    color: black;
+}
+
+#home-personal-info h3 a:hover {
+  color: #1997F0;
+  transition: 0.5s;
+}
+
+#home-follow-info {
+    margin-top: 20px !important;
+}
+
+#home-follow-info div a {
+    color: black;
+}
+
+#home-personal-info form {
+  margin-top: 25px !important;
+}
+
+#home-tweet-input{
+  padding: 5px 10px !important;
+  border: 1px solid lightgray;
+  margin-right: 0px !important;
+  border-radius: 10px;
+}
+
+#home-tweet-input:hover {
+  border: 2px solid black;
+  transition: 0.5s;
+  padding: 4px 9px !important
+}
+
+#home-tweet-btn {
+  padding: 5px 10px !important;
+  border: 1px solid #1997F0;
+  margin-left: 0px !important;
+  border-radius: 10px;
+  background-color: #1997F0;
+  color: white;
+}
+
+#home-tweet-btn:hover {
+  transition: 0.5s;
+  background-color: white;
+  color: #1997F0;
+}
+
+
+/* RIGHT PART -------- */
+
+#home-right-part {
+    background-color: transparent;
+    height: 200vh;
+    padding: 10px !important;
+
+}
+
+#home-feed {
+    width: 100% !important;
+    height: auto;
+    background-color: white;
+}
+
+#home-feed-tweet {
+    padding: 10px !important;
+    background-color: white;
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 30px !important;
+}
+
+#home-tweet-profile img {
+    border-radius: 50%;
+    height: 60px;
+}
+
+#home-tweet-content {
+    padding-left: 30px !important;
+}
+
+#home-tweet-content-profile-info {
+    margin-bottom: 10px !important;
+}
+
+#home-tweet-content-profile-info h5 a{
+    display: inline;
+    color: black;
+}
+
+#home-tweet-content-profile-info h5 {
+    display: inline;
+}
+
+#home-tweet-content-profile-info p {
+    color: gray;
+    display: inline;
+    margin-right: 7px !important;
+}
+
+#home-tweet-perform-choices {
+    margin-top: 25px !important
+}
+
+#home-tweet-perform-choices a {
+    color: gray;
+    display: inline;
+}
+
+#home-tweet-perform-choices a:hover {
+    color: #1997F0;
+    transition: 0.2s;
+}
+
+#home-tweet-perform-choices a p{
+    display: inline;
+    margin-right: 60px !important;
+}
+
+#explore-footer {
+  padding: 13px !important;
+}
+
+#like_form {
+  display: inline !important;
+  height: auto;
+  color: gray;
+}
+
+#like_form input {
+  background-color: transparent !important;
+  border: 1px solid transparent !important;
+  margin-right: 20px !important;
+  height: auto;
+  color: gray;
+}
+
+#like_form input:hover {
+  color: #1997F0 !important;
+  transition: 0.5s !important;
+  height: auto;
+}
+
+#retweet_form {
+  display: inline !important;
+  height: auto;
+  color: gray;
+}
+
+#retweet_form input {
+  background-color: transparent !important;
+  border: 1px solid transparent !important;
+  margin-right: 20px !important;
+  height: auto;
+  color: gray;
+}
+
+#retweet_form input:hover {
+  color: #1997F0 !important;
+  transition: 0.5s !important;
+  height: auto;
+}
+
+
+@media only screen and (max-width:1000px) {
+  #home-main-content-container {
+      padding-top: 19% !important;
+      padding-left: 0% !important;
+      padding-right: 0% !important;
+  }
+  /* left part (becomes the `top`) */
+  #home-left-part {
+      padding: 0px !important;
+  }
+  /* RIGHT PART -------- */
+
+  #home-right-part {
+      padding: 0px !important;
+  }
+
+  #home-tweet-profile img {
+      border-radius: 50%;
+      height: 50px !important;
+      width: 50px !important;
+  }
+
+}

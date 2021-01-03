@@ -1,0 +1,78 @@
+html body {
+    height: 100%;
+    background-color: white;
+    font-family: verdana;
+}
+
+#logo-div h1 {
+  display: inline;
+  margin: 100px 0px 0px 10px;
+}
+
+#logo-div img {
+  margin-top: -20px !important;
+  text-align: center;
+  margin-left: 20px;
+}
+
+#logo-div {
+  width: 300px;
+  margin-top: 20vh !important;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  padding-top: 10px;
+  background-color: white;
+  height: auto;
+}
+
+#login-form-wrapper {
+  border: 1px solid black;
+  width: 300px;
+  height: auto;
+  margin: 0 auto;
+  background-color: transparent;
+  box-shadow: 3px 4px 0 rgba(0,0,0,0.1);
+  padding-top: 15px;
+}
+
+#login-gate-form {
+    text-align: center;
+}
+
+#login-gate-form input {
+    display: list-item;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 5px;
+    border: 1px solid lightgray;
+}
+#login-gate-form input:hover {
+  border-color: #2ECC71;
+  transition: 0.5s;
+}
+
+#login_submit_button {
+  margin-bottom: 20px !important;
+  background-color: #2ECC71;
+  color: white;
+  border: 1px solid #2ECC71 !important;
+  width: 100px;
+}
+
+#login_submit_button:hover {
+    background-color: white;
+    color: #2ECC71;
+    transition: 0.5s;
+}
+
+#error-box {
+  border: 1px solid #E74C3C;
+  color: white;
+  background-color: #E74C3C;
+  width: 170px;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 15px;
+  transition: 0.5s;
+  padding: 7px;
+}

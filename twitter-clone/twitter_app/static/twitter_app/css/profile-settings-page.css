@@ -1,0 +1,57 @@
+#settings-content {
+    background-color: white;
+    height: 80vh;
+    width: 60%;
+    color: black;
+    margin: 0 auto !important;
+    margin-top: 80px !important;
+    padding: 20px !important;
+}
+
+#settings-content h3 {
+    font-size: 26px;
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 10px !important;
+    margin-bottom: 20px !important;
+}
+
+
+#settings-content form div {
+    margin-bottom: 15px !important;
+}
+
+#settings-content form div input {
+    padding: 20px !important;
+    font-size: 17px;
+}
+
+#settings-content form div label {
+    font-size: 17px;
+    margin-bottom: 10px !important;
+}
+
+
+#settings-submit-button {
+  background-color: white;
+  padding:7px !important;
+  border-radius: 10px;
+  border: 1px solid #1997F0;
+  color: #1997F0;
+}
+
+#settings-submit-button:hover {
+  background-color: #1997F0;
+  color: white;
+  transition:0.5s;
+}
+
+@media only screen and (max-width:1000px) {
+  #settings-content {
+      height: 80vh;
+      width: 100%;
+      color: black;
+      margin: 0 auto !important;
+      margin-top: 80px !important;
+      padding: 20px !important;
+  }
+}

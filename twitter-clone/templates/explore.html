@@ -1,0 +1,207 @@
+{% extends 'base.html' %}
+{% load cloudinary %}
+{% load staticfiles %}
+
+
+{% block csslink %}
+<link rel="stylesheet" href="{% static 'twitter_app/css/explore_page.css' %}" />
+<link rel="stylesheet" href="{% static 'twitter_app/css/search-bar.css' %}" />
+{% endblock %}
+
+
+<!-- SEARCH MECHNAISM -->
+<!-- =============================================================== -->
+{% block searchForm %}
+<form id="search_bar" action="{% url 'explore' %}" method="GET" accept-charset="utf-8">
+  {{ search_form }}
+  <button id="search-button" type="submit"><i class="fa fa-search"></i></button>
+</form>
+
+<!-- hidden search panel -->
+<div id="search_panel">
+  <button id="search-panel-close"><i class="fa fa-close"></i></button>
+  <br />
+  <!-- user cells generated from the search keyword -->
+  <div id="search_user_cell">
+    <img src="{{ filtered_db_user_settings.profile_photo.url }}" alt="pp" height="50px" width="50px" style="border-radius:50%;" /> {% if not filtered_db_user.username %}
+    <a href=""><h4>@{{ filtered_db_user }}</h4></a> {% else %}
+    <a href="{% url 'other_user_profile' filtered_db_user.username %}"><h4>@{{ filtered_db_user.username }}</h4></a> {% endif %}
+  </div>
+</div>
+
+<script src="{% static 'twitter_app/js/search_bar.js' %}" type="text/javascript"></script>
+{% endblock %}
+
+
+
+<!-- BLOCK CONTENT -->
+<!-- =============================================================== -->
+{% block content %}
+
+<div id="explore-container">
+  <div id="refresh-div" class="text-center">
+    <a href="{% url 'explore' %}" ><i class="fa fa-refresh"></i></a>
+  </div>
+  <div id="row">
+
+    <a href="{% url 'other_user_profile' random_settings_1.user.username %}">
+      <div id="cell">
+        <div id="pp-div">
+          <img alt="pp" src="{{ random_settings_1.profile_photo.url }}" height="90px" width="90px" />
+        </div>
+        <div id="name-username">
+          <h3>{{ random_settings_1.first_name }}</h3>
+          <h4>@{{random_settings_1.user.username }}</h4>
+        </div>
+        <hr style="margin-top:20px !important;" />
+        <div id="bio">
+          <p>{{ random_settings_1.bio }}</p>
+        </div>
+      </div><!-- /cell-->
+    </a>
+
+    <a href="{% url 'other_user_profile' random_settings_2.user.username %}">
+      <div id="cell">
+        <div id="pp-div">
+          <img alt="pp" src="{{ random_settings_2.profile_photo.url }}" height="90px" width="90px" />
+        </div>
+        <div id="name-username">
+          <h3>{{ random_settings_2.first_name }}</h3>
+          <h4>@{{random_settings_2.user.username }}</h4>
+        </div>
+        <hr style="margin-top:20px !important;" />
+        <div id="bio">
+          <p>{{ random_settings_2.bio }}</p>
+        </div>
+      </div><!-- /cell-->
+    </a>
+
+    <a href="{% url 'other_user_profile' random_settings_3.user.username %}">
+      <div id="cell">
+        <div id="pp-div">
+          <img alt="pp" src="{{ random_settings_3.profile_photo.url }}" height="90px" width="90px" />
+        </div>
+        <div id="name-username">
+          <h3>{{ random_settings_3.first_name }}</h3>
+          <h4>@{{random_settings_3.user.username }}</h4>
+        </div>
+        <hr style="margin-top:20px !important;" />
+        <div id="bio">
+          <p>{{ random_settings_3.bio }}</p>
+        </div>
+      </div><!-- /cell-->
+    </a>
+
+  </div><!-- /row -->
+
+  <div id="row">
+
+    <a href="{% url 'other_user_profile' random_settings_4.user.username %}">
+      <div id="cell">
+        <div id="pp-div">
+          <img alt="pp" src="{{ random_settings_4.profile_photo.url }}" height="90px" width="90px" />
+        </div>
+        <div id="name-username">
+          <h3>{{ random_settings_4.first_name }}</h3>
+          <h4>@{{random_settings_4.user.username }}</h4>
+        </div>
+        <hr style="margin-top:20px !important;" />
+        <div id="bio">
+          <p>{{ random_settings_4.bio }}</p>
+        </div>
+      </div><!-- /cell-->
+    </a>
+
+    <a href="{% url 'other_user_profile' random_settings_5.user.username %}">
+      <div id="cell">
+        <div id="pp-div">
+          <img alt="pp" src="{{ random_settings_5.profile_photo.url }}" height="90px" width="90px" />
+        </div>
+        <div id="name-username">
+          <h3>{{ random_settings_5.first_name }}</h3>
+          <h4>@{{random_settings_5.user.username }}</h4>
+        </div>
+        <hr style="margin-top:20px !important;" />
+        <div id="bio">
+          <p>{{ random_settings_5.bio }}</p>
+        </div>
+      </div><!-- /cell-->
+    </a>
+
+    <a href="{% url 'other_user_profile' random_settings_6.user.username %}">
+      <div id="cell">
+        <div id="pp-div">
+          <img alt="pp" src="{{ random_settings_6.profile_photo.url }}" height="90px" width="90px" />
+        </div>
+        <div id="name-username">
+          <h3>{{ random_settings_6.first_name }}</h3>
+          <h4>@{{random_settings_6.user.username }}</h4>
+        </div>
+        <hr style="margin-top:20px !important;" />
+        <div id="bio">
+          <p>{{ random_settings_6.bio }}</p>
+        </div>
+      </div><!-- /cell-->
+    </a>
+
+  </div><!-- /row -->
+
+  <div id="row">
+
+    <a href="{% url 'other_user_profile' random_settings_7.user.username %}">
+      <div id="cell">
+        <div id="pp-div">
+          <img alt="pp" src="{{ random_settings_7.profile_photo.url }}" height="90px" width="90px" />
+        </div>
+        <div id="name-username">
+          <h3>{{ random_settings_7.first_name }}</h3>
+          <h4>@{{random_settings_7.user.username }}</h4>
+        </div>
+        <hr style="margin-top:20px !important;" />
+        <div id="bio">
+          <p>{{ random_settings_7.bio }}</p>
+        </div>
+      </div><!-- /cell-->
+    </a>
+
+    <a href="{% url 'other_user_profile' random_settings_8.user.username %}">
+      <div id="cell">
+        <div id="pp-div">
+          <img alt="pp" src="{{ random_settings_8.profile_photo.url }}" height="90px" width="90px" />
+        </div>
+        <div id="name-username">
+          <h3>{{ random_settings_8.first_name }}</h3>
+          <h4>@{{random_settings_8.user.username }}</h4>
+        </div>
+        <hr style="margin-top:20px !important;" />
+        <div id="bio">
+          <p>{{ random_settings_8.bio }}</p>
+        </div>
+      </div><!-- /cell-->
+    </a>
+
+    <a href="{% url 'other_user_profile' random_settings_9.user.username %}">
+      <div id="cell">
+        <div id="pp-div">
+          <img alt="pp" src="{{ random_settings_9.profile_photo.url }}" height="90px" width="90px" />
+        </div>
+        <div id="name-username">
+          <h3>{{ random_settings_9.first_name }}</h3>
+          <h4>@{{random_settings_9.user.username }}</h4>
+        </div>
+        <hr style="margin-top:20px !important;" />
+        <div id="bio">
+          <p>{{ random_settings_9.bio }}</p>
+        </div>
+      </div><!-- /cell-->
+    </a>
+
+  </div><!-- /row -->
+
+  <div id="refresh-div" class="text-center" style="margin-top:10px !important;">
+    <a href="{% url 'explore' %}" ><i class="fa fa-refresh"></i></a>
+  </div>
+
+</div><!-- /explore-container -->
+
+{% endblock %}

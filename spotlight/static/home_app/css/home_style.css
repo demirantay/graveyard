@@ -1,0 +1,165 @@
+#first-scene {
+  width: 100%;
+  height: 97vh;
+  background-color: white;
+  padding: 20px 50px;
+}
+
+#top-nav {
+  width: 100%;
+  background-color: white;
+  padding: 10px;
+  padding-top: 20px;
+  height: 65px;
+}
+
+#top-nav a {
+  color: #39443b;
+  font-size: 14px;
+  margin-right: 20px;
+  float: right !important;
+}
+
+#logo-div {
+  text-align: center;
+  background-color: transparent;
+  margin-top: 70px;
+}
+
+#first-scene h1 {
+  text-align: center;
+}
+
+#first-scene-links {
+  text-align: center;
+  margin-top: 35px;
+}
+#first-scene-links a {
+  border: 1px solid lightgray;
+  padding: 10px;
+  margin-right: 10px;
+  font-weight: bold;
+  font-size: 15px;
+  padding: 10px 25px;
+  box-shadow: 3px 4px 0 rgba(0,0,0,0.1);
+  text-decoration: none;
+  color: gray;
+}
+#first-scene-links a:hover {
+  background-color: #2ECC71;
+  transition: 0.5s;
+  color: white;
+}
+
+#get-started {
+  background-color: #2ECC71 ;
+  color: white !important;
+}
+#get-started:hover {
+  background-color: #27AE60 !important;
+  transition: 0.5s;
+}
+
+#second-scene {
+  width: 100%;
+  height: 68vh;
+  background-color: #2ECC71;
+  padding: 20px 50px;
+}
+#info-text h2 {
+  color: white;
+  font-weight: 600;
+  margin-top: 100px;
+}
+#info-text p {
+  font-size: 17px;
+  color: white;
+  margin-top: 20px !important;
+}
+#info-text {
+  width: 35%;
+  margin-left: 50px;
+}
+#screen-shot-div {
+  border: 1px solid black;
+  height: auto !important;
+  width: auto !important;
+  z-index: 1;
+  position: absolute;
+  float: right;
+  right: 0 !important;
+  margin-top: -200px;
+  box-shadow: 3px 4px 0 rgba(0,0,0,0.1);
+  margin-right: 70px;
+}
+
+
+#third-scene {
+  width: 100%;
+  height: 72vh;
+  background-color: white;
+  padding: 70px 50px;
+  padding-left: 170px;
+}
+#third-scene-info-text {
+  float: right;
+  height: auto;
+  background-color: white;
+  width: 30%;
+  z-index: 1;
+  position: absolute;
+  right: 0;
+  margin-right: 170px;
+  margin-top: 70px;
+}
+#third-scene-info-text p {
+  font-size: 17px;
+  margin-top: 20px;
+}
+
+#office-box {
+  width: 160px;
+  height: 160px;
+  background-color: white;
+  margin: 5px 5px;
+  display: inline-block;
+  text-align: center !important;
+  border: 1px solid lightgray;
+  box-shadow: 3px 4px 0 rgba(0,0,0,0.1);
+  padding-top: 30px;
+}
+
+#office-box:hover {
+  border-color: #2ECC71;
+  transition: 0.5s;
+}
+
+#office-box h3 {
+  color:black;
+  font-size: 20px;
+}
+
+#boxes a {
+  text-decoration: none;
+}
+
+#fourth-scene {
+  width: 100%;
+  height: auto;
+  background-color: #F4F5F7;
+  padding: 25px 50px;
+}
+
+#footer {
+  width: 100%;
+  height: auto;
+  background-color: transparent;
+  padding: 15px;
+  border:1px solid transparent;
+  text-align: center;
+}
+
+#footer a {
+  color: black;
+  margin-right: 15px;
+}

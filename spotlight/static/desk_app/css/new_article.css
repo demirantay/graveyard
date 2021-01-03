@@ -1,0 +1,49 @@
+#wrapper {
+  margin-left: 375px !important;
+  background-color: white;
+  height: 100vh;
+  width: 70%;
+  padding-left: 30px;
+  padding-right: 25px;
+  overflow: auto;
+}
+
+#header {
+  font-weight: 500;
+  font-size: 26px;
+}
+
+#title {
+  display: block;
+  width: 80%;
+  font-size: 28px;
+  border: 1px solid transparent;
+  font-weight: 600;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+#title:hover {
+  background-color: #e8e9ea;
+  transition: 0.5s;
+}
+
+#content {
+  width: 80%;
+  height: 60vh;
+  border: 1px solid transparent;
+  display: block;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+#new_article_submit_button {
+  background-color: #2ECC71;
+  border: 2px solid #2ECC71;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+#new_article_submit_button:hover {
+  background-color: white;
+  color: #2ECC71;
+  transition: 0.5s;
+}

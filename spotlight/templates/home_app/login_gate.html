@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block css_link %}
+  <link rel="stylesheet" href="{% static 'home_app/css/login_gate_style.css' %}" />
+{% endblock %}
+
+{% block content %}
+  <div id="logo-div">
+  <img src="{% static 'assets/black-logo.png' %}" alt="logo_image" height="60px"/>
+    <h1 >Spotlight</h1>
+  </div>
+
+  <div id="login-form-wrapper">
+  {% if invalid_user_credits == True %}
+    <div id="error-box" class="text-center">
+      <p>Invalid username or password</p>
+    </div>
+  {% endif %}
+
+  <form action="{% url 'login_gate' %}" method="POST" id="login-gate-form">
+    {% csrf_token %}
+    {{ login_form.username }}
+    {{ login_form.password }}
+    <input type="submit" value="Log In" name="login_submit_button" id="login_submit_button">
+  </form>
+  </div>
+{% endblock %}

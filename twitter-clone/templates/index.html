@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load cloudinary %}
+{% load staticfiles %}
+
+{% block csslink %}
+<link rel="stylesheet" href="{% static 'twitter_app/css/index.css' %}" />
+{% endblock %}
+
+{% block content %}
+  <div class="container-fluid">
+    <div class="row">
+
+      <!-- LEFT PART OF THE HOME PAGE -->
+      <div class="col-md-6">
+        <div class="jumbotron" id="left-part" style="background-image: url({% static 'twitter_app/assets/icon-blue.png' %})">
+          <p><i class="fa fa-search"></i><b>Follow your interests</b></p>
+          <p><i class="fa fa-users"></i><b>Hear what people are talking about</b></p>
+          <p><i class="fa fa-comment"></i><b>Join the conversation</b></p>
+        </div>
+        <!-- leftpart jumbo -->
+      </div>
+      <!-- /col-md-6 -->
+
+      <!-- RIGHT PART OF THE HOME PAGE (log in log out) -->
+      <div class="col-md-6">
+        <div class="jumbotron" id="right-part">
+
+          <!-- LOGIN FORM -->
+          <form method="post" action="{% url 'login' %}" class="form-inline text-center" id="login-form">
+            {% csrf_token %}
+            <div class="form-group">
+              {{ login_form }}
+            </div>
+            <input type="submit" value="Log In" id="login-button" class="btn btn-default" />
+          </form>
+          <!-- /LOGIN FORM -->
+
+
+          <!-- SIGNUP -->
+          <div id="signup">
+            <img alt="logo" src="{% static 'twitter_app/assets/icon-blue.png'%}" style="height: 70px">
+            <h2><b>See what’s happening in the world right now</b></h2>
+            <p><b>Join Twitter today.</b></p>
+
+            <!-- SIGNUP FORM -->
+            <form method="post" action="">
+              {% csrf_token %}
+              <div class="form-group">
+                {{ signup_form }}
+              </div>
+              <input type="submit" value="Sign Up" class="btn btn-default" id="signup-button" />
+            </form>
+
+
+            <!-- / SIGNUP FORM -->
+          </div>
+        </div>
+        <!-- /right part jumbo -->
+
+      </div>
+      <!-- /col-md-6 -->
+    </div>
+    <!-- /row -->
+
+    <div class="row">
+      <div class="col-md-12">
+        <!-- FOOTER -->
+        <div class="jumbotron text-center" id="footer">
+          <p>Twitter is a registered trademark of Twitter Inc. This project is just for educational purpose only.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- /container -->
+{% endblock %}

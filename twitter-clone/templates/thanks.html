@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load cloudinary %}
+{% load staticfiles %}
+
+{% block csslink %}
+<link rel="stylesheet" href="{% static 'twitter_app/css/thanks.css' %}" />
+{% endblock %}
+
+{% block content %}
+<div id="thanks-container" class="container-fluid">
+
+  <div id='thanks-box' class="text-center">
+    <img alt="icon" src="{% static 'twitter_app/assets/icon-blue.png' %}" height="150px">
+    <h1><i class="fa fa-check"></i> You have created an account </h1>
+    <h3>Now <a href="{% url 'index' %}">Log In</a> and have fun !</h3>
+  </div>
+
+</div>
+
+{% endblock %}

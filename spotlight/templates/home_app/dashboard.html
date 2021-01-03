@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block css_link %}
+<link rel="stylesheet" href="{% static 'home_app/css/dashboard_style.css' %}" />
+{% endblock %}
+
+{% block content %}
+<div id="wrapper">
+  <h3 id="header">Dashboard</h3>
+  <br />
+
+  <form id="announcament-form" method="post" action="{% url 'dashboard' current_office.name %}">
+    {% csrf_token %}
+    {{ announcament_form.content }}
+    <input value="Submit" type="submit" id="announcament_submit_form" name="announcament_submit_button"/>
+  </form>
+
+  <div id="announcaments">
+    {% for announcament in office_announcaments %}
+      <div id="announcament-cell">
+        <div id="announcament-cell-author-info">
+          {% if announcament.profile_settings %}
+            <a href=""><img src="{{ announcament.profile_settings.profile_photo.url }}" alt="pp" height="30px" width="30px"/></a>
+          {% else %}
+            <a href=""><img src="{% static 'assets/pp.jpg' %}" alt="pp" height="30px" width="30px"</a>
+          {% endif %}
+          <a href=""><h5>{{ announcament.user.username }}</h5></a>
+          <p>{{ announcament.publish_date }}</p>
+          <form method="POST" action="{% url 'dashboard' current_office.name %}" id="deletion_form">
+            {% csrf_token %}
+            <input type="hidden" value="{{ announcament.id }}" name="hidden_id" />
+            <input type="submit" value="X" name="announcament_delete_btn" id="annoucnament_delete_btn" />
+          </form>
+        </div>
+        <p>{{ announcament.content }}</p>
+
+      </div><!-- /announcament-cell -->
+    {% endfor %}
+  </div><!-- /anoncaments -->
+
+</div><!-- /wrapper -->
+{% endblock %}

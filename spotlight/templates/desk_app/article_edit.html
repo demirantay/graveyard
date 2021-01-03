@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block css_link %}
+<link rel="stylesheet" href="{% static 'desk_app/css/article_edit.css' %}" />
+{% endblock %}
+
+{% block content %}
+<div id="wrapper">
+  <h3 id="header">Edit: </h3>
+  <br />
+  {% if article.author == desk.sub_editor %}
+    <h4 style="color:#2ECC71; border:#2ECC71 1px solid ; padding:3px; border-radius:2px; font-size:16px; display:inline-block;"><span style="color:black">Author:</span> @{{ current_user.username }}</h4>
+  {% else %}
+    <h4 style="color:#3498DB; border:1px solid #3498DB; padding:3px; border-radius:2px; font-size:16px; display:inline-block;"><span style="color:black">Author:</span> @{{ current_user.username }}</h4>
+  {% endif %}
+  <p>{{ article.publish_date }}</p>
+
+  <form method="post" action="{% url 'article_edit' deskname=desk.name article_id=article.id %}" id="edit_form" >
+    {% csrf_token %}
+    <input type="text" value="{{ article.title }}" name="edit_title" id="edit_title"/>
+    <textarea name="edit_content" id="edit_content">{{ article.content }}</textarea>
+    <input type="submit" value="Save Changes" name="save_changes_submit_button" id="edit_save_btn"/>
+  </form>
+
+  <form method="post" action="{% url 'article_edit' deskname=desk.name article_id=article.id %}" id="delete_form">
+    {% csrf_token %}
+    <input type="hidden" value="{{ article.id }}" />
+    <input type="submit" value="Delete Article" name="delete_article_btn" id="delete_article_btn" />
+  </form>
+
+  <h3>Coments:</h3>
+  <div id="comment-wrapper">
+    {% for comment in article_comments %}
+      <!-- comment cell -->
+      <div id="comment-cell">
+        {% if comment.author == desk.sub_editor %}
+          <h4 style="color:#2ECC71; border:#2ECC71 1px solid ; padding:3px; border-radius:2px; font-size:16px; display:inline-block;">{{ comment.author.username }}</h4>
+        {% else %}
+          <h4 style="color:#3498DB; border:#3498DB 1px solid ; padding:3px; border-radius:2px; font-size:16px; display:inline-block;">{{ comment.author.username }}</h4>
+        {% endif %}
+        <p> {{ comment.content }}</p>
+      </div>
+      <div id="comment-line"></div>
+      <!-- /commen cell -->
+    {% endfor %}
+
+    <!-- comment form -->
+    <form id="comment_form" method="post" action="{% url 'article_edit' deskname=desk.name article_id=article.id %}">
+      {% csrf_token %}
+      <input type="text" name="comment_content" id="comment_content" placeholder="Comment ... " />
+      <input type="submit" name="comment_submit_btn" id="comment_submit_btn" />
+    </form>
+  </div>
+
+</div>
+{% endblock %}

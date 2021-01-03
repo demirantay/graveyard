@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block css_link %}
+<link rel="stylesheet" href="{% static 'desk_app/css/in_progress.css' %}" />
+{% endblock %}
+
+{% block content %}
+<div id="wrapper">
+  <h3 id="header">In Progress</h3>
+  <br />
+
+  <div id="article-container">
+    <!-- Cell -->
+    {% for article in all_articles %}
+    <div id="article-cell">
+      <div id="author-info">
+        <img src="{{ article.author_settings.profile_photo.url }}" alt="pp_image" height="30px" width="30px" />
+        {% if article.author == desk.sub_editor %}
+          <h4 style="color:#2ECC71; border:#2ECC71 1px solid ; padding:3px; border-radius:2px; font-size:16px">@{{ article.author.username }}</h4>
+        {% else %}
+          <h4 style="color:#3498DB; border:1px solid #3498DB; padding:3px; border-radius:2px; font-size:16px">@{{ article.author.username }}</h4>
+        {% endif %}
+        <p>{{ article.publish_date }}</p>
+      </div><!-- /author info -->
+      <!-- buttons -->
+      <div id="perform-buttons">
+        <a href="{% url 'article_edit' deskname=desk.name article_id=article.id %}">Edit</a>
+        <form method="post" action="{% url 'in_progress' deskname=desk.name %}" id="done-form">
+          {% csrf_token %}
+          <input value="{{ article.id }}" type="hidden" name="hidden_id" />
+          <button type="submit" name="check_button" value="True"><span id="form-span"><i class="fa fa-check"></i></span></button>
+        </form>
+      </div><!-- /perform buttons -->
+      <h3>{{ article.title }}</h3>
+      <p>{{ article.content|slice:"0:500" }}</p>
+      <a href="{% url 'article_edit' deskname=desk.name article_id=article.id %}">see the full article ...</a>
+    </div><!-- /CELL -->
+    {% endfor %}
+  </div><!-- /article container -->
+</div>
+{% endblock %}

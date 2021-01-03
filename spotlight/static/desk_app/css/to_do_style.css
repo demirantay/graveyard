@@ -1,0 +1,125 @@
+#wrapper {
+  margin-left: 375px !important;
+  background-color: white;
+  height: 100vh;
+  width: 70%;
+  padding-left: 30px;
+  padding-right: 25px;
+  overflow: auto;
+}
+
+#header {
+  font-weight: 500;
+  font-size: 26px;
+}
+
+#to_do_task_input {
+  display: inline;
+  width: 80%;
+  font-size: 20px;
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: 2px solid transparent;
+  height: 50px;
+}
+#to_do_task_input:hover {
+  border-color:#2ECC71;
+  transition: 0.5s;
+}
+
+#to_do_form_submit_button {
+  width: 100px ;
+  height: 45px;
+  color: white;
+  background-color: #2ECC71;
+  border: 2px solid #2ECC71;
+  border-radius: 3px;
+}
+#to_do_form_submit_button:hover {
+  background-color: white;
+  transition: 0.5s;
+  color: #2ECC71;
+}
+
+#to-do-list {
+  height: 70vh;
+  width: 95%;
+  background-color: white;
+  margin-top: 30px;
+  overflow-y: scroll;
+  padding: 10px;
+}
+
+#to-do-cell {
+  height: auto;
+  width: 100%;
+  background-color: transparent;
+  margin-bottom: 15px;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+#left-part {
+  height: 100%;
+  width: 5%;
+  padding-left: 20px;
+  padding-top: 10px;
+  background-color: transparent;
+  display: inline-block;
+  vertical-align: top !important;
+}
+#content {
+  display: inline-block;
+  height: 100%;
+  width: 80%;
+  background-color: transparent;
+  vertical-align: top !important;
+  padding: 5px 0px 0px 14px;
+}
+#content h5 {
+  display: inline;
+  margin-bottom: 10px;
+}
+#date {
+  margin-left: 10px;
+  font-size: 12px;
+  color: gray;
+}
+#content p {
+  margin-top: 5px;
+}
+
+#right-part {
+  height: 100%;
+  width: 14%;
+  display: inline-block;
+  background-color: transparent;
+  vertical-align: top !important;
+}
+
+#delete_button {
+  float: right;
+  display: block;
+  background-color: transparent;
+  border: 0px;
+}
+#delete_button:hover {
+  color: #E74C3C;
+  transition: 0.5s;
+}
+
+#check_button {
+  font-size: 25px;
+  padding: 5px 10px;
+  margin-left: 20px;
+  margin-top:40px;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  color: #2ECC71;
+  width: 50px;
+  height: 50px;
+}
+#check_button:hover {
+  background-color: #2ECC71;
+  transition: 0.5s;
+}

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block css_link %}
+<link rel="stylesheet" href="{% static 'profile_app/css/desk_management.css' %}" />
+{% endblock %}
+
+{% block content %}
+<div id="wrapper">
+  <h3 id="header">Desk Management</h3>
+  <br />
+
+  <div id="desk-list-container">
+    {% for desk in current_user_desks %}
+      <!-- cell -->
+      <div id="desk-cell">
+        <h4><i class="{{ desk.joined_desk.get_category_display }}"></i> {{ desk.joined_desk.name }} </h4>
+        <form id="delete_form" method="post" action="{% url 'desk_management' %}" id="delete_form">
+          {% csrf_token %}
+          <input type="hidden" name="hidden_desk_id" value="{{ desk.id }}" />
+          <input type="submit" name="delete_desk_submit_btn" value="Quit" id="delete_desk_submit_btn">
+        </form>
+      </div><!-- /cell -->
+    {% endfor %}
+  </div>
+
+</div><!-- wrapper -->
+{% endblock %}

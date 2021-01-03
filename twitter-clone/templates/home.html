@@ -1,0 +1,251 @@
+{% extends 'base.html' %}{% load cloudinary %} {% load staticfiles %} {% block csslink %}
+<link rel="stylesheet" href="{% static 'twitter_app/css/home-page.css' %}" />
+<link rel="stylesheet" href="{% static 'twitter_app/css/search-bar.css' %}" /> {% endblock %}
+
+
+
+<!-- SEARCH MECHNAISM -->
+<!-- =============================================================== -->
+{% block searchForm %}
+<form id="search_bar" action="{% url 'home' %}" method="GET" accept-charset="utf-8">
+  {{ search_form }}
+  <button id="search-button" type="submit"><i class="fa fa-search"></i></button>
+</form>
+
+<!-- hidden search panel -->
+<div id="search_panel">
+  <button id="search-panel-close"><i class="fa fa-close"></i></button>
+  <br />
+  <!-- user cells generated from the search keyword -->
+  <div id="search_user_cell">
+    <img src="{{ filtered_db_user_settings.profile_photo.url }}" alt="pp" height="50px" width="50px" style="border-radius:50%;" /> {% if not filtered_db_user.username %}
+    <a href=""><h4>@{{ filtered_db_user }}</h4></a> {% else %}
+    <a href="{% url 'other_user_profile' filtered_db_user.username %}"><h4>@{{ filtered_db_user.username }}</h4></a> {% endif %}
+  </div>
+</div>
+
+<script src="{% static 'twitter_app/js/search_bar.js' %}" type="text/javascript"></script>
+{% endblock %}
+
+
+
+<!-- BLOCK CONTENT -->
+<!-- =============================================================== -->
+{% block content %}
+
+<!-- MAIN CONTENT -->
+<div class="row" id="home-main-content-container">
+  <!-- LEFT PART -->
+  <div class="col-md-4" id="home-left-part">
+    <!-- Personal info -->
+    <div id="home-personal-info">
+      <img src="{{ current_user_settings.profile_photo.url }}" height="80px" width="80px">
+      <h3><a href="{% url 'profile' %}">{{ current_user_settings.first_name }}</a></h3>
+      <div id="home-follow-info">
+        <div class="row text-center">
+          <div class="col-xs-4">
+            <a href="{% url 'profile' %}">Tweets: </a>
+            <p>{{ current_user_tweets_count }}</p>
+          </div>
+          <div class="col-xs-4">
+            <a href="{% url 'follow_info' %}">Followers: </a>
+            <p>{{ current_user_followers_count }}</p>
+          </div>
+          <div class="col-xs-4">
+            <a href="{% url 'follow_info' %}">Following: </a>
+            <p>{{ current_user_followings_count }}</p>
+          </div>
+        </div>
+      </div>
+      <!-- /Follow info -->
+      <form class="text-center" method="POST" action="{% url 'home' %}">
+        {% csrf_token %}
+        <input required type="text" placeholder="What's up?" id="home-tweet-input" name="tweet_content"/>
+        <input value="Tweet" type="submit" id="home-tweet-btn" name="home_tweet_submit"/>
+      </form>
+    </div>
+    <!-- /home perosnal info -->
+
+    <!-- Follow suggestions -->
+    <!-- DONT FORGET MAXIMUM 5 CELLS OTHERWISE THEY BREACH THEIR FRAME -->
+    <div id="follow-suggestion-box">
+      <h4>You may also like</h4>
+      <!-- cell -->
+      <div id="suggestion-profile">
+        <div class="row">
+          <div class="col-xs-3">
+            <img alt="suggestion_img" src="{{ random_settings_1.profile_photo.url }}" height="52px" width="52px">
+          </div>
+          <div class="col-xs-9" id="suggestion-profile-info">
+            <a href="{% url 'other_user_profile' random_settings_1.user.username %}">{{ random_settings_1.first_name }}</a>
+            <p> @{{ random_settings_1.user.username }} </p>
+          </div>
+        </div>
+        <!-- /row -->
+      </div>
+      <!-- suggestion cell -->
+
+      <!-- cell -->
+      <div id="suggestion-profile">
+        <div class="row">
+          <div class="col-xs-3">
+            <img alt="suggestion_img" src="{{ random_settings_2.profile_photo.url }}" height="52px" width="52px">
+          </div>
+          <div class="col-xs-9" id="suggestion-profile-info">
+            <a href="{% url 'other_user_profile' random_settings_2.user.username %}">{{ random_settings_2.first_name }}</a>
+            <p> @{{ random_settings_2.user.username }} </p>
+          </div>
+        </div>
+        <!-- /row -->
+      </div>
+      <!-- suggestion cell -->
+
+      <!-- cell -->
+      <div id="suggestion-profile">
+        <div class="row">
+          <div class="col-xs-3">
+            <img alt="suggestion_img" src="{{ random_settings_3.profile_photo.url }}" height="52px" width="52px">
+          </div>
+          <div class="col-xs-9" id="suggestion-profile-info">
+            <a href="{% url 'other_user_profile' random_settings_3.user.username %}">{{ random_settings_3.first_name }}</a>
+            <p> @{{ random_settings_3.user.username }} </p>
+          </div>
+        </div>
+        <!-- /row -->
+      </div>
+      <!-- suggestion cell -->
+
+      <!-- cell -->
+      <div id="suggestion-profile">
+        <div class="row">
+          <div class="col-xs-3">
+            <img alt="suggestion_img" src="{{ random_settings_4.profile_photo.url }}" height="52px" width="52px">
+          </div>
+          <div class="col-xs-9" id="suggestion-profile-info">
+            <a href="{% url 'other_user_profile' random_settings_4.user.username %}">{{ random_settings_4.first_name }}</a>
+            <p> @{{ random_settings_4.user.username }} </p>
+          </div>
+        </div>
+        <!-- /row -->
+      </div>
+      <!-- suggestion cell -->
+
+      <!-- cell -->
+      <div id="suggestion-profile">
+        <div class="row">
+          <div class="col-xs-3">
+            <img alt="suggestion_img" src="{{ random_settings_5.profile_photo.url }}" height="52px" width="52px">
+          </div>
+          <div class="col-xs-9" id="suggestion-profile-info">
+            <a href="{% url 'other_user_profile' random_settings_5.user.username %}">{{ random_settings_5.first_name }}</a>
+            <p> @{{ random_settings_5.user.username }} </p>
+          </div>
+        </div>
+        <!-- /row -->
+      </div>
+      <!-- suggestion cell -->
+    </div>
+    <!--/follow-suggestion-box -->
+    <style>
+      #follow-suggestion-box {
+        background-color: white;
+        height: 380px;
+        width: 100%;
+        margin: 0 auto !important;
+        margin-top: 25px !important;
+        padding: 12px !important;
+      }
+      #follow-suggestion-box h4 {
+        font-size: 16px;
+        font-weight: bold;
+      }
+      #follow-suggestion-box div {
+        height: 57px;
+        margin: 5px 0px !important;
+        background-color: white;
+      }
+      #follow-suggestion-box div img {
+        height: 52px;
+        border-radius: 50%;
+        margin: 2px !important;
+        z-index: 1;
+      }
+      #follow-suggestion-box div a:hover {
+        transition: 0.2s;
+        color: #1997F0;
+      }
+      #suggestion-profile-info {
+        padding-top: 10px !important;
+      }
+      #suggestion-profile div a {
+        color: black;
+        margin-top: 10px !important;
+      }
+      #suggestion-profile-info p {
+        color: gray;
+      }
+    </style>
+
+  </div>
+  <!--Left Part -->
+
+
+  <!-- ################################################### -->
+
+  <!-- Right PART -->
+
+    <!-- Right PART -->
+    <div class="col-md-8" id="home-right-part">
+      <!-- Feed -->
+      <div id="home-feed">
+
+
+        {% for tweet in home_feed_tweets %}
+          <!-- Tweet example 1 -->
+          <div id="home-feed-tweet">
+            <div class="row">
+              <div class="col-xs-1" id="home-tweet-profile">
+                <img src="{{ tweet.user.settings.profile_photo.url }}" height="60px" width="60px">
+              </div>
+              <div class="col-xs-11" id="home-tweet-content">
+                <div id="home-tweet-content-profile-info">
+                  <h5><a href="{% url 'other_user_profile' tweet.user.username %}">{{ tweet.user.settings.first_name }}</a></h5>
+                  <p>@{{ tweet.user.username }}</p>
+                  <p>{{ tweet.publish_date }}</p>
+                </div>
+                <p>{{ tweet.tweet_content }}</p>
+                <div class="row" id="home-tweet-perform-choices">
+                  <form method="POST" action="{% url 'home' %}" id="retweet_form">
+                    {% csrf_token %}
+                    <input type="hidden" name='hidden_retweet_value' value="{{ tweet.id }}" />
+                    <input type="submit" name="retweet_button" style="color:gray;" value="&#8634; {{ tweet.tweet_retweets }}" />
+                  </form>
+
+                  <form method="POST" action="{% url 'home' %}" id="like_form">
+                    {% csrf_token %}
+                    <input type="hidden" name="hidden_tweet_value" value="{{ tweet.id }}" />
+                    <input type="submit" name="like_button" style="color:gray;" value="	&hearts; {{ tweet.tweet_likes }}">
+                  </form>
+
+                </div><!-- /tweet perform cohices -->
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+
+        <!-- Explore link footer -->
+        <div id="explore-footer" class="text-center">
+          <p>For more tweets go to specific users profiles or <a href="{% url 'explore' %}">explore new users!</a></p>
+        </div><!-- /explore footer -->
+
+      </div>
+      <!-- /home feed -->
+    </div>
+    <!-- /RIGHT PART -->
+
+
+</div>
+<!-- /row -->
+
+
+{% endblock %}

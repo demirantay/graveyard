@@ -1,0 +1,112 @@
+#wrapper {
+  margin-left: 375px !important;
+  background-color: white;
+  height: 100vh;
+  width: 70%;
+  padding-left: 30px;
+  padding-right: 25px;
+  overflow: auto;
+}
+
+#header {
+  font-weight: 500;
+  font-size: 26px;
+}
+
+#article-container {
+  margin-top: 25px;
+  height: auto;
+  width: 100%;
+  background-color: transparent;
+  padding: 5px;
+}
+
+#article-cell {
+  height: auto;
+  width: 100%;
+  background-color: transparent;
+  border-radius: 5px;
+  padding: 10px 15px;
+  border: 2px solid #F4D03F;
+  padding-top: 10px;
+  margin-bottom: 20px;
+}
+#author-info img {
+  display: inline;
+  border-radius: 50%;
+}
+#author-info h4 {
+  display: inline;
+  margin-left: 5px;
+}
+#author-info p {
+  display: inline;
+  font-size: 12px;
+  margin-left: 5px;
+  color: gray;
+}
+#author-info {
+  margin-bottom: 10px;
+  display: inline;
+  width: 70%;
+  background-color: transparent;
+}
+
+#perform-buttons {
+  display: inline-block;
+  width: 25%;
+  float: right;
+  background-color: transparent;
+}
+
+#perform-buttons form {
+  display: inline-block;
+  margin-left: 10px;
+}
+#perform-buttons form button {
+  border: 2px solid #F39C12;
+  background-color: white;
+  color: #2ECC71;
+  border-radius: 3px;
+  height: 35px;
+  width: 40px;
+  vertical-align: top !important;
+
+}
+#perform-buttons form button:hover #form-span{
+  display: block;
+  transition: 0.5s;
+}
+#perform-buttons form button:hover {
+  color : #2ECC71;
+  border: 2px solid #2ECC71;
+  transition: 0.5s;
+}
+
+#form-span {
+  display: none;
+  margin:0;
+  padding: 0;
+}
+
+#perform-buttons a {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: white;
+  color: #F39C12;
+  border-radius: 5px;
+  font-size: 15px;
+  border: 2px solid #F39C12;
+  text-decoration: none;
+  vertical-align: top !important;
+  margin-left: 75px;
+}
+#perform-buttons a:hover {
+  transition: 0.5s;
+  background-color: #F39C12;
+  color: white;
+}
+
+#article-cell a {
+  color: #F39C12;
+}

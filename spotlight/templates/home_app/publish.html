@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block css_link %}
+  <link rel="stylesheet" href="{% static 'home_app/css/publish_style.css' %}" />
+{% endblock %}
+
+{% block content %}
+<div id="wrapper">
+  <h3 id="header">Publish</h3>
+  <br />
+  <p>Articles that are ready to publish are listed below: </p>
+  <div id="article-container">
+
+    {% for article in all_articles %}
+      <!-- CELL -->
+      <div id="article-cell">
+        <img src="{{ article.author_settings.profile_photo.url }}" alt="pp" height="50px" width="50px" style="border-radius:50%;"/>
+        <h4 style="display:inline; margin-left:10px;">{{ article.author_settings.name }}</h4>
+        <h4 style="display:inline; margin-left: 10px;">@{{article.author.username}}</h4>
+
+        <h3>{{ article.title }}</h3>
+        <h4 style="color:{{article.desk.get_category_color_display}}; border: 1px solid {{article.desk.get_category_color_display}}; display:inline-block; padding:3px; border-radius: 3px;">{{ article.category|lower }}</h4>
+        <h5>{{ article.publish_date }}</h5>
+        <p>
+          {{article.content}}
+        </p>
+      </div>
+      <!-- /CELL -->
+    {% endfor %}
+
+  </div>
+
+</div>
+{% endblock %}

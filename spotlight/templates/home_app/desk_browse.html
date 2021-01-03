@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block css_link %}
+<link rel="stylesheet" href="{% static 'home_app/css/desk_browse.css' %}" />
+{% endblock %}
+
+{% block content %}
+<div id="wrapper">
+  <h3 id="header">Desk</h3>
+  <br />
+
+  {% if wrong_form_input == True%}
+  <div id="invalid_desk_credits">
+    <h2>You must upload a picture of the desk!</h2>
+  </div>
+  {% endif %}
+
+  {% if invalid_desk_credits == True %}
+  <div id="invalid_desk_credits">
+    <h2>The desk name you have entered already exists!</h2>
+  </div>
+  {% endif %}
+
+  <!-- create a desk button -->
+  <button id="create_desk"><i class="fa fa-plus"></i></button>
+
+  <!-- hidden panel -->
+  <div id="hidden_panel">
+    <button id="close_panel_button"><i class="fa fa-close"></i></button>
+    <form id="create_desk_form" action="{% url 'desk_browse' current_office.name %}" method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+      <label>Desk Image</label>
+      <input type="file" name="desk_create_image" id="desk_create_image" />
+      <label>Category</label>
+      <select id="desk_create_select" name="desk_create_category">
+        <option value="WORLD">World</option>
+        <option value="METRO">Metro</option>
+        <option value="POLITICS">Politics</option>
+        <option value="BUSINESS">Business</option>
+        <option value="TECH">Tech</option>
+        <option value="SCIENCE">Science</option>
+        <option value="OPINION">Opinion</option>
+        <option value="HEALTH">Health</option>
+        <option value="SPORTs">Sports</option>
+        <option value="ARTS">Arts</option>
+        <option value="BOOKS">Books</option>
+        <option value="STYLE">Style</option>
+        <option value="TRAVEL">Travel</option>
+        <option value="MAGAZINE">Magazine</option>
+        <option value="TABLOID">Tabloid</option>
+      </select>
+      <label>Name</label>
+      <input type="text" placeholder="Desk Name (max 30 characters)" name="desk_create_name" id="desk_create_name"/>
+      <label>Description</label>
+      <input type="text" placeholder="Short Description" name="desk_create_desc" id="desk_create_desc" />
+      <input type="submit" value="Create" name="desk_create_button" id="desk_create_button"/>
+    </form>
+  </div><!-- hidden panel -->
+
+  <script>
+    // DOM objects
+    var open_panel_button = document.getElementById('create_desk');
+    var close_panel_button = document.getElementById('close_panel_button');
+    var hidden_panel = document.getElementById('hidden_panel');
+    // Events
+    open_panel_button.onclick = function() {
+      hidden_panel.style.display = 'block';
+    }
+    close_panel_button.onclick = function() {
+      hidden_panel.style.display = 'none';
+    }
+  </script>
+
+
+  <!-- LISTINGS OF DESK -->
+  <div id="desk-boxes">
+    {% for desk in all_desks %}
+    <!-- CELL -->
+    <div id="desk-box-cell" style="border: 2px solid {{ desk.get_category_color_display }};">
+      {% if desk.image %}
+        <img src="{{ desk.image.url }}" alt="desk_image" height="90" width="90" />
+      {% else %}
+        <img src="" alt="desk_image" height="90px" width="90px" style="background-color:#5D6D7E;" />
+      {% endif %}
+      <div id="content">
+        <h4>{{ desk.name }}</h4>
+        <!-- MAX 236 CHARS -->
+        <p>{{ desk.description }}</p>
+      </div>
+      <form action="{% url 'desk_browse' current_office.name %}" method="POST">
+        {% csrf_token %}
+        <input name="hidden_value" value="{{ desk.id }}" type="hidden" />
+        <input type="submit" value="JOIN" style="background-color: {{ desk.get_category_color_display }}" name="join_desk_button"/>
+      </form>
+    </div><!-- /cell -->
+    {% endfor %}
+  </div><!-- /desk-boxes -->
+  <br />
+
+</div>
+{% endblock %}

@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block css_link %}
+  <link rel="stylesheet" href="{% static 'home_app/css/home_style.css' %}" />
+{% endblock %}
+
+{% block content %}
+  <!-- FIRST SCENE -->
+  <div id="first-scene">
+    <div id="top-nav">
+      <a href="{% url 'login_gate' %}">Login</a>
+      <a href="{% url 'signup' %}">Signup</a>
+      <a href="https://github.com/demirantay/spotlight">GitHub</a>
+      <a href="">Documentation</a>
+      <a href="">Introduction</a>
+    </div>
+
+  <div id="logo-div">
+    <img src="{% static 'assets/bigger-font-logo.png' %}" alt="logo" width="auto" height="200" />
+  </div>
+  <h1>Free Workflow Tool</h1>
+
+  <div id="first-scene-links">
+    <a id="get-started" href="">GET STARTED</a>
+    <a href="{% url 'signup' %}">SIGN UP</a>
+    <a href="{% url 'login_gate' %}">LOG IN</a>
+  </div>
+</div> <!-- /First scene -->
+
+  <!-- SECOND SCENE -->
+  <div id="second-scene">
+    <div id="info-text">
+      <h2>Simple Workflow</h2>
+      <p>Spotlight, a free workflow tool that provides ease for your work life. The tool plans, tracks, reviews and reports all of your hard work. You can customize the tool as simple or as complex as you want.</p>
+    </div>
+    <div id="screen-shot-div">
+      <img alt="screen_shot" src="{% static 'assets/screen_shots/in_progress_ss.png'%}" width="540px" height="300px" align="right" />
+    </div>
+  </div><!-- second scene -->
+
+  <!-- THIRD SCENE -->
+  <div id="third-scene">
+    <div id="third-scene-info-text">
+      <h2>Choose an Office</h2>
+      <p>Every team and business sector has a unique process of doing things. In order to give you a template, you will choose an office type from many options.</p>
+    </div>
+
+    <div id="boxes">
+      <a href="">
+        <div id="office-box">
+          <img src="{% static 'assets/newspaper.png' %}" alt="newpaper-logo" height="50px" width="50px" />
+          <h3>Journalism</h3>
+        </div>
+      </a>
+      <a href="">
+        <div id="office-box">
+          <img src="{% static 'assets/software-logo.png' %}" alt="software-logo" height="50px" width="50px" />
+          <h3>Software</h3>
+        </div>
+      </a>
+      <br />
+      <a href="">
+        <div id="office-box">
+          <img src="{% static 'assets/academy-logo.png' %}" alt="academy-logo" height="50px" width="50px" />
+          <h3>Academic</h3>
+        </div>
+      </a>
+      <a href="">
+        <div id="office-box">
+          <img src="{% static 'assets/management-logo.png' %}" alt="management-logo" height="50px" width="50px"/>
+          <h3>Management</h3>
+        </div>
+      </a>
+    </div>
+  </div><!-- third scene -->
+
+  <!-- FOURTH SCENE -->
+  <div id="fourth-scene">
+    <div id="footer">
+      <a href="">About</a>
+      <a href="">Help Center</a>
+      <a href="">Blog</a>
+      <a href="">Engineering Blog</a>
+      <a href="">Documentation</a>
+      <a href="">Github</a>
+    </div>
+  </div><!-- /fourth-scene -->
+{% endblock %}

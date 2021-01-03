@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block css_link %}
+<link rel="stylesheet" href="{% static 'desk_app/css/done.css' %}" />
+{% endblock %}
+
+{% block content %}
+<div id="wrapper">
+  <h3 id="header">Done</h3>
+  <br />
+
+  <div id="done-articles-wrapper">
+
+    {% for article in all_articles %}
+      <div id="article-cell">
+        <div id="author-info">
+          <img height="50px" width="50px" src="{{ article.author_settings.profile_photo.url }}" alt="pp_image" />
+          <h4>{{ article.author_settings.name }}</h4>
+          {% if article.author == desk.sub_editor %}
+            <h4 style="color:#2ECC71; border:#2ECC71 1px solid ; padding:3px; border-radius:2px; font-size:16px; display:inline-block;">@{{ current_user.username }}</h4>
+          {% else %}
+            <h4 style="color:#3498DB; border:1px solid #3498DB; padding:3px; border-radius:2px; font-size:16px; display:inline-block;">@{{ current_user.username }}</h4>
+          {% endif %}
+        </div>
+        <h3>{{ article.title }}</h3>
+        <h5 style="margin-bottom:15px;">{{ article.publish_date }}</h5>
+        <p>{{ article.content|linebreaks }}</p>
+        {% if current_user == desk.sub_editor %}
+          <form method="post" action="{% url 'done' deskname=desk.name %}">
+            {% csrf_token %}
+            <input type="hidden" value="{{article.id}}" name="hidden_article_id"  />
+            <input value="Push To Publish" type="submit" name="done_article_submit_btn" id="push_to_publish_btn"/>
+          </form>
+        {% endif %}
+      </div>
+    {% endfor %}
+
+  </div><!-- /article wrapper -->
+
+</div>
+{% endblock %}

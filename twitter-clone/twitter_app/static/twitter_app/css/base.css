@@ -1,0 +1,187 @@
+/*
+   twitter blue color : #1997F0
+*/
+* {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+html body {
+    font-family: 'Roboto', sans-serif;
+    height: auto;
+    background-color: #E2E9EE;
+    width: 100%;
+}
+
+/* TOP NAV BAR --------- */
+
+#top-nav-bar {
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    position: fixed;
+    border-bottom: 1px solid lightgray;
+    padding: 8px 90px 0px 90px !important;
+    z-index: 1;
+}
+
+#nav_open_btn {
+  display: none;
+}
+
+#nav_close_btn {
+  display: none;
+}
+
+#home-link {
+  color: dimgray;
+  font-weight: bolder;
+  display: inline !important;
+  margin-right: 30px !important;
+}
+
+#profile-link {
+  color: dimgray;
+  font-weight: bolder;
+  display: inline !important;
+  margin-right: 30px !important;
+}
+
+#explore-link {
+  color: dimgray;
+  font-weight: bolder;
+  display: inline !important;
+  margin-right: 30px !important;
+}
+
+#settings-link {
+  color: dimgray;
+  font-weight: bolder;
+  display: inline !important;
+  float: right !important;
+  margin-top: 3px !important;
+  margin-left: 30px !important;
+}
+
+#logout-link {
+  color: dimgray !important;
+  font-weight: bolder !important;
+  display: inline !important;
+  float: right !important;
+  margin-top: 3px !important;
+  margin-left: 30px !important;
+}
+
+
+
+#top-nav-bar a:hover {
+    color: #1997F0 !important;
+    border-bottom: 3px solid #1997F0 ;
+    text-decoration: none;
+    transition: 0.2s;
+    padding-bottom: 16px !important;
+}
+
+#logo {
+  margin-left:190px !important;
+}
+
+
+@media only screen and (max-width:1000px) {
+
+  #nav_open_btn {
+    display: inline;
+    padding: 5px !important;
+    background-color: transparent;
+    border: 0px solid transparent;
+    font-size: 28px;
+    position: absolute;
+    margin-top: -10px !important;
+    margin-left: -60px !important;
+  }
+
+  #nav_open_btn:hover {
+    color:  #1997F0;
+    transition: 0.5s;
+  }
+
+  #nav_close_btn:hover {
+    color: #1997F0;
+    transition: 0.5s;
+  }
+
+  #home-link {
+    display: none !important;
+  }
+  #profile-link {
+    display: none !important;
+  }
+  #explore-link {
+    display: none !important;
+  }
+  #settings-link {
+    display: none !important;
+  }
+  #logout-link {
+    display: none !important;
+  }
+
+  #logo {
+    margin-left: 45% !important;
+  }
+
+  #settings {
+    display: inline !important;
+  }
+
+  /* Commented out because it will be added once the javascipt cicks in
+  #top-nav-bar {
+    width: 40%;
+    height: 100vh;
+    padding: 10px !important;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    padding: 140px 50px 0px 50px !important;
+    transition: 0.5s;
+  }
+  #close_btn {
+    display: block;
+    margin-bottom: 110px !important;
+    margin-top: -110px !important;
+    float: right;
+    padding: 10px !important;
+    font-size: 23px;
+    background-color: transparent;
+    border: 1px solid transparent;
+  }
+  #close_btn:hover {
+    color: #1997F0;
+    transition: 0.5s;
+  }
+  #top-nav-bar a {
+    color: dimgray;
+    font-weight: bolder;
+    display: block !important ;
+    font-size: 25px;
+    margin-bottom: 20px !important;
+  }
+  #top-nav-bar img {
+    display: none;
+  }
+  #log-out-a {
+    float: left;
+    display: block !important;
+    width: 100%;
+  }
+  #settings {
+    float: left;
+    display: block !important;
+    width: 100%;
+    margin-left: 0 auto !important;
+  }
+  */
+
+
+}

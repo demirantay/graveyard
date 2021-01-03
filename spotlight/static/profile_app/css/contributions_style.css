@@ -1,0 +1,36 @@
+#wrapper {
+  margin-left: 375px !important;
+  background-color: white;
+  height: 100vh;
+  width: 70%;
+  padding-left: 30px;
+  padding-right: 25px;
+  overflow: auto;
+}
+
+#header {
+  font-weight: 500;
+  font-size: 26px;
+}
+
+#wrapper img {
+  border-radius: 50%;
+}
+
+#articles-container {
+  margin-top: 10px;
+  background-color: transparent;
+  width: 100%;
+  height: auto !important;
+  padding: 15px;
+  margin-bottom: 30px;
+}
+
+#article-cell {
+  height: auto !important;
+  width: 100%;
+  background-color: #EDEDEE;
+  padding: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 30px;
+}

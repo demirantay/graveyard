@@ -1,0 +1,52 @@
+#wrapper {
+  margin-left: 375px !important;
+  background-color: white;
+  height: 100vh;
+  width: 70%;
+  padding-left: 30px;
+  padding-right: 25px;
+  overflow: auto;
+}
+
+#header {
+  font-weight: 500;
+  font-size: 26px;
+}
+
+#desk-list-container {
+  width: 100%;
+  height: auto;
+  padding: 15px;
+  background-color: transparent;
+}
+
+#desk-cell {
+  width: 50%;
+  height: auto;
+  padding: 10px;
+  background-color: transparent;
+  margin-bottom: 10px;
+  border: 2px solid #E74C3C;
+  border-radius: 5px;
+}
+
+#desk-cell h4 {
+  display: inline;
+}
+
+#delete_form {
+  display: inline;
+  float: right;
+}
+
+#delete_form input {
+  color: white;
+  background-color: #E74C3C;
+  border: 2px solid #E74C3C;
+  border-radius: 4px;
+}
+#delete_form input:hover {
+  color: #E74C3C;
+  background-color: white;
+  transition: 0.5s;
+}

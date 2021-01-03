@@ -1,0 +1,164 @@
+/*
+   twitter blue color : #1997F0
+*/
+
+* {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+html body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* LEFT PART -------------------*/
+
+#left-part {
+  background-color: #1997F0;
+  color: white;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 94vh;
+  padding-top: 40vh !important;
+  padding-left: 20% !important;
+  border-radius: 0px;
+}
+
+#left-part p i {
+  margin-right: 15px !important;
+  font-size: 20px;
+}
+
+#left-part p {
+  font-size: 19px;
+  margin: 10px 0px 10px 0px !important;
+}
+
+/* RIGHT PART -------------------*/
+
+#right-part {
+  background-color: white;
+  height: 94vh;
+  margin: 0px !important;
+  padding: 0px !important;
+  border-radius: 0px;
+  overflow-y: scroll !important;
+}
+
+#login-form {
+  padding-top: 30px !important;
+}
+
+#login-username {
+  padding: 20px !important;
+}
+
+#login-password {
+  padding: 20px !important;
+}
+
+#login-button {
+  padding: 10px !important;
+  border-radius: 20px;
+  border-color: #1997F0;
+  color: #1997F0;
+}
+
+#login-button:hover {
+  background-color:  #1997F0;
+    transition: 0.5s;
+    color: white;
+}
+
+#signup {
+    width: 450px;
+    background-color: white;
+    margin: 0 auto !important;
+    margin-top: 16vh !important;
+
+}
+
+#signup p {
+    margin-bottom: 15px !important;
+    margin-top: 15px !important;
+}
+
+#signup-username, #signup-email, #signup-password{
+  width: 450px;
+ padding: 20px !important;
+ margin-bottom: 10px !important;
+
+}
+
+#signup-button {
+  padding: 10px !important;
+    border-radius: 18px;
+    color: white;
+    background-color: #1997F0;
+    border : 1px solid transparent;
+}
+
+#signup-button:hover {
+  transition: 0.5s;
+    background-color: white;
+    color: #1997F0;
+    border: 1px solid  #1997F0;
+}
+
+
+/* FOOTER  -------------------*/
+#footer {
+    margin: 0;
+    padding: 0;
+    height: 6vh;
+    background: white;
+    border-top: 0.5px solid lightgrey;
+    border-radius: 0px;
+}
+
+#footer p {
+    font-size: 16px;
+    margin-top: 9px !important;
+}
+
+/* Responsive media queries -------- */
+
+@media only screen and (max-width: 600px) {
+
+    /* LEFT PART */
+    #left-part {
+        height: 30vh;
+        padding-top: 5vh !important;
+    }
+
+    /* RIGHT PART */
+    #right-part {
+        padding: 10px !important;
+    }
+
+    #login-username{
+        padding: 15px !important;
+        margin-bottom: 10px !important;
+    }
+
+    #login-password {
+      padding: 15px !important;
+      margin-bottom: 10px !important;
+    }
+
+    #signup {
+        margin-top: 5vh !important;
+        width: 100% !important;
+
+    }
+
+    #signup-username, #signup-email, #signup-password {
+        width: 100% !important;
+    }
+
+    /* FOOTER */
+    #footer p {
+        font-size: 14px;
+    }
+}

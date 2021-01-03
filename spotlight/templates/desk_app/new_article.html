@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block css_link %}
+<link rel="stylesheet" href="{% static 'desk_app/css/new_article.css' %}" />
+{% endblock %}
+
+{% block content %}
+<div id="wrapper">
+  <h3 id="header">New Article</h3>
+  <br />
+
+  <form id="new_article_form" method="post" action="{% url 'new_article' deskname=desk.name %}">
+    {% csrf_token %}
+    <input type="text" id="title" name="title" placeholder="Type your title" />
+    <textarea id="content" name="content"  placeholder="Type your article here. You cannot upload a document or a image but it will change as soon as possible."></textarea>
+    <input type="submit" value="Save" name="new_article_submit_button" id="new_article_submit_button" />
+  </form>
+
+</div>
+{% endblock %}

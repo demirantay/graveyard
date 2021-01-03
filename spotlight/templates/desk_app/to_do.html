@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block css_link %}
+<link rel="stylesheet" href="{% static 'desk_app/css/to_do_style.css' %}" />
+{% endblock %}
+
+{% block content %}
+<div id="wrapper">
+  <h3 id="header">To-Do</h3>
+  <br />
+
+  <form id="to-do-form" method="post" action="{% url 'to_do' deskname=desk.name %}">
+    {% csrf_token %}
+    <input type="text" name="to_do_task_input" id="to_do_task_input" placeholder="Add a task ..." />
+    <input type="submit" name="to_do_form_submit_button" id="to_do_form_submit_button" />
+  </form>
+
+  <div id="to-do-list">
+    {% for task in desk_to_do_tasks %}
+      <!-- CELL -->
+      {% if task.task_completed == False %}
+      <div id="to-do-cell" style="border:2px solid #E74C3C;">
+        <div id="left-part">
+          <p style="color:#E74C3C;"><i class="fa fa-circle"></i></p>
+        </div>
+        <!-- /left-part -->
+        <div id="content">
+          <h5><span style="border: 1px solid #E74C3C; color: #E74C3C; padding:3px; border-radius:3px;">{{task.user.username}} </span> <span id="date">{{task.publish_date}}</span></h5>
+          <p>{{task.content}}</p>
+        </div>
+        <!-- /content -->
+        <div id="right-part">
+          <form method="post" action="{% url 'to_do' deskname=desk.name %}">
+            {% csrf_token %}
+            <input type="hidden" value="{{ task.id }}" name="hidden_id"/>
+            <input value="X" type="submit" name="delete_button" id="delete_button" />
+          </form>
+          <form method="post" class="text-center" action="{% url 'to_do' deskname=desk.name %}">
+            {% csrf_token %}
+            <input type="hidden" value="{{ task.id }}" name="hidden_id"/>
+            <input type="submit" name="check_button" id="check_button" style="border:2px solid #E74C3C" value=" "/>
+          </form>
+        </div>
+        <!-- right part -->
+      </div>
+      <!-- /cell -->
+      {% elif task.task_completed == True %}
+      <div id="to-do-cell" style="border:2px solid #2ECC71;">
+        <div id="left-part">
+          <p style="color:#2ECC71;"><i class="fa fa-circle"></i></p>
+        </div>
+        <!-- /left-part -->
+        <div id="content">
+          <h5><span style="border: 1px solid #2ECC71; color: #2ECC71; padding:3px; border-radius:3px;">{{task.user.username}} </span> <span id="date">{{task.publish_date}}</span></h5>
+          <p>{{task.content}}</p>
+        </div>
+        <!-- /content -->
+        <div id="right-part">
+          <form method="post">
+            {% csrf_token %}
+            <input type="hidden" value="{{ task.id }}" name="hidden_id"/>
+            <input value="X" type="submit" name="delete_button" id="delete_button" />
+          <form method="post" class="text-center">
+            {% csrf_token %}
+            <button type="submit" name="check_button" id="check_button" style="border:2px solid #2ECC71"><span><i class="fa fa-check"></i></span></button>
+          </form>
+        </div>
+        <!-- right part -->
+      </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+  <!-- /to do list -->
+
+</div>
+<!-- /wrapper -->
+{% endblock %}

@@ -1,0 +1,95 @@
+#search_bar {
+    display: inline;
+}
+
+#search_bar input {
+    padding: 1px 10px !important;
+    border-top: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    margin-right: 0px !important;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    display: inline;
+}
+
+#search_bar input:hover {
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
+    transition: 0.5s;
+    padding: 0px 9px !important
+
+}
+#search_panel {
+  height: auto;
+  width: 310px;
+  background-color: #F1F1F1;
+  position: absolute;
+  margin-left: 230px !important;
+  border-radius: 10px !important;
+  padding: 10px !important;
+  transition: 0.5s;
+  display: none;
+  z-index: 1;
+}
+/*
+#search_bar:hover ~ #search_panel {
+  display: block !important;
+  transition: 0.5s;
+}
+*/
+#search_user_cell {
+  background-color: white;
+  margin-top: 10px !important;
+  height: 70px !important;
+  width: 100%;
+  z-index: 1;
+  border-radius: 5px;
+  padding: 10px !important;
+  transition: 0.5s;
+}
+#search_user_cell h4 {
+  display: inline;
+  margin-left: 15px !important;
+}
+#search-panel-close {
+  font-size: 12px;
+  margin: 0px !important;
+  padding: 5px !important;
+  border-radius: 8px;
+  background-color: transparent;
+  color: black;
+  float: right;
+  border: 1px solid transparent;
+}
+#search-panel-close:hover {
+  background-color: white;
+  color: #1997F0;
+  transition: 0.5s;
+}
+#search-button{
+  padding: 1px 10px !important;
+  border-right: 1px solid lightgray;
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin-left: -5px !important;
+}
+#search-button:hover {
+  border-top: 2px solid black;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  transition: 0.5s;
+  padding: 0px 9px !important;
+}
+
+
+@media only screen and (max-width:1000px) {
+
+  #search_bar {
+    display: none;
+  }
+
+}

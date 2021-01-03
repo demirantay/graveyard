@@ -1,0 +1,301 @@
+{% extends 'base.html' %}
+{% load cloudinary %}
+{% load staticfiles %}
+
+{% block csslink %}
+<link rel="stylesheet" href="{% static 'twitter_app/css/profile-page.css' %}" />
+<link rel="stylesheet" href="{% static 'twitter_app/css/search-bar.css' %}" />
+
+{% endblock %}
+
+
+<!-- SEARCH MECHNAISM -->
+<!-- =============================================================== -->
+{% block searchForm %}
+<form id="search_bar" action="{% url 'profile' %}" method="GET" accept-charset="utf-8">
+  {{ search_form }}
+  <button id="search-button" type="submit"><i class="fa fa-search"></i></button>
+</form>
+
+<!-- hidden search panel -->
+<div id="search_panel">
+  <button id="search-panel-close"><i class="fa fa-close"></i></button>
+  <br />
+  <!-- user cells generated from the search keyword -->
+  <div id="search_user_cell">
+    <img src="{{ filtered_db_user_settings.profile_photo.url }}" alt="pp" height="50px" width="50px" style="border-radius:50%;"/>
+    {%  if not filtered_db_user %}
+      <a href=""><h4>@{{ filtered_db_user }}</h4></a>
+    {% else %}
+      <a href="{% url 'other_user_profile' filtered_db_user.username %}"><h4>@{{ filtered_db_user.username }}</h4></a>
+    {% endif %}
+  </div>
+</div>
+
+<script src="{% static 'twitter_app/js/search_bar.js' %}" type="text/javascript"></script>
+{% endblock %}
+
+
+
+
+
+
+<!-- BLOCK CONTENT -->
+<!-- =============================================================== -->
+{% block content %}
+<style>
+</style>
+
+<div class="row" id="main-content">
+
+  <!-- LEFT BIO/TRENDS/SUGESSTIONS PART -->
+  <div class="col-md-4" id="left-part">
+    <!-- PP -->
+    <div id="profile-picture" class="text-center">
+      {%if current_user_settings.profile_photo%}
+      <img alt="profile_image" src=" {{ current_user_settings.profile_photo.url }}" height="230px" width="230px">
+      {% else %}
+      <img alt="profile_image_default" src=" {{ 1234567890_default.png }}" height="230px" width="230px">
+      {% endif %}
+    </div>
+
+    <!-- Profile BIO -->
+    <div id="profile-bio">
+      <h3><b>{{ current_user_settings.first_name }}</b></h3>
+      <br>
+      <p id="username">@{{ current_user.username }}</p>
+      <br>
+      <p id="bio">{{ current_user_settings.bio }}</p>
+      <br>
+      <div id="follower-info">
+        <div class="row ">
+          <a href="{% url 'profile' %}">
+            <div class="col-xs-4">
+              <h4 class="follow-info-number">{{ current_user_tweets_count }}</h4>
+              <p class="follow-info-description">Tweets</p>
+            </div>
+          </a>
+          <a href="{% url 'follow_info' %}">
+            <div class="col-xs-4">
+              <h4 class="follow-info-number">{{ current_user_followers_count }}</h4>
+              <p class="follow-info-description">Followers</p>
+            </div>
+          </a>
+          <a href="{% url 'follow_info' %}">
+            <div class="col-xs-4">
+              <h4 class="follow-info-number"> {{ current_user_followings_count }}</h4>
+              <p class="follow-info-description">Following</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <!-- / follwoer / following / tweets info -->
+      <br>
+      <p><i class="fa fa-map-marker"></i> {{ current_user_settings.location }}</p>
+      <a href="{{ current_user_settings.personal_link }}" <p><i class="fa fa-chain"></i> {{ current_user_settings.personal_link }} </p></a>
+    </div>
+    <!-- / Profile bio -->
+
+    <!-- Follow suggestions -->
+    <!-- DONT FORGET MAXIMUM 5 CELLS OTHERWISE THEY BREACH THEIR FRAME -->
+    <div id="follow-suggestion-box">
+      <h4>You may also like</h4>
+      {% for following, following_settings in following_data %}
+        <div id="suggestion-profile">
+          <div class="row">
+            <div class="col-xs-3">
+              <img alt="suggestion_img" src="{{ following_settings.profile_photo.url }}" height="52px" width="52px">
+            </div>
+            <div class="col-xs-9" id="suggestion-profile-info">
+              <a href="{% url 'other_user_profile' following.followed %}">{{ following_settings.first_name }}</a>
+              <p> @{{ following.followed }} </p>
+            </div>
+          </div><!-- /row -->
+        </div><!-- suggestion cell -->
+      {% endfor %}
+    </div><!-- /box -->
+    <!-- / follow sugestion box -->
+
+  </div>
+  <!-- /LEFT PART -->
+
+  <!-- ################################## -->
+
+  <!-- RIGHT PART -->
+  <div class="col-md-7" id="right-part">
+    <!-- TWEETS PART -->
+    <div class="right-part">
+      <!-- Right part top navbar -->
+      <div id="right-part-nav">
+        <button id="tweets-panel-opener-btn" class="btn btn-default">Tweets</button>
+        <button id="retweets-panel-opener-btn" class="btn btn-default">Retweets</button>
+
+        <button id="tweet-btn" class="btn btn-default">Tweet</button>
+        <!-- Tweet mechanism -->
+        <div id="tweet-mechanism">
+          <button id="tweet-mechanism-close-btn"><i class="fa fa-close"></i></button>
+          <h3><b>Tweet</b></h3>
+          <br>
+          <hr>
+          <form method="POST" action="{% url 'profile' %}">
+            {% csrf_token %}
+            {{ tweet_form }}
+            <input id="panel-tweet-btn" type="submit" value="Tweet" class="btn btn-default" />
+          </form>
+        </div><!-- /tweet-mechanism -->
+        <!-- tweet-mechanism panel styling -->
+        <style>
+
+        </style>
+        <!-- displaying of tweet-mechanism on button click -->
+        <script>
+          //TWEET MECHANISM
+          var tweet_button = document.getElementById('tweet-btn');
+          var tweet_mechanism = document.getElementById('tweet-mechanism');
+          var close_panel = document.getElementById('tweet-mechanism-close-btn');
+          tweet_button.onclick = function() {
+            tweet_mechanism.style.display = 'block';
+          }
+          close_panel.onclick = function() {
+            tweet_mechanism.style.display = 'none';
+          }
+        </script>
+
+      </div><!-- /right part nav -->
+
+      <div id="tweet-container">
+      <!-- Tweets -->
+      {% for tweet in current_user_tweets %}
+        <div id="tweet">
+          <div class="row">
+            <div class="col-xs-1 text-center" id="tweet-left-part">
+              {%if current_user_settings.profile_photo%}
+              <img alt="profile_image" src=" {{ current_user_settings.profile_photo.url }}" height="52px" width="52px">
+              {% else %}
+              <img alt="profile_image_default" src=" {{ 1234567890_default.png }}" height="52px" width="52px">
+              {% endif %}
+            </div><!-- /tweet-left-part -->
+            <div class="col-xs-11" id="tweet-right-part">
+              <div id="tweet-right-part-head-info">
+                <a href="{% url 'profile' %}"><h5>{{ current_user_settings.first_name }}</h5></a>
+                <p id="tweet-username">@{{ current_user.username }}</p>
+                <p style="font-size:12px;">{{ tweet.publish_date }}</p>
+              </div><!-- /tweet-right-part-head-info -->
+
+              <!-- 280 char limit -->
+              <p> {{ tweet.tweet_content }} </p>
+              <div id="tweet-right-perform-choices">
+                <form method="POST" action="{% url 'profile' %}" id="retweet_form">
+                  {% csrf_token %}
+                  <input type="hidden" name='hidden_retweet_value' value="{{ tweet.id }}" />
+                  <input type="submit" name="retweet_button" style="color:gray;" value="&#8634; {{ tweet.tweet_retweets }}" />
+                </form>
+
+                <form method="POST" action="{% url 'profile' %}">
+                  {% csrf_token %}
+                  <input type="hidden" name="hidden_tweet_value" value="{{ tweet.id }}" />
+                  <input type="submit" name="like_button" value="	&hearts; {{ tweet.tweet_likes }}">
+                </form>
+                <style>
+                  #tweet-right-perform-choices form {
+                    display: inline;
+                  }
+                  #tweet-right-perform-choices form input {
+                    background-color: transparent;
+                    border: 1px solid transparent;
+                    margin-right: 20px !important;
+                  }
+                  #tweet-right-perform-choices form input:hover {
+                    color: #1997F0;
+                    transition: 0.5s;
+                  }
+                </style>
+              </div><!-- /tweet-right-perform-choices -->
+            </div><!-- tweet-right-part-->
+          </div> <!-- /row -->
+        </div><!-- /tweet -->
+      {% endfor %}
+    </div>
+
+
+      <div id="retweet-container">
+      {% for retweet in retweets %}
+      <!-- Retweet -->
+      <div id="retweet">
+        <div class="row">
+          <div class="col-xs-1 text-center" id="tweet-left-part">
+            <img alt="pp_img" src="{{ retweet.retweet_settings.profile_photo.url }}" height="52px" width="52px">
+          </div>
+          <div class="col-xs-11" id="tweet-right-part">
+            <p id="retweet-p"><i class="fa fa-retweet"></i> {{ current_user.username }} retweeted</p>
+            <div id="tweet-right-part-head-info">
+              <a href="{% url 'other_user_profile' retweet.retweet.user.username %}">
+                <h5>{{ retweet.retweet_settings.first_name }}</h5>
+              </a>
+              <p id="tweet-username">@{{ retweet.retweet.user.username }}</p>
+              <p>{{ retweet.retweet.publish_date }}</p>
+            </div>
+            <!-- 280 char limit -->
+            <p>{{ retweet.retweet.tweet_content }}</p>
+            <div id="tweet-right-perform-choices">
+              <form method="POST" action="{% url 'profile' %}">
+                {% csrf_token %}
+                <input type="hidden" name="hidden_retweet_value" value="{{ retweet.retweet.id }}" />
+                <input type="submit" name="retweet_like_button" value="	&hearts; {{ retweet.retweet.tweet_likes }}">
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- tweet exapmle 2 -->
+      {% endfor %}
+    </div>
+
+
+    <style>
+    #tweet-container {
+      display: block;
+    }
+
+    #retweet-container {
+      display: none;
+    }
+
+    #right-part-nav button {
+      margin-right: 20px !important;
+      padding: 2px 10px !important;
+      font-size: 17px;
+      border: 1px solid transparent;
+    }
+
+    #right-part-nav button:hover {
+      background-color: lightgray;
+      transition: 0.5s;
+    }
+    </style>
+    <script>
+      var tweets_panel_btn = document.getElementById("tweets-panel-opener-btn");
+      var retweets_panel_btn = document.getElementById('retweets-panel-opener-btn');
+      var tweet_container = document.getElementById('tweet-container');
+      var retweet_container = document.getElementById('retweet-container');
+
+      tweets_panel_btn.onclick = function() {
+        tweet_container.style.display = 'block';
+        retweet_container.style.display = 'none';
+      }
+
+      retweets_panel_btn.onclick = function() {
+        tweet_container.style.display = 'none';
+        retweet_container.style.display = 'block';
+      }
+
+    </script>
+
+    </div><!-- right part  -->
+  </div><!-- right part -->
+  <div class="col-md-1"></div>
+  <!-- / Right Part -->
+
+</div><!-- container -->
+<!-- /main content -->
+{% endblock %}

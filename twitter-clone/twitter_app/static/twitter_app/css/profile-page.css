@@ -1,0 +1,330 @@
+/*
+   twitter blue color : #1997F0
+*/
+
+* {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+html body {
+  font-family: 'Roboto', sans-serif;
+  height: auto;
+  background-color: #E2E9EE;
+}
+
+/* MAIN CONTENT ---------------------- */
+
+#main-content {
+  padding: 1vh !important;
+}
+
+/*LEFT PART -------------------------*/
+
+#left-part {
+  height: 200px;
+  background-color: white;
+  margin-top: 70px !important;
+}
+
+#profile-picture {
+  margin-bottom: 25px !important;
+  background-color: #E2E9EE;
+}
+
+#profile-picture img {
+  height: 230px;
+  border-radius: 50%;
+  border: 5px solid white;
+}
+
+#profile-bio {
+  padding: 0px 60px !important;
+}
+
+#profile-bio p i {
+  width: 17px;
+}
+
+#profile-bio a p i {
+  width: 17px;
+}
+
+#username {
+  margin-top: -2vh !important;
+  color: gray;
+}
+
+#follower-info {
+  border-radius: 4px;
+}
+
+#follower-info div a {
+  font-size: 12px;
+  color: black;
+}
+
+#follower-info div a:hover {
+  color: #1997F0;
+  transition: 0.2s;
+}
+
+#follow-suggestion-box {
+  background-color: white;
+  height: 380px;
+  width: 75%;
+  margin: 0 auto !important;
+  margin-top: 25px !important;
+  padding: 12px !important;
+}
+
+#follow-suggestion-box h4 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#follow-suggestion-box div {
+  height: 57px;
+  margin: 5px 0px !important;
+  background-color: white;
+}
+
+#follow-suggestion-box div img {
+  height: 52px;
+  border-radius: 50%;
+  margin: 2px !important;
+}
+
+#follow-suggestion-box div a:hover {
+  transition: 0.2s;
+  color: #1997F0;
+}
+
+#suggestion-profile-info {
+  padding-top: 10px !important;
+}
+
+#suggestion-profile div a {
+  color: black;
+  margin-top: 10px !important;
+}
+
+#suggestion-profile-info p {
+  color: gray;
+}
+
+
+/* RIGHT PART ------------------------ */
+
+#right-part {
+  height: auto !important;
+  background-color: white;
+  margin-top: 70px !important;
+}
+
+#right-part-nav {
+  border-bottom: 1px solid lightgray;
+  color: black;
+  padding: 17px !important;
+}
+
+
+#tweet {
+  height: auto;
+  width: 100%;
+  border-bottom: 1px solid lightgray;
+  padding: 10px !important;
+}
+
+#tweet-left-part {
+  background-color: white;
+  height: 149px !important;
+  padding: 3px !important;
+}
+
+#tweet-left-part img {
+  height: 52px;
+  border-radius: 50%;
+  margin-top: 10px !important;
+}
+
+#tweet-right-part {
+  height: auto;
+  background-color: white;
+  padding: 10px !important;
+}
+
+#tweet-right-part-head-info {
+  margin-bottom: 5px !important;
+}
+
+#tweet-right-part-head-info h5 {
+  display: inline !important;
+  font-weight: bolder;
+  margin-right: 5px !important;
+}
+
+#tweet-right-part-head-info a {
+    color: black;
+}
+
+#tweet-right-part-head-info a:hover {
+    color: #1997F0;
+    transition: 0.2s;
+}
+
+#tweet-right-part-head-info p {
+    display: inline !important;
+    margin-right: 5px !important;
+    color: gray;
+}
+
+#tweet-pub-date {
+  font-size: 5px !important;
+}
+
+#tweet-right-perform-choices {
+    color: gray;
+    padding-top: 15px !important;
+}
+
+#tweet-right-perform-choices  p {
+    display: inline;
+    margin-right: 60px !important;
+}
+
+#tweet-right-perform-choices form button {
+  display: inline;
+  margin-right: 60px !important;
+}
+
+#tweet-right-perform-choices a {
+    color: gray;
+}
+
+#tweet-right-perform-choices a:hover {
+    color: #1997F0;
+    transition: 0.2s;
+}
+
+#retweet {
+    height: auto;
+    width: 100%;
+    border-bottom: 1px solid lightgray;
+    padding: 10px !important;
+    padding-bottom: 30px !important;
+}
+
+#retweet-p {
+    color: gray;
+    margin-bottom: 4px !important;
+}
+
+@media only screen and (max-width:1000px) {
+
+  #main-content {
+    padding: 0vh !important;
+  }
+
+  /*LEFT PART -------------------------*/
+
+  #left-part {
+    height: auto;
+  }
+
+  #profile-picture img {
+    margin-bottom: 25px !important;
+  }
+
+  #tweet-left-part {
+    height: auto !important;
+    padding: 0px !important;
+  }
+
+  #tweet-left-part img {
+    height: 30px !important;
+    width: 30px !important
+  }
+
+  #tweet-right-part {
+    height: auto;
+  }
+
+}
+
+
+
+
+/* Tweet mechanism --------------- */
+#tweet-btn {
+  float: right;
+  margin-left: 20px !important;
+  display: inline;
+  padding: 2px 10px !important;
+  border-radius: 16px;
+  background-color: #1997F0;
+  border: 1px solid #1997F0;
+  color: white;
+}
+#tweet-btn:hover {
+  background-color: white;
+  border: 1px solid #1997F0;
+  color: #1997F0;
+  transition: 0.5s;
+}
+#tweet-mechanism {
+  height: 200px;
+  background-color: #DAF2FF;
+  border-radius: 10px;
+  display: none;
+  z-index: 1;
+  width: 100%;
+  margin-top: 30px !important;
+  margin-bottom: 30px !important;
+  padding: 15px !important;
+}
+#tweet-mechanism-close-btn {
+  float: right;
+  margin-left: 20px !important;
+  display: inline;
+  padding: 2px 10px !important;
+  border-radius: 16px;
+  background-color: #1997F0;
+  border: 1px solid #1997F0;
+  color: white;
+}
+#tweet-mechanism-close-btn:hover {
+  background-color: white;
+  border: 1px solid #1997F0;
+  color: #1997F0;
+  transition: 0.5s;
+}
+#tweet-mechanism form {
+  margin-top: 0px !important;
+}
+#tweet-mechanism-textarea {
+  border-radius: 10px;
+  width: 100%;
+  height: 60px;
+  margin-bottom: 15px !important;
+}
+#panel-tweet-btn {
+  height: 30px !important;
+  width: 50px !important;
+  display: inline;
+  float: right;
+  border-radius: 14px !important;
+  background-color: #1997F0;
+  border: 1px solid #1997F0;
+  color: white;
+  margin-top: 0px !important;
+}
+#panel-tweet-btn:hover {
+  background-color: white;
+  border: 1px solid #1997F0;
+  color: #1997F0;
+  transition: 0.5s;
+}
+#right-part-nav {
+  padding: 17px !important;
+}
