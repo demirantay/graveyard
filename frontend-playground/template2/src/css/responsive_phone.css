@@ -1,0 +1,186 @@
+/*
+    Phone (phones, 0 - 760px) --
+    (max column width: Auto / divided into 12 col)
+*/
+
+@media screen and (min-width: 0px) and (max-width: 760px) {
+
+  /* Menu --------------------------*/
+  #hidden-menu ul {
+    margin-top: 20%;
+  }
+
+  /* Laning Page ------------------*/
+
+  #landing_page {
+    background-color: white;
+    height: 50vh;
+    padding: 0px;
+
+  }
+
+  #landing_header {
+    width: auto;
+    height: auto;
+    right: 0px;
+    bottom: 0px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+  }
+
+  #landing_header h1 {
+    font-size: 35px;
+  }
+
+
+  /* BANNER LISTING THE SERVICES --------------------- */
+  #most_used_links {
+    height: auto;
+    padding: 0px 0px;
+  }
+
+  #first_link_row {
+    margin-bottom: 20px;
+  }
+
+  #most_used_links_img1 {
+    height: 320px;
+    width: 250px;
+    margin-top: 30px;
+  }
+
+  #horizontal_line1 {
+    margin-top: 10px;
+    margin-left: 0px;
+    z-index: 15px;
+  }
+
+  #link-to-photo1 {
+    margin-top: 10px;
+    width: 100%;
+    height: auto;
+  }
+
+  #link-to-photo1 a {
+    width: 40px;
+    margin-left: 50px;
+    text-decoration: underline;
+  }
+
+  #most_used_links_img2 {
+    display: none;
+  }
+
+  #horizontal_line2 {
+    display: none;
+  }
+
+  #link-to-photo2 {
+    display: none;
+  }
+
+  #link-to-photo2 a {
+    display: none;
+
+  }
+
+  #last_link_row {
+    margin-top: 80px;
+  }
+
+
+  #most_used_links_img3 {
+    height: 320px;
+    width: 250px;
+    margin-top: -50px;
+  }
+
+  /* About us ---------------------------------- */
+  #about_us {
+    height: auto;
+    padding: 60px 10px;
+  }
+
+  #about_left_side p {
+    text-align: left;
+    padding: 10px 30px;
+  }
+
+  #about_us_img {
+    height: 200px;
+    width: auto;
+  }
+
+  /* Quote section ---------------------- */
+  #quote_section {
+    height: auto;
+    padding: 60px 60px;
+    text-align: center;
+  }
+
+  #quote {
+    padding: 20px;
+    background-color: transparent;
+    text-align: center;
+  }
+
+  #quote h2 {
+    font-size: 30px;
+  }
+
+  #vertical_line_left {
+    display: none;
+  }
+
+  #vertical_line_right {
+    display: none;
+  }
+
+  /* Footer  ------------------------------ */
+  #footer {
+    height: auto;
+    padding: 30px 5px;
+  }
+
+  #footer-top {
+    background-color: #363434;
+    width: 100%;
+    padding: 10px;
+  }
+
+
+  #footer-top h1, ul span {
+    color: white;
+    margin-right: 10px;
+  }
+
+  #footer h1 {
+    z-index: 15;
+    margin-top: -15px;
+    margin-bottom: 30px;
+  }
+
+  #footer-top ul {
+    display: none;
+  }
+
+
+  #footer-top form input {
+    padding: 10px 15px;
+    margin-right: 10px;
+    z-index: 15;
+    margin-top: -15px;
+  }
+
+  #footer-top form button {
+    border: 1px solid white;
+    color: white;
+    background-color: #363434;
+    padding: 10px 15px;
+    z-index: 15;
+    margin-top: -15px;
+  }
+
+
+
+}

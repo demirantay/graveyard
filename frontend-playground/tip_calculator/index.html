@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+
+<head>
+  <title> Tip Calculator </title>
+
+  <!-- Meta Info -->
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <!-- FONT AWSOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- BASE CSS LINKS -->
+  <link rel="stylesheet" type="text/css" href="./main.css" />
+
+</head>
+
+<body>
+
+  <div id="container">
+
+    <h1>Tip Calculator</h1>
+
+    <form>
+      <input type="text" placeholder="$ Total Cost" id="total_cost" />
+      <input type="text" placeholder="How many people ?" id="people_amount" />
+      <label for="service_quality">Service Quality</label>
+      <select id="service_quality">
+        <option value="excellent">Excellent (%20 tip)</option>
+        <option value="normal">Normal (%10 tip)</option>
+        <option value="bad">Bad (%5 tip)</option>
+      </select>
+      <button type="submit" id="tip_calculator_submit_btn">Calculate</button>
+    </form>
+
+    <!-- Cost Splitter -->
+    <h3>Cost for each person: $<span id="each_person_cost">0</span></h3>
+
+    <!-- tip calculator -->
+    <h3>Tip you will pay: $<span id="tip_you_will_pay">0</span></h3>
+
+  </div>
+
+  <script src="tip_calculator.js"></script>
+
+</body>
+
+</html>

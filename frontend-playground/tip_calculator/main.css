@@ -1,0 +1,47 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  padding: 20px 40px;
+  text-align: center;
+}
+
+#container {
+  border: 1px solid #EAEDED;
+  border-radius: 4px;
+  padding: 10px;
+  width: 700px;
+  margin: 0 auto;
+  margin-top: 10%;
+}
+
+
+form input {
+  border-radius: 4px;
+  border: 1px solid lightgrey;
+  padding: 4px 7px;
+}
+
+form button {
+  background-color: #3498DB;
+  color: white;
+  border-radius: 4px;
+  padding: 4px 7px;
+  border: 0px;
+}
+
+form button:hover {
+  cursor: pointer;
+}
+
+h3 {
+  font-weight: 600;
+}
+
+h3 span {
+  background-color: #2ECC71;
+  padding: 2px 4px;
+  border-radius: 4px;
+  color: white;
+}

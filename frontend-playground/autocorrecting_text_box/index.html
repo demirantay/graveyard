@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+
+<head>
+  <title> Autocorrecting Text Box </title>
+
+  <!-- Meta Info -->
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <!-- FONT AWSOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- BASE CSS LINKS -->
+  <link rel="stylesheet" type="text/css" href="./main.css" />
+
+</head>
+
+<body>
+
+  <form id="autocorrecting-text-form">
+    <input onkeyup="get_most_similar_word()" id="autocorrecting-text-input" type="text" placeholder="Type something ..."/>
+  </form>
+
+  <div id="autocorrect-output">
+    <p>
+        Did you mean: <span id="autocorrect-program-guess"></span>
+    </p>
+  </div>
+
+  <script src="auto_correct.js"></script>
+
+</body>
+
+</html>

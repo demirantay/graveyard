@@ -1,0 +1,90 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  padding: 20px 40px;
+  text-align: center;
+}
+
+body h1 {
+  margin-top: 6%;
+}
+
+#user_selection_container form select {
+  font-size: 20px;
+}
+
+#user_selection_container form button {
+  font-size: 20px;
+  border-radius: 4px;
+  color: white;
+  background-color: #2C3135;
+  border: 1px solid #2C3135;
+}
+
+#user_selection_container form button:hover {
+  cursor: pointer;
+}
+
+#result_container {
+  border-radius: 5px;
+  border: 1px solid #EAEDED;
+  width: 400px;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+
+#user_win_status {
+  height: 100px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin-bottom: 10px;
+}
+
+#user_selected_gesture {
+  background-color: white;
+  width: auto;
+  height: 100px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+#computer_selected_gesture {
+  background-color: white;
+  width: auto;
+  height: 100px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.lost_banner {
+  background-image: url("./images/lost.png");
+}
+
+.paper {
+  background-image: url("./images/paper.png");
+}
+
+.rock {
+  background-image: url("./images/rock.png");
+}
+
+.scissors {
+  background-image: url("./images/scissors.png");
+}
+
+.tie_banner {
+  background-image: url("./images/tie.png");
+}
+
+.won_banner {
+  background-image: url("./images/won.png");
+}

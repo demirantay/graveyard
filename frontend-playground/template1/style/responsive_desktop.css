@@ -1,0 +1,19 @@
+/*
+    Medium devices (desktops, 992px and up) --
+    (max column width: 78px / divided into 12 col)
+*/
+
+@media screen and (max-width: 1000px) {
+  #about {
+    padding: 10px 20px;
+  }
+
+  #about div h3 {
+    margin-bottom: 20px;
+  }
+
+  #about-us-panel p {
+    font-size: 13px !important;
+  }
+
+}

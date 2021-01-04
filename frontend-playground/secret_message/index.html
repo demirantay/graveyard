@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+
+<head>
+  <title> Secret Calculator </title>
+
+  <!-- Meta Info -->
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <!-- FONT AWSOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- BASE CSS LINKS -->
+  <link rel="stylesheet" type="text/css" href="./main.css" />
+
+</head>
+
+<body>
+
+    <h1>Ceaser's Cipher</h1>
+    <h5>Note: Spaces and Uppercase letters are not supprted</h5>
+
+    <!-- encoding -->
+    <div id="encoding_container">
+      <form>
+        <input type="text" placeholder="Normal Message" id="normal_message" />
+        <input type="text" placeholder="Shift Key (max 25)" id="encrypt_shift_key" />
+        <button type="submit" id="encode_submit_btn">Encode</button>
+      </form>
+      <h3>Encrypted Message: <span id="encrypted_message" class="fa fa-lock">...</span></h3>
+    </div>
+
+    <!-- decoding -->
+    <div id="decoding_container">
+      <form>
+          <input type="text" placeholder="Encrypted Message" id="encoded_message" />
+          <input type="text" placeholder="Shift Key (max 25)" id="decrypt_shift_key" />
+          <button type="submit" id="decode_submit_btn">Decode</button>
+      </form>
+      <h3>Decrypted Message: <span id="decrypted_message" class="fa fa-unlock">...</span></h3>
+    </div>
+
+  <script src="secret_message.js"></script>
+
+</body>
+
+</html>

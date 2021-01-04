@@ -1,0 +1,84 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  padding: 20px 40px;
+  text-align: center;
+}
+
+#encoding_container {
+  border: 1px solid #EAEDED;
+  border-radius: 6px;
+  width: 500px;
+  padding-top: 20px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  word-break: break-all;
+}
+
+#encoding_container form input {
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  padding: 4px 5px;
+}
+
+#encoding_container form button {
+  color: white;
+  background-color: #2C3135;
+  border-radius: 5px;
+  border: 1px solid #2C3135;
+  padding: 4px 5px;
+}
+
+#encoding_container form button:hover {
+  cursor: pointer;
+}
+
+#encoding_container h3 {
+  text-align: left;
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+#encoding_container h3 span {
+
+}
+
+#decoding_container {
+  border: 1px solid #EAEDED;
+  border-radius: 6px;
+  width: 500px;
+  padding-top: 20px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  word-break: break-all;
+}
+
+#decoding_container form input {
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  padding: 4px 5px;
+}
+
+#decoding_container form button {
+  color: white;
+  background-color: #2C3135;
+  border-radius: 5px;
+  border: 1px solid #2C3135;
+  padding: 4px 5px;
+}
+
+#decoding_container form button:hover {
+  cursor: pointer;
+}
+
+#decoding_container h3 {
+  text-align: left;
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+#decoding_container h3 span {
+
+}

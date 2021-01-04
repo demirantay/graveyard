@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+
+<head>
+  <title> UI Design </title>
+
+  <!-- Meta Info -->
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <!-- FONT AWSOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- BASE CSS LINKS -->
+  <link rel="stylesheet" type="text/css" href="./main.css" />
+
+</head>
+
+<body>
+
+  <h1>Self Design Your UI Elements!</h1>
+
+  <!-- button preview -->
+  <div id="button_preview">
+    <button id="button_element" class="btn_base red_color normal_type ">Value</button>
+  </div>
+
+  <!-- form tools for editing the button -->
+  <form>
+    <label for="colors">Color: </label>
+    <select id="colors">
+      <option value="red">Red</option>
+      <option value="purple">Purple</option>
+      <option value="blue">Blue</option>
+      <option value="green">Green</option>
+      <option value="yellow">Yellow</option>
+      <option value="orange">Orange</option>
+      <option value="grey">Grey</option>
+      <option value="navy">Navy</option>
+      <option value="black">Black</option>
+    </select>
+    <br />
+    <label for="type">Type: </label>
+    <select id="type">
+      <option value="normal_type">Normal</option>
+      <option value="hard_borders_type">Hard Borders</option>
+    </select>
+    <br />
+    <button type="submit" id="ui_design_submit_btn">Run ></button>
+  </form>
+
+  <!-- final elements css values -->
+
+  <div id="button_element_css_values">
+    <h4>CSS Code:</h4>
+
+    <pre style="text-align:left;">
+      # Btn Base
+
+      .btn_base {
+        font-size: 24px;
+      }
+
+      .btn_base:hover {
+        cursor: pointer;
+      }
+    </pre>
+
+    <pre style="text-align:left;">
+      # Btn Color
+      <span id="color_code_snippet"></span>
+    </pre>
+
+    <pre style="text-align:left;">
+      # Btn Type
+      <span id="type_code_snippet"></span>
+    </pre>
+  </div>
+
+
+  <script src="ui_design.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+
+<head>
+  <title> RPS </title>
+
+  <!-- Meta Info -->
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <!-- FONT AWSOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- BASE CSS LINKS -->
+  <link rel="stylesheet" type="text/css" href="./main.css?v=1.0.4034.343343" />
+
+</head>
+
+<body>
+
+    <h1>Rock Paper Scissors</h1>
+
+    <!-- container -->
+    <div id="user_selection_container">
+      <form>
+          <select id="user_selection">
+            <option value="rock">Rock</option>
+            <option value="paper">Paper</option>
+            <option value="scissors">Scissors</option>
+          </select>
+          <button type="submit" id="play_submit_btn">Play!</button>
+      </form>
+    </div>
+
+    <!-- end result container -->
+    <div id="result_container">
+        <img id="user_win_status" src="images/lost.png"/>
+        <br />
+        <img id="user_selected_gesture" src="images/rock.png"/>
+        <img id="computer_selected_gesture" src="images/rock.png"/>
+        <!--
+        <div id="user_win_status" class=""></div>
+        <div id="user_selected_gesture" class=""></div>
+        <div id="computer_selected_gesture" class=""></div>
+      -->
+    </div>
+
+  <script src="rock_paper_scissors.js"></script>
+
+</body>
+
+</html>

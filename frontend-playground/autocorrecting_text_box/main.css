@@ -1,0 +1,31 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+#autocorrecting-text-form {
+  text-align: center;
+  margin-top: 10%;
+}
+
+#autocorrecting-text-form input {
+  padding: 10px 35px;
+  border-radius: 8px;
+  border: 3px solid #2C3135;
+  font-size: 22px;
+}
+
+#autocorrect-output {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#autocorrect-output p {
+  color: grey;
+}
+
+#autocorrect-output p span {
+  background-color: #E74C3C;
+  border-radius: 4px;
+  padding: 2px 5px;
+  color: white;
+}

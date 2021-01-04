@@ -1,0 +1,185 @@
+/* index CSS File ----- */
+
+/*
+  Color Pallette
+  --------------
+  Dark Red:     #C0392B
+  Light Red:    #E74C3C
+  Dark Purple:  #8E44AD
+  Light Purple: #9B59B6
+  Dark Blue:    #2980B9
+  Light Blue:   #3498DB
+  Dark Green:   #27AE60
+  Light Green:  #2ECC71
+  Dark Yellow:  #F1C40F
+  Light Yellow: #F7DC6F
+  Dark Orange:  #E67E22
+  Light Orange: #F39C12
+  Dark Grey:    #7F8C8D
+  Light Grey:   #CACFD2
+  Dark: Navy:   #2C3E50
+  Light: Navy:  #34495E
+  Black:        #2C3135
+  FORM BORDERS: #EAEDED
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', serif;
+  color: #363434;
+}
+
+p {
+  font-family: 'Roboto', serif;
+  font-size: 14px;
+  color: #363434;
+}
+
+a {
+  font-family: 'Roboto', serif;
+}
+
+
+.top-banner {
+  padding-top: 20px;
+}
+
+.top-banner {
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #EAEDED;
+  width: 500px;
+  margin: 0 auto;
+}
+
+.content-card {
+  width: 500px;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.project-cell {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #EAEDED;
+  padding-bottom: 10px;
+}
+
+.project-cell-left-part {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.project-cell-left-part h2 {
+  color: #2C3135;
+  font-size: 23px;
+  margin-left: 10px;
+  margin-bottom: 4px;
+}
+
+.project-cell-left-part p {
+  margin-left: 10px;
+  color: #7F8C8D;
+}
+
+.project-cell-right-part {
+  display: inline-block;
+  float: right;
+  vertical-align: middle;
+  margin-top: 10px;
+}
+
+.project-cell-right-part a {
+  display: inline-block;
+  color: #27AE60;
+  text-decoration: none;
+  margin-right: 5px;
+}
+
+.tag {
+  display: inline-block;
+  margin-right: 15px;
+  padding: 4px 6px;
+  border-radius: 4px;
+  color: white;
+}
+
+.tag-react {
+  background-color: #2980B9;
+}
+
+.tag-css {
+  background-color: #9B59B6;
+}
+
+.tag-js {
+  background-color: #F1C40F;
+}
+
+.tag-react-native {
+  background-color: #3498DB;
+}
+
+.tag-electron {
+  background-color: #34495E;
+}
+
+.footer {
+  padding-top: 30px;
+}
+
+.footer p {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.footer p a {
+  color: #27AE60;
+  text-decoration: none;
+}
+
+
+
+/* Mobile Small  --------------------------------------------------------- */
+@media screen and (min-width: 0px) and (max-width: 320px) {
+}
+
+
+/* Mobile Medium  --------------------------------------------------------- */
+@media screen and (min-width: 321px) and (max-width: 375px) {
+
+}
+
+
+/* Mobile Large - --------------------------------------------------------- */
+@media screen and (min-width: 376px) and (max-width: 425px) {
+
+}
+
+
+/* Tablet - --------------------------------------------------------------- */
+@media screen and (min-width: 426px) and (max-width: 768px) {
+
+
+}
+
+
+/* Laptop ------------------------------------------------------------------ */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  /* Nothing to do for now does not break too much */
+}
+
+
+/* Laptop Large -------------------------------------------------------------*/
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  /* Nothing to do for now does not break too much */
+}
+
+
+/* 4K Large Desktop ------------------------------------------------------- */
+@media screen and (min-width: 1441px) {
+  /* Nothing to do for now does not break too much */
+}

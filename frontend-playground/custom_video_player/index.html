@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+
+<head>
+  <title> Video Player </title>
+
+  <!-- Meta Info -->
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <!-- FONT AWSOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- BASE CSS LINKS -->
+  <link rel="stylesheet" type="text/css" href="./main.css" />
+
+</head>
+
+<body>
+
+  <div id="top_banner">
+    <h1>Y T F L X</h1>
+  </div>
+
+  <div id="video_player">
+    <video id="video" controls>
+      <source src="video.mp4" type="video/mp4"  />
+      <p>Your browser doesn't support HTML5 video. Here is a link to the video <a href="video.mp4"link</a></p>
+    </video>
+    <!-- controls are below here -->
+    <div id="video_controls">
+        <button id="play_pause"><span id="playStopIcons" class="fa fa-play"></span></button>
+        <button id="rewind"><span class="fa fa-backward"></span></button>
+        <span id="timer">00:00</span>
+        <button id="forward"><span class="fa fa-forward"></span></button>
+        <button id="full_screen"><span class="fa fa-arrows-alt"></span></button>
+        <button id="volume"><span class="fa fa-volume-up"></span></button>
+    </div>
+
+    <!-- channel pp and video information header date ... etc. -->
+    <div id="video_meta_info">
+      <h3>Inside Aaron Paul’s Rustic Riverside Home In Idaho | Open Door | Architectural Digest</h3>
+      <p><span>5,545,826</span> views</p>
+      <p>Feb 11, 2020</p>
+    </div>
+
+
+
+  </div>
+
+  <script src="custom_video_player.js"></script>
+
+</body>
+
+</html>

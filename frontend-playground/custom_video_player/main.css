@@ -1,0 +1,144 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  text-decoration: none !important;
+}
+
+body {
+  background-color: #110908;
+}
+
+#top_banner {
+  background-color: #110908;
+  width: 100%;
+  padding: 20px 0px;
+}
+
+#top_banner h1 {
+  text-align: center;
+  color: white;
+  font-weight: 100px;
+  font-family: "Roboto";
+  font-size: 35px;
+}
+
+#video_player {
+  text-align:center;
+  width: 100%;
+  height: 70vh;
+  background-color: lightgrey;
+  margin-bottom: 80px;
+}
+
+#video_player video {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
+#video_controls {
+  opacity: 0.5;
+  width: 500px;
+  margin: 0 auto;
+  background-color: black;
+  transition: 0.5s;
+  z-index: 99;
+  position: relative;
+  margin-top: -100px;
+  border-radius: 30px;
+  padding: 10px 30px;
+  text-decoration: none;
+  text-align: left;
+}
+
+#video_controls button {
+  display: inline;
+  text-decoration: none;
+}
+#video_controls button:hover {
+  cursor: pointer;
+}
+
+#play_pause {
+  color: white;
+  background-color: transparent;
+  padding: 5px;
+  border: 1px solid transparent;
+  font-size: 16px;
+  text-decoration: none
+}
+
+#rewind {
+  color: white;
+  background-color: transparent;
+  padding: 5px;
+  border: 1px solid transparent;
+  font-size: 16px;
+  margin-left: 155px;
+}
+
+#forward {
+  color: white;
+  background-color: transparent;
+  padding: 5px;
+  border: 1px solid transparent;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+#timer {
+  display: inline;
+  font-family: "Roboto";
+  color: white;
+  text-decoration: none;
+}
+
+#volume {
+  color: white;
+  background-color: transparent;
+  padding: 5px;
+  border: 1px solid transparent;
+  font-size: 16px;
+  float: right;
+  vertical-align: middle;
+}
+
+#full_screen {
+  color: white;
+  background-color: transparent;
+  padding: 5px;
+  border: 1px solid transparent;
+  font-size: 16px;
+  float: right;
+  vertical-align: middle;
+}
+
+#video_player:hover #video_controls {
+  opacity: 1;
+}
+
+#video_meta_info {
+  background-color: transparent;
+  margin-top: 60px;
+  text-align: center;
+  padding: 0px 30px;
+  font-family: "Roboto";
+  color: white;
+  text-decoration: none;
+}
+
+#video_meta_info h3 {
+  text-decoration: none;
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: lightgrey;
+}
+
+#video_meta_info p {
+  text-decoration: none;
+  font-size: 16px;
+  display: inline;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: grey;
+}
