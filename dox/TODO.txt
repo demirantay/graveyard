@@ -1,0 +1,45 @@
+# TO-DO for Dox compiler
+
+Main compiler reference:
+```
+f = open(filename)
+generate(optimize(semantic(parse(scan(f)))))
+f.close()
+```
+
+Scrum framework reference:
+  - Product Backlog
+  - Sprint Backlog
+    - In Progress
+    - Quality Testing
+    - Documentation
+    - Spring Review
+    - Blocked
+  - Done & Deploy
+
+
+----------------------------------------------------
+
+Product Backlog:
+- [ ] Lexical Analyzer
+- [ ] Symbol Table
+- [ ] Error Handling
+- [ ] Syntax Analyzer
+- [ ] Semantic Analyzer
+- [ ] Intermediate Code Generator
+- [ ] Code Optimizer
+- [ ] Target Code Generation
+
+----------------------------------------------------
+
+Sprint Backlog and TODO:
+
+In this sprint we are going to implement the Lexical Analyzer. Lexical
+analysis is just getting an input file and outputting a token stream. While
+doing so we skip the spaces, tabs, newlines ... etc. but keep track of lines
+
+- [ ] Implement Lexical Analyzer
+- [ ] Test everything
+- [ ] Normal documentation
+- [ ] Devlog documentation
+- [ ] Review everything, and deploy.
