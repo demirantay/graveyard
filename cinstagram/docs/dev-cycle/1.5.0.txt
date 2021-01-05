@@ -1,0 +1,22 @@
+Plan (finish these apps frontend):
+
+- [x] Re-design help-centre
+- [x] redesign about
+- [x] redesign signup-login
+- [x] Profile Settings
+
+--------------
+
+# Profile Settings Frontend
+
+- [x] edit profile page
+- [x] change password page
+- [x] email and sms
+- [x] privacy and security
+- [x] responsive
+
+--------------
+
+#########
+
+After completing above since it is frontend skip test and documentation but write the devlog

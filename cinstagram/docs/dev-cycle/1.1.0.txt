@@ -1,0 +1,23 @@
+# `Discuss`
+
+- Programmer Panel is a god-mode panel that has the ultimate control over everything on the site. I can add stuff to control such as users, passwords .. usernames .. deleting posts and such but i am going to add an admin panel for that kind of low level administration.  However for programmer panel I am going to add stuff like ... latency analysis, graphs with kafka about the request amount, adding admins or deleting admins ... etc.
+
+- Get the css inspiration from here: https://dribbble.com/shots/7125946-New-Magento-dashboard-concept/attachments/129217?mode=media
+
+# `Design`
+
+- This will be basic since it is just a starter feature, will be improved in the future:
+  - login
+  - signup
+  - panel overview
+  - data: admin CRUD
+  - securing the login
+
+# `Plan`
+
+  - [x] Programmer Signup
+  - [x] Login
+  - [x] Panel overview page
+  - [x] admin CRUD forms
+  - [x] Test the code
+  - [x] Document the code

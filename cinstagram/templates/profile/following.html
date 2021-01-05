@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block specific_css_links %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/profile/profile.css' %}" />
+{% endblock %}
+
+
+{% block content %}
+<div class="followers-likers-container">
+
+  <!-- top banner -->
+  <div class="followers-likers-top-header-banner">
+    <h2>Following</h2>
+  </div>
+
+  <!-- user cells -->
+
+  {% for following in current_user_followings %}
+
+  <div class="user-cell">
+      <div class="followers-likers-user-cell-profile-photo" style="background-image: url('{{ following.followed_user_settings.profile_photo.url }}');"></div>
+      <a href="">
+      <h3>{{ following.followed_user.full_name }}</h3>
+      <h3 class="follower-likers-username">@{{ following.followed_user.username }}</h3>
+      </a>
+
+      {% if following.followed_user in accounts_current_user_following %}
+        <form method="POST" action="{% url 'profile_following' %}">
+            {% csrf_token %}
+            <input type="hidden" value="{{ following.followed_user.id }}" name="hidden_user_id" />
+            <input type="submit" value="Following" style="background-color: #2C3135" name="unfollow_submit_btn"/>
+        </form>
+      {% else %}
+        <form method="POST" action="{% url 'profile_following' %}">
+            {% csrf_token %}
+            <input type="hidden" value="{{ following.followed_user.id }}" name="hidden_user_id"  />
+            <input type="submit" value="Follow" name="follow_submit_btn"/>
+        </form>
+      {% endif %}
+  </div>
+
+  {% endfor %}
+
+  <div class="followers-likers-load-more-button">
+      <form>
+          <button type="submit" onclick="alert('this does not work')"><span class="fa fa-plus"></span></button>
+      </form>
+  </div>
+
+</div><!-- e/content container -->
+{% endblock %}

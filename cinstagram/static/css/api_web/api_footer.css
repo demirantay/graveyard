@@ -1,0 +1,82 @@
+.api-footer {
+  border-top: 1px solid lightgrey;
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.api-footer a {
+  color: black;
+  text-decoration: none;
+}
+
+
+
+/* Mobile Small  --------------------------------------------------------- */
+@media screen and (min-width: 0px) and (max-width: 320px) {
+  .api-footer {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .api-footer a {
+    font-size: 10px;
+    margin-right: 3px;
+    display: inline-block;
+  }
+
+}
+
+
+/* Mobile Medium  --------------------------------------------------------- */
+@media screen and (min-width: 321px) and (max-width: 375px) {
+  .api-footer {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .api-footer a {
+    font-size: 10px;
+    margin-right: 3px;
+    display: inline-block;
+  }
+}
+
+
+/* Mobile Large - --------------------------------------------------------- */
+@media screen and (min-width: 376px) and (max-width: 425px) {
+  .api-footer {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .api-footer a {
+    font-size: 10px;
+    margin-right: 3px;
+    display: inline-block;
+  }
+}
+
+
+/* Tablet - --------------------------------------------------------------- */
+@media screen and (min-width: 426px) and (max-width: 768px) {
+  /* nothing for now */
+}
+
+
+/* Laptop ------------------------------------------------------------------ */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  /* nothing for now */
+}
+
+
+/* Laptop Large -------------------------------------------------------------*/
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  /* nothing for now */
+}
+
+
+/* 4K Large Desktop ------------------------------------------------------- */
+@media screen and (min-width: 1441px) {
+  /* nothing for now */
+}

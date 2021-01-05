@@ -1,0 +1,94 @@
+{% load static %}
+
+<!doctype html>
+<html>
+
+<head>
+  <title>Cinstagram</title>
+
+  <!-- Meta Info -->
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="cinstagram, instagram, instagram-clone, cloning, instagram, python, flask, nginx" />
+  <meta name="description" content="Instagram clone built with flask python and nginx" />
+  <meta name="author" content="demir antay, Demir Antay, @demirantay" />
+
+  <!-- FAVICON -->
+
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,700|Prata" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Literata&display=swap" rel="stylesheet">
+
+  <!-- FONT AWSOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- MY CSS LINKS -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/api_web/api_base.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'css/api_web/api_top_nav.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'css/api_web/api_content_card.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'css/api_web/api_footer.css' %}" />
+
+</head>
+
+<body>
+  <div class="api-container">
+    <!-- TOP NAV MENU ###################################################### -->
+    <div class="api-top-nav">
+      <a href=""><img class="api-top-nav-logo" src="{% static 'branding/favicon.png' %}" alt="logo" /></a>
+      <!-- TOP NAV WILL BE EDITED ON MY DESIGN OF THE API -->
+      <a href="" class="api-top-nav-username">Account Name</a>
+    </div>
+
+
+    <!-- API CONTENT Card ################################################## -->
+    <div class="api-content-card">
+
+      <!-- left part: post list -->
+      <div class="api-content-card-left-part">
+        <a href="">Overview</a>
+        <a href="">Authentication</a>
+        <a href="">Post Headers</a>
+      </div>
+
+      <!-- right part: post content -->
+      <div class="api-content-card-right-part">
+        <h1>Overview</h1>
+
+        <p>
+            This is the Cinstagram API. Most of this will be used by bots in order
+            to create the traffic for the website. I mean I can add more functionality to
+            this but there is no need. All I need to document is to show how the API will
+            work with the bots.
+            <br />
+            <br />
+            Here is the bot's list:
+        </p>
+
+        <ul>
+          <li>__admin bot__: from time to time delees bad users post, suspends their accoutns ... etc.</li>
+          <li>__bad bot__  : intentianlly bad user to get caught to the admin</li>
+          <li>__user:bot__: try to mimick real personalities for example use real isntagrams real pages and photographies to create virtual clones of those people. For example joe rogan-clone uploads every post that joe rogan uploads but in a timely manner, changes it settings, logs in, logs out, uploads stories, chats with other bots ... etc.</li>
+          <li>__hacker bot__: intentionally tries to hack the site ddos attacks ... etc.</li>
+        </ul>
+
+      </div>
+    </div>
+
+
+    <!-- Footer ###########################################################  -->
+    <div class="api-footer">
+      <a href="">ABOUT US</a>
+      <a href="">SUPPORT</a>
+      <a href="">API</a>
+      <a href="">JOBS</a>
+      <a href="">LEGAL</a>
+    </div>
+
+
+  </div><!-- e/api container -->
+</body>
+
+</html>

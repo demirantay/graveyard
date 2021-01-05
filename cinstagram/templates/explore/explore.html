@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block specific_css_links %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/explore/explore.css' %}" />
+
+<style>
+
+  .explore-grid-view-post-cell {
+    background-color: black;
+    height: 260px;
+    width: 260px;
+    display: inline-block;
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-bottom: 30px;
+    vertical-align: top;
+
+    -webkit-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75);
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("{% static 'branding/profile_photo.jpg' %}");
+  }
+
+</style>
+{% endblock %}
+
+{% block content %}
+<!-- expolore container -->
+<div class="explore-container">
+
+  <!-- hashtag tag links -->
+  <div class="explore-hashtag-links">
+    <a href="">#hashTag1</a>
+    <a href="">#hashTag2</a>
+    <a href="">#hashTag3</a>
+    <a href="">#hashTag4</a>
+    <a href="">#hashTag5</a>
+    <a href="">#hashTag6</a>
+    <a href="">#hashTag7</a>
+    <a href="">#hashTag8</a>
+  </div>
+
+  <!-- grid view -->
+  <div class="explore-grid-view">
+    <!-- after three posts always break -->
+    <div class="explore-grid-view-post-cell">
+      <a href="">
+      <div class="explore-post-cell-link-container">
+        <span class="fa fa-heart"> 106</span>
+        <span class="fa fa-comment"> 14</span>
+      </div>
+      </a>
+    </div>
+
+
+    <div class="explore-grid-view-post-cell">
+      <a href="">
+      <div class="explore-post-cell-link-container">
+        <span class="fa fa-heart"> 106</span>
+        <span class="fa fa-comment"> 14</span>
+      </div>
+      </a>
+    </div>
+
+
+    <div class="explore-grid-view-post-cell">
+      <a href="">
+      <div class="explore-post-cell-link-container">
+        <span class="fa fa-heart"> 106</span>
+        <span class="fa fa-comment"> 14</span>
+      </div>
+      </a>
+    </div>
+
+    <br /> <!-- ALWAYS BREAK AFTER 3 POSTS -->
+
+  </div><!-- /grid view -->
+
+</div>
+{% endblock %}

@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load filters %}
+
+{% block specific_css_links %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/profile/profile.css' %}" />
+{% endblock %}
+
+{% block content %}
+<div class="profile-card">
+
+  <!-- top profile information -->
+  <div class="profile-card-information">
+
+      <div class="profile-card-information-left-part">
+        <img src="{{ current_user_settings.profile_photo.url }}" alt="profile-image" />
+      </div><!--e/left part -->
+
+      <div class="profile-card-information-right-part">
+        <div class="profile-card-information-right-part-top">
+          <h1>{{ current_user.username }}</h1>
+          <a href="{% url 'profile_settings_edit_profile' %}">Edit Profile</a>
+          <span class="fa fa-cog drop-down-menu"></span>
+        </div>
+
+        <div class="profile-card-information-right-part-middle">
+          <a><span>{{ post_count }}</span> Posts</a>
+          <a href="{% url 'profile_followers' %}"><span>{{ follower_count }}</span> Follower</a>
+          <a href="{% url 'profile_following' %}"><span>{{ following_count }}</span> Following</a>
+        </div>
+
+        <div class="profile-card-information-right-part-bottom">
+          <p><b>{{ current_user_settings.full_name }}</b></p>
+          <p>{{ current_user_settings.bio }}</p>
+        </div>
+      </div><!-- e/right part -->
+
+
+      <!-- bottom profile navigation -->
+      <div class="profile-card-navigation">
+        <a href="{% url 'profile_posts_page' %}"><span class="fa fa-th-large"></span> POSTS</a>
+        <a href="{% url 'profile_saved' %}"><span class="fa fa-bookmark"></span> SAVED</a>
+        <a href="{% url 'profile_tagged' %}"><span class="fa fa-tag"></span> TAGGED</a>
+      </div>
+
+
+    </div><!-- e/profile card information -->
+  </div> <!--e/ profile card -->
+
+
+  <!-- grid view -->
+  <div class="profile-grid-view">
+    <!-- after three posts always break -->
+
+    {% for post in all_posts %}
+
+      <!-- after three posts always break -->
+      <div class="grid-view-post-cell" style="background-image: url('{{ post.photo.url }}');">
+        <a href="{% url 'profile_single_post_page' post.id %}">
+        <div class="post-cell-link-container">
+          <span class="fa fa-heart">{{ all_posts_likes|get_key_value:post.id }}</span>
+          <span class="fa fa-comment">{{ all_posts_comments|get_key_value:post.id }}</span>
+        </div>
+        </a>
+      </div>
+
+      <!--
+      Some how suspicialiosuly the box breaking is working probably because of <thead>
+        div width however do not forget. If something breaks a good solution is
+        to
+
+        (psuedo-code)
+        if:
+        post.count % 3 == 0:
+          <br />
+      </thead>
+      -->
+
+    {% endfor %}
+
+
+  </div><!-- /grid view -->
+{% endblock %}

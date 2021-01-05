@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load filters %}
+
+{% block specific_css_links %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/profile/profile.css' %}" />
+{% endblock %}
+
+{% block content %}
+<div class="profile-card">
+
+  <!-- top profile information -->
+  <div class="profile-card-information">
+
+      <div class="profile-card-information-left-part">
+        <img src="{{ other_user_settings.profile_photo.url }}" alt="profile-image" />
+      </div><!--e/left part -->
+
+      <div class="profile-card-information-right-part">
+        <div class="profile-card-information-right-part-top">
+          <h1>{{ other_user.username }}</h1>
+
+          {% if other_user in accounts_current_user_following %}
+            <form class="profile_right_part_other_user_profile_follow_form" method="POST" action="{% url 'other_users_profile_posts_page' other_user.username %}">
+                {% csrf_token %}
+                <input type="hidden" value="{{ other_user.id }}" name="hidden_user_id"  />
+                <input type="submit" value="following" name="unfollow_submit_btn" />
+            </form>
+          {% else %}
+            <form class="profile_right_part_other_user_profile_follow_form" method="POST" action="{% url 'other_users_profile_posts_page' other_user.username %}">
+                {% csrf_token %}
+                <input type="hidden" value="{{ other_user.id }}" name="hidden_user_id"  />
+                <input type="submit" value="follow" name="follow_submit_btn" />
+            </form>
+          {% endif %}
+        </div>
+
+        <div class="profile-card-information-right-part-middle">
+          <a><span>{{ post_count }}</span> Posts</a>
+          <a href="{% url 'other_users_profile_followers' other_user.username %}"><span>{{ follower_count }}</span> Follower</a>
+          <a href="{% url 'other_users_profile_following' other_user.username %}"><span>{{ following_count }}</span> Following</a>
+        </div>
+
+        <div class="profile-card-information-right-part-bottom">
+          <p><b>{{ other_user_settings.full_name }}</b></p>
+          <p>{{ other_user_settings.bio }}</p>
+        </div>
+      </div><!-- e/right part -->
+
+
+      <!-- bottom profile navigation -->
+      <div class="profile-card-navigation">
+        <a href="{% url 'other_users_profile_posts_page' other_user.username %}"><span class="fa fa-th-large"></span> POSTS</a>
+        <a href="{% url 'other_users_profile_saved' other_user.username %}"><span class="fa fa-bookmark"></span> SAVED</a>
+        <a href="{% url 'other_users_profile_tagged' other_user.username %}"><span class="fa fa-tag"></span> TAGGED</a>
+      </div>
+
+
+    </div><!-- e/profile card information -->
+  </div> <!--e/ profile card -->
+
+
+  <!-- grid view -->
+  <div class="profile-grid-view">
+    <!-- after three posts always break -->
+
+    {% for post in all_bookmarked_posts %}
+
+      <!-- after three posts always break -->
+      <div class="grid-view-post-cell" style="background-image: url('{{ post.bookmarked_photo.photo.url }}');">
+        <a href="{% url 'other_users_profile_single_post_page' post.bookmarked_photo.user.username post.bookmarked_photo.id %}">
+        <div class="post-cell-link-container">
+          <span class="fa fa-heart">{{ all_bookmarked_posts_likes|get_key_value:post.id }}</span>
+          <span class="fa fa-comment">{{ all_bookmarked_posts_comments|get_key_value:post.id }}</span>
+        </div>
+        </a>
+      </div>
+
+      <!--
+      Some how suspicialiosuly the box breaking is working probably because of <thead>
+        div width however do not forget. If something breaks a good solution is
+        to
+
+        (psuedo-code)
+        if:
+        post.count % 3 == 0:
+          <br />
+      </thead>
+      -->
+
+    {% endfor %}
+
+
+  </div><!-- /grid view -->
+{% endblock %}

@@ -1,0 +1,113 @@
+/*
+
+  Color Pallette
+  --------------
+
+  Red:          #E74C3C
+  dark red:     #C0392B
+  Grey:         #E5E7E9
+  blue:         #3498DB
+  black:        #2C3135
+
+  form-border:  #EAEDED
+
+*/
+
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto";
+  transition: 0.4s;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto";
+}
+
+p {
+  font-family: "Roboto";
+}
+
+body {
+  background-color: #F5F8FA;
+}
+
+.container {
+  position: relative;
+
+  padding-left: 4%;
+  padding-right: 4%;
+
+  padding-top: 95px;
+}
+
+
+/* Mobile Small  --------------------------------------------------------- */
+@media screen and (min-width: 0px) and (max-width: 320px) {
+  .container {
+    position: relative;
+
+    padding-left: 0px;
+    padding-right: 0px;
+
+    padding-top: 95px;
+  }
+}
+
+
+/* Mobile Medium  --------------------------------------------------------- */
+@media screen and (min-width: 321px) and (max-width: 375px) {
+  .container {
+    position: relative;
+
+    padding-left: 0px;
+    padding-right: 0px;
+
+    padding-top: 95px;
+  }
+}
+
+
+/* Mobile Large - --------------------------------------------------------- */
+@media screen and (min-width: 376px) and (max-width: 425px) {
+  .container {
+    position: relative;
+
+    padding-left: 0px;
+    padding-right: 0px;
+
+    padding-top: 95px;
+  }
+}
+
+
+/* Tablet - --------------------------------------------------------------- */
+@media screen and (min-width: 426px) and (max-width: 768px) {
+  .container {
+    position: relative;
+
+    padding-left: 0px;
+    padding-right: 0px;
+
+    padding-top: 95px;
+  }
+}
+
+
+/* Laptop ------------------------------------------------------------------ */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  /* nothing for now */
+}
+
+
+/* Laptop Large -------------------------------------------------------------*/
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  /* nothing for now */
+}
+
+
+/* 4K Large Desktop ------------------------------------------------------- */
+@media screen and (min-width: 1441px) {
+
+}

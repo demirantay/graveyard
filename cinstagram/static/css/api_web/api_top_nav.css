@@ -1,0 +1,115 @@
+.api-top-nav {
+  position: absolute;
+  top:0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  background-color: black;
+  height: 80px;
+  border-bottom: 1px solid black;
+  color: white;
+  -webkit-box-shadow: -1px 68px 53px -61px rgba(0,0,0,0.75);
+  -moz-box-shadow: -1px 68px 53px -61px rgba(0,0,0,0.75);
+  box-shadow: -1px 68px 53px -61px rgba(0,0,0,0.75);
+}
+
+.api-top-nav-logo {
+  height: 80px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 0px;
+  margin-left: 10%;
+}
+
+.api-top-nav-username {
+  float: right;
+  margin-right: 10%;
+  margin-top: 27px;
+  color: white;
+  text-decoration: none;
+  background-color: black;
+  padding: 3px 5px;
+}
+
+.api-top-nav-username:hover {
+  transition:0.5s;
+  background-color: white;
+  color: black;
+  border-radius: 2px;
+}
+
+
+
+/* Mobile Small  --------------------------------------------------------- */
+@media screen and (min-width: 0px) and (max-width: 320px) {
+  .api-top-nav {
+    text-align: center;
+  }
+
+  .api-top-nav-logo {
+    margin-left: 0px;
+  }
+
+  .api-top-nav-username {
+    display: none;
+  }
+
+}
+
+
+/* Mobile Medium  --------------------------------------------------------- */
+@media screen and (min-width: 321px) and (max-width: 375px) {
+  .api-top-nav {
+    text-align: center;
+  }
+
+  .api-top-nav-logo {
+    margin-left: 0px;
+  }
+
+  .api-top-nav-username {
+    display: none;
+  }
+
+}
+
+
+/* Mobile Large - --------------------------------------------------------- */
+@media screen and (min-width: 376px) and (max-width: 425px) {
+  .api-top-nav {
+    text-align: center;
+  }
+
+  .api-top-nav-logo {
+    margin-left: 0px;
+  }
+
+  .api-top-nav-username {
+    display: none;
+  }
+
+}
+
+
+/* Tablet - --------------------------------------------------------------- */
+@media screen and (min-width: 426px) and (max-width: 768px) {
+  /* nothing for now */
+}
+
+
+/* Laptop ------------------------------------------------------------------ */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  /* nothing for now */
+}
+
+
+/* Laptop Large -------------------------------------------------------------*/
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  /* nothing for now */
+}
+
+
+/* 4K Large Desktop ------------------------------------------------------- */
+@media screen and (min-width: 1441px) {
+  /* nothing for now */
+}

@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<!-- ############### -->
+
+{% block specific_css_links %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/about/about.css' %}" />
+{% endblock %}
+
+<!-- ############### -->
+
+{% block content %}
+
+<div class="about-content-card">
+  <!-- left part -->
+  <div class="about-content-card-left-part">
+    <h2>ABOUT</h2>
+    <a href="{% url 'about' %}">Company</a>
+    <a href="{% url 'jobs' %}">Jobs</a>
+    <a href="{% url 'legal' %}">Legal</a>
+  </div>
+  <!-- right part -->
+  <div class="about-content-card-right-part">
+
+    <h1>Legal</h1>
+    <p>
+      I (Demir Antay) am not cloning this project "Cinstagram" for any kind
+      of commercial or profit-wise intentions. My motive is purely educational.
+       I have always wanted to test my web development skills by writing
+      a big application.
+      <br />
+      <br />
+      I have not used any of the assets of Instagram Inc. on this project.
+      All of the logos ... etc. have been created by me using various tools
+      such as Photoshop ... etc.
+      <br />
+      <br />
+      I have purposefully did not put a MIT License on this project because
+      even though I believe in Open Source I wanted to be safe in the legal
+      terms. I hope no one will use this code for plagiarism.
+      <br />
+      <br />
+      If you have any questions, contact me via: demir99antay@gmail.com
+    </p>
+
+  </div>
+</div>
+
+{% endblock %}

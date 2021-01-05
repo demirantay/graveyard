@@ -1,0 +1,78 @@
+.signup-login-footer {
+  padding-top: 15px;
+  padding-bottom: 30px;
+  padding-left: 10%;
+  padding-right:10%;
+  text-align: center;
+}
+
+.signup-login-footer a {
+  color: #003569;
+  text-decoration: none;
+  font-weight: 900;
+  margin-right: 20px;
+  font-size: 15px;
+}
+
+
+/* Mobile Small  --------------------------------------------------------- */
+@media screen and (min-width: 0px) and (max-width: 320px) {
+  .signup-login-footer {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .signup-login-footer a {
+    font-size: 10px;
+  }
+}
+
+
+/* Mobile Medium  --------------------------------------------------------- */
+@media screen and (min-width: 321px) and (max-width: 375px) {
+  .signup-login-footer {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .signup-login-footer a {
+    font-size: 10px;
+  }
+}
+
+
+/* Mobile Large - --------------------------------------------------------- */
+@media screen and (min-width: 376px) and (max-width: 425px) {
+  .signup-login-footer {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .signup-login-footer a {
+    font-size: 10px;
+  }
+}
+
+
+/* Tablet - --------------------------------------------------------------- */
+@media screen and (min-width: 426px) and (max-width: 768px) {
+
+}
+
+
+/* Laptop ------------------------------------------------------------------ */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  /* nothing for now */
+}
+
+
+/* Laptop Large -------------------------------------------------------------*/
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  /* nothing for now */
+}
+
+
+/* 4K Large Desktop ------------------------------------------------------- */
+@media screen and (min-width: 1441px) {
+
+}

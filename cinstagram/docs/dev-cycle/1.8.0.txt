@@ -1,0 +1,24 @@
+Plan (finish these apps frontend):
+
+- [x] Explore
+- [ ] Home
+
+--------------
+
+# Explore
+
+- [x] Explore Page
+- [x] responsive
+
+
+--------------
+
+# Home
+
+- [x] Home Page
+- [x] responsive
+
+
+#########
+
+After completing above since it is frontend skip test and documentation but write the devlog

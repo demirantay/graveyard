@@ -1,0 +1,94 @@
+{% load static %}
+
+<!doctype html>
+<html>
+
+<head>
+  <title>Cinstagram</title>
+
+  <!-- Meta Info -->
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="cinstagram, instagram, instagram-clone, cloning, instagram, python, flask, nginx" />
+  <meta name="description" content="Instagram clone built with flask python and nginx" />
+  <meta name="author" content="demir antay, Demir Antay, @demirantay" />
+
+  <!-- FAVICON -->
+  <link rel="icon" href="{% static 'branding/app-logo.png' %}" />
+
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,700|Prata" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Literata&display=swap" rel="stylesheet">
+
+  <!-- FONT AWSOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- BASE CSS LINKS -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'css/top-nav.css' %}"/>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/content.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'css/footer.css' %}" />
+
+  <!-- SPECIFIC CSS LINKS -->
+  {% block specific_css_links %}
+
+  {% endblock %}
+
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- TOP NAV MENU -->
+    <div class="top-nav">
+      <!-- logo -->
+      <a href="{% url 'home' %}"><img class="top-nav-logo" src="{% static 'branding/cinstagram_logo_text.png' %}" alt="logo" /></a>
+
+      <!-- search form -->
+      <form class="top-nav-search-form">
+        <input type="text" placeholder="Search" />
+        <button class="top-nav-search-submit-btn" type="submit"><span class="fa fa-search"></span></button>
+      </form>
+
+      <!-- top navigation -->
+      <div class="top-nav-navigation">
+        <a href="{% url 'home' %}"><span class="fa fa-home"></span></a>
+        <a href="{% url 'explore' %}"><span class="fa fa-compass"></span></a>
+        <a href="{% url 'upload_page' %}"><span class="fa fa-plus-square"></span></a>
+        <a href="{% url 'profile_posts_page' %}"><img class="top-nav-profile-photo" src="{{ current_user_settings.profile_photo.url }}" alt="profile_photo"/></a>
+      </div>
+    </div>
+
+
+    <!-- CONTENT -->
+    <div class="content-wrapper">
+
+    <!-- ################## CONTENT GOES HERE ######################### -->
+
+    {% block content %}
+
+    {% endblock %}
+
+
+    <!-- ################## CONTENT GOES HERE ######################### -->
+
+    </div><!-- e/main card -->
+
+
+    <!-- Footer -->
+    <div class="footer">
+      <a href="{% url 'about' %}">ABOUT US</a>
+      <a href="{% url 'help_centre_index' %}">HELP</a>
+      <a href="{% url 'api_web' %}">API</a>
+      <a href="{% url 'jobs' %}">JOBS</a>
+      <a href="{% url 'legal' %}">LEGAL</a>
+    </div>
+  </div><!-- e/container-->
+
+
+</body>
+
+</html>

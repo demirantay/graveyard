@@ -1,0 +1,222 @@
+
+/* -------------------------- MAIN PAGE ------------------------------ */
+
+.help-centre-content-card {
+  background-color: white;
+  height: auto;
+  padding: 30px;
+
+  /* Box shadow neccesities */
+  border-bottom: 0 none;
+  box-shadow: 0px 7px 25px -20px rgba(0,0,0,0.75);
+}
+
+.help-centre-content-card-top-part {
+  background-color: transparent;
+  display: block;
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #E5E7E9;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+.help-centre-content-card-top-part h1 {
+  font-size: 22px;
+}
+
+.help-centre-content-card-left-part {
+  background-color: transparent;
+  display: inline-block;
+  width: 20%;
+  height: auto;
+  vertical-align: top;
+  text-align: left;
+}
+
+.help-centre-content-card-left-part a {
+  display: block;
+  background-color: transparent;
+  color: black;
+  text-decoration: none;
+  border-left: 4px solid transparent;
+  padding: 10px 5px;
+  text-align: left;
+}
+
+.help-centre-content-card-left-part a:hover {
+  border-color: lightgrey;
+  background-color: #E5E7E9;
+  transition: 0.2s;
+}
+
+.help-centre-content-card-right-part {
+  background-color: transparent;
+  display: inline-block;
+  width: 78%;
+  height: auto;
+  vertical-align: top;
+  border-left: 1px solid #E5E7E9;
+}
+
+.help-centre-content-card-right-part a {
+  margin-left: 30px;
+  margin-top: 10px;
+  display: block;
+  color: #3498DB;
+  text-decoration: none;
+}
+
+.help-centre-content-card-right-part a:hover {
+  text-decoration: underline;
+}
+
+.help-centre-content-card-right-part h3 {
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+.help-centre-content-card-right-part p {
+  margin-left: 30px;
+}
+
+.help-centre-content-card-right-part p a {
+  display: inline-block;
+  margin-left: 0px;
+}
+
+.help-centre-content-card-right-part ul {
+  margin-left: 20px;
+  margin-top: 15px;
+}
+
+/* Mobile Small  --------------------------------------------------------- */
+@media screen and (min-width: 0px) and (max-width: 320px) {
+
+  /* -------------------------- MAIN PAGE ------------------------------ */
+
+  .help-centre-content-card-left-part {
+    display: block;
+    width: 100%;
+  }
+
+  .help-centre-content-card-left-part a {
+    margin-bottom: 5px;
+  }
+
+  .help-centre-content-card-right-part {
+    display: block;
+    width: 100%;
+    border-left: 0px;
+  }
+
+  .help-centre-content-card-right-part a {
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
+
+  .help-centre-content-card-right-part h3 {
+    margin-left: 0px;
+    margin-bottom: 20px;
+  }
+
+  .help-centre-content-card-right-part p {
+    margin-left: 0px;
+  }
+
+}
+
+
+/* Mobile Medium  --------------------------------------------------------- */
+@media screen and (min-width: 321px) and (max-width: 375px) {
+  .help-centre-content-card-left-part {
+    display: block;
+    width: 100%;
+  }
+
+  .help-centre-content-card-left-part a {
+    margin-bottom: 5px;
+  }
+
+  .help-centre-content-card-right-part {
+    display: block;
+    width: 100%;
+    border-left: 0px;
+  }
+
+  .help-centre-content-card-right-part a {
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
+
+  .help-centre-content-card-right-part h3 {
+    margin-left: 0px;
+    margin-bottom: 20px;
+  }
+
+  .help-centre-content-card-right-part p {
+    margin-left: 0px;
+  }
+
+}
+
+
+/* Mobile Large - --------------------------------------------------------- */
+@media screen and (min-width: 376px) and (max-width: 425px) {
+  .help-centre-content-card-left-part {
+    display: block;
+    width: 100%;
+  }
+
+  .help-centre-content-card-left-part a {
+    margin-bottom: 5px;
+  }
+
+  .help-centre-content-card-right-part {
+    display: block;
+    width: 100%;
+    border-left: 0px;
+  }
+
+  .help-centre-content-card-right-part a {
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
+
+  .help-centre-content-card-right-part h3 {
+    margin-left: 0px;
+    margin-bottom: 20px;
+  }
+
+  .help-centre-content-card-right-part p {
+    margin-left: 0px;
+  }
+
+}
+
+
+/* Tablet - --------------------------------------------------------------- */
+@media screen and (min-width: 426px) and (max-width: 768px) {
+  /* nothing for now */
+}
+
+
+/* Laptop ------------------------------------------------------------------ */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  /* nothing for now */
+}
+
+
+/* Laptop Large -------------------------------------------------------------*/
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  /* nothing for now */
+}
+
+
+/* 4K Large Desktop ------------------------------------------------------- */
+@media screen and (min-width: 1441px) {
+
+}

@@ -1,0 +1,809 @@
+.home-container {
+  background-color: transparent;
+  width: 90%;
+  margin: 0 auto;
+  height: auto;
+  padding: 30px;
+}
+
+.home-post-feed {
+  background-color: transparent;
+  width: 68%;
+  margin-right: 10px;
+  height: 120vh;
+  display: inline-block;
+  vertical-align: top;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.home-post-cell {
+  width: 100%;
+  height: auto;
+  border: 1px solid #EAEDED;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 20px;
+  border-radius: 4px;
+  background-color: white;
+  margin-top: -10px;
+  margin-bottom: 50px;
+  overflow-x: hidden;
+
+  /* Box shadow neccesities */
+  border-bottom: 0 none;
+  box-shadow: 0px 7px 25px -20px rgba(0,0,0,0.75);
+}
+
+.post-cell-top-part {
+  margin-top: 10px;
+}
+
+.post-cell-top-part a {
+  text-decoration: none;
+  color: black;
+}
+
+.post-cell-top-part a img {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 20px;
+  margin-right: 5px;
+}
+
+.post-cell-top-part a h3 {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.post-cell-picture-part {
+  width: 100%;
+  height: auto;
+  background-color: black;
+  margin-top: 10px;
+}
+
+.cell-picture {
+  width: 100%;
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-x: hidden;
+}
+
+.post-cell-options-part {
+  margin-top: 10px;
+}
+
+.post-cell-options-part form {
+  display: inline-block;
+}
+
+.post-cell-options-part form button {
+  font-size: 30px;
+  background-color: white;
+  border: 0px;
+  margin-right: 10px;
+  margin-left: 20px;
+}
+
+.post-cell-options-part form button:hover {
+  cursor: pointer;
+  color: #3498DB;
+  transition: 0s !important;
+}
+
+.post-cell-comments-part {
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-right: 20px;
+}
+
+.post-cell-comments-part h2 {
+  margin-bottom: 5px;
+}
+
+.post-cell-caption {
+  margin-bottom: 10px;
+}
+
+.post-cell-caption h3 {
+  display: inline;
+  font-weight: 900;
+}
+
+.post-cell-caption p {
+  display: inline;
+}
+
+.post-cell-caption a {
+  text-decoration: none;
+  color: grey;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.post-cell-comments p {
+  font-size: 16px;
+}
+
+.post-cell-comments p span {
+  font-weight: 900;
+}
+
+.post-time {
+  color: grey;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.post-cell-add-comment-form-part form {
+  width: 100%;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.post-cell-add-comment-form-part form input {
+  padding: 8px 50px;
+  border: 1px solid transparent;
+  border-top: 1px solid #EAEDED;
+  width: 62%;
+  font-size: 16px;
+  display: inline-block;
+  padding-top:15px;
+}
+
+.comment-form-submit-btn {
+  width: 18% !important;
+  padding: 10px 0px;
+  color: #3498DB;
+  font-size: 16px;
+  display: inline-block;
+  margin-left: -5px;
+  padding-top: 15px;
+}
+
+.comment-form-submit-btn:hover {
+  cursor: pointer;
+}
+
+.load-more-posts {
+
+}
+
+.load-more-posts form {
+  text-align: center;
+  width: 100%;
+}
+
+.load-more-posts form button {
+  background-color: #3498DB;
+  color: white;
+  border-radius: 50%;
+  font-size: 20px;
+  height: 40px;
+  width: 40px;
+  border: 1px solid transparent;
+}
+
+.load-more-posts form button:hover {
+  cursor: pointer;
+}
+
+.home-right-side-nav {
+  background-color: transparent;
+  width: 30%;
+  height: 100px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.home-profile-box {
+  border: 1px solid transparent;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.home-profile-box a {
+  color: black;
+  text-decoration: none;
+}
+
+.home-profile-box a img {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 15px;
+  margin-right: 5px;
+}
+
+.home-profile-box-info {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.home-profile-box-info h3 {
+  font-size: 16px;
+}
+
+.home-profile-box-info h4 {
+  font-size: 15px;
+  color: grey;
+}
+
+
+.home-alert-box {
+  border: 1px solid #EAEDED;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 20px;
+  border-radius: 4px;
+  background-color: white;
+
+  /* Box shadow neccesities */
+  border-bottom: 0 none;
+  box-shadow: 0px 7px 25px -20px rgba(0,0,0,0.75);
+
+}
+
+.home-alert-box-header {
+  border-bottom: 1px solid #EAEDED;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.home-alert-box-header h2 {
+  font-size: 17px;
+  padding-bottom: 10px;
+  color: grey;
+  margin-left: 5px;
+}
+
+.home-alert-box-header h2 span {
+  margin-right: 5px;
+}
+
+.home-alert-box-scroll-part {
+  background-color: white;
+  height: 250px;
+  overflow-y: scroll;
+}
+
+.alert-cell {
+  margin-bottom: 25px;
+}
+
+.alert-cell a {
+  text-decoration: none;
+  color: black;
+}
+
+.alert-cell a img {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 15px;
+  margin-right: 5px;
+}
+
+.alert-cell a h2 {
+  display: inline-block;
+  font-size: 16px;
+}
+
+.alert-cell p {
+  display: inline-block;
+  font-size: 16px;
+}
+
+.alert-cell p a {
+  color: #3498DB;
+}
+
+
+.alert-cell p span {
+  margin-left: 5px;
+  color: grey;
+}
+
+.home-suggestions-box {
+  border: 1px solid #EAEDED;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  margin-top: 20px;
+  border-radius: 4px;
+  background-color: white;
+
+  /* Box shadow neccesities */
+  border-bottom: 0 none;
+  box-shadow: 0px 7px 25px -20px rgba(0,0,0,0.75);
+}
+
+.home-suggestions-box-header {
+  border-bottom: 1px solid #EAEDED;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.home-suggestions-box-header h2 {
+  font-size: 17px;
+  padding-bottom: 10px;
+  color: grey;
+  margin-left: 5px;
+}
+
+.home-suggestions-box-cell-container {
+  background-color: white;
+  margin-top: -10px;
+}
+
+.suggestion-cell {
+  margin-top: 25px;
+}
+
+.suggestion-cell a {
+  color: black !important;
+  text-decoration: none !important;
+}
+
+.suggestion-cell img {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 15px;
+  margin-right: 5px;
+}
+
+.suggestion-cell-info-part {
+  display: inline-block;
+  vertical-align: middle;
+  color: black;
+  text-decoration: none;
+}
+
+.suggestion-cell-info-part h2 {
+  font-size: 15px;
+  color: black;
+  text-decoration: none;
+
+}
+
+.suggestion-cell-info-part h3 {
+  font-size: 15px;
+  color: grey;
+}
+
+.suggestion-cell form {
+  display: inline-block;
+}
+
+.suggestion-cell form input {
+  color: #3498DB;
+  font-size: 16px;
+  background-color: transparent;
+  border: 0px;
+  vertical-align: middle;
+  margin-left: 25px;
+}
+
+.suggestion-cell form input:hover {
+  cursor: pointer;
+}
+
+.right-nav-footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.right-nav-footer a {
+  text-decoration: none;
+  color: black;
+  font-weight: 900;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+
+
+/* Mobile Small  --------------------------------------------------------- */
+@media screen and (min-width: 0px) and (max-width: 320px) {
+  .home-container {
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+    padding: 0px;
+  }
+
+  .home-post-feed {
+    width: 100%;
+    margin-right: 0px;
+    height: auto;
+    display: block;;
+    overflow-y: hidden;
+  }
+
+  .home-post-cell {
+    width: 100%;
+    height: auto;
+    border: 0px;
+  }
+
+  .post-cell-options-part form button {
+    font-size: 25px;
+  }
+
+  .post-cell-comments-part {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .post-cell-caption h3 {
+    font-size: 16px;
+  }
+
+  .post-cell-caption p {
+    font-size: 16px;
+  }
+
+  .post-cell-caption a {
+    font-size: 15px;
+  }
+
+  .post-cell-comments p {
+    font-size: 15px;
+  }
+
+  .post-time {
+    font-size: 14px;
+  }
+
+  .post-cell-add-comment-form-part form input {
+    padding: 8px 10px;
+    font-size: 15px;
+  }
+
+  .comment-form-submit-btn {
+    width: 15% !important;
+    font-size: 15px;
+    background-color: white;
+  }
+
+  .home-right-side-nav {
+    display: none;
+  }
+
+  .home-profile-box {
+    display: none;
+  }
+
+  .home-alert-box {
+    display: none;
+  }
+
+  .home-suggestions-box {
+    display: none;
+  }
+
+  .home-suggestions-box-cell-container {
+    background-color: white;
+    margin-top: -10px;
+  }
+
+  .suggestion-cell {
+    display: none;
+  }
+
+  .right-nav-footer {
+    display: none;
+  }
+}
+
+
+/* Mobile Medium  --------------------------------------------------------- */
+@media screen and (min-width: 321px) and (max-width: 375px) {
+  .home-container {
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+    padding: 0px;
+  }
+
+  .home-post-feed {
+    width: 100%;
+    margin-right: 0px;
+    height: auto;
+    display: block;;
+    overflow-y: hidden;
+  }
+
+  .home-post-cell {
+    width: 100%;
+    height: auto;
+    border: 0px;
+  }
+
+  .post-cell-options-part form button {
+    font-size: 25px;
+  }
+
+  .post-cell-comments-part {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .post-cell-caption h3 {
+    font-size: 16px;
+  }
+
+  .post-cell-caption p {
+    font-size: 16px;
+  }
+
+  .post-cell-caption a {
+    font-size: 15px;
+  }
+
+  .post-cell-comments p {
+    font-size: 15px;
+  }
+
+  .post-time {
+    font-size: 14px;
+  }
+
+  .post-cell-add-comment-form-part form input {
+    padding: 8px 10px;
+    font-size: 15px;
+  }
+
+  .comment-form-submit-btn {
+    width: 15% !important;
+    font-size: 15px;
+    background-color: white;
+  }
+
+  .home-right-side-nav {
+    display: none;
+  }
+
+  .home-profile-box {
+    display: none;
+  }
+
+  .home-alert-box {
+    display: none;
+  }
+
+  .home-suggestions-box {
+    display: none;
+  }
+
+  .home-suggestions-box-cell-container {
+    background-color: white;
+    margin-top: -10px;
+  }
+
+  .suggestion-cell {
+    display: none;
+  }
+
+  .right-nav-footer {
+    display: none;
+  }
+}
+
+
+/* Mobile Large - --------------------------------------------------------- */
+@media screen and (min-width: 376px) and (max-width: 425px) {
+  .home-container {
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+    padding: 0px;
+  }
+
+  .home-post-feed {
+    width: 100%;
+    margin-right: 0px;
+    height: auto;
+    display: block;;
+    overflow-y: hidden;
+  }
+
+  .home-post-cell {
+    width: 100%;
+    height: auto;
+    border: 0px;
+  }
+
+  .post-cell-options-part form button {
+    font-size: 25px;
+  }
+
+  .post-cell-comments-part {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .post-cell-caption h3 {
+    font-size: 16px;
+  }
+
+  .post-cell-caption p {
+    font-size: 16px;
+  }
+
+  .post-cell-caption a {
+    font-size: 15px;
+  }
+
+  .post-cell-comments p {
+    font-size: 15px;
+  }
+
+  .post-time {
+    font-size: 14px;
+  }
+
+  .post-cell-add-comment-form-part form input {
+    padding: 8px 10px;
+    font-size: 15px;
+  }
+
+  .comment-form-submit-btn {
+    width: 15% !important;
+    font-size: 15px;
+    background-color: white;
+  }
+
+  .home-right-side-nav {
+    display: none;
+  }
+
+  .home-profile-box {
+    display: none;
+  }
+
+  .home-alert-box {
+    display: none;
+  }
+
+  .home-suggestions-box {
+    display: none;
+  }
+
+  .home-suggestions-box-cell-container {
+    background-color: white;
+    margin-top: -10px;
+  }
+
+  .suggestion-cell {
+    display: none;
+  }
+
+  .right-nav-footer {
+    display: none;
+  }
+}
+
+
+/* Tablet - --------------------------------------------------------------- */
+@media screen and (min-width: 426px) and (max-width: 768px) {
+  .home-container {
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+    padding: 0px;
+  }
+
+  .home-post-feed {
+    width: 100%;
+    margin-right: 0px;
+    height: auto;
+    display: block;;
+    overflow-y: hidden;
+  }
+
+  .home-post-cell {
+    width: 100%;
+    height: auto;
+    border: 0px;
+  }
+
+  .post-cell-options-part form button {
+    font-size: 25px;
+  }
+
+  .post-cell-comments-part {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .post-cell-caption h3 {
+    font-size: 16px;
+  }
+
+  .post-cell-caption p {
+    font-size: 16px;
+  }
+
+  .post-cell-caption a {
+    font-size: 15px;
+  }
+
+  .post-cell-comments p {
+    font-size: 15px;
+  }
+
+  .post-time {
+    font-size: 14px;
+  }
+
+  .post-cell-add-comment-form-part form input {
+    padding: 8px 10px;
+    font-size: 15px;
+  }
+
+  .comment-form-submit-btn {
+    width: 15% !important;
+    font-size: 15px;
+    background-color: white;
+  }
+
+  .home-right-side-nav {
+    display: none;
+  }
+
+  .home-profile-box {
+    display: none;
+  }
+
+  .home-alert-box {
+    display: none;
+  }
+
+  .home-suggestions-box {
+    display: none;
+  }
+
+  .home-suggestions-box-cell-container {
+    background-color: white;
+    margin-top: -10px;
+  }
+
+  .suggestion-cell {
+    display: none;
+  }
+
+  .right-nav-footer {
+    display: none;
+  }
+}
+
+
+/* Laptop ------------------------------------------------------------------ */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  /* nothing for now */
+}
+
+
+/* Laptop Large -------------------------------------------------------------*/
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  /* nothing for now */
+}
+
+
+/* 4K Large Desktop ------------------------------------------------------- */
+@media screen and (min-width: 1441px) {
+
+}

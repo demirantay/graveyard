@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block specific_css_links %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/chat/chat.css' %}" />
+{% endblock %}
+
+{% block content %}
+<div class="chat-container">
+
+  <!-- top naviagtion -->
+  <div class="chat-index-top-navigation">
+    <h1>New Chat</h1>
+  </div>
+
+  <!-- search bar -->
+  <div class="chat-index-search-bar">
+    <form>
+        <input  type="text" placeholder="Search People"/>
+        <button type="submit"><span class="fa fa-search"></span></button>
+    </form>
+  </div>
+
+  <!-- messages list index -->
+  <div class="chat-index">
+
+    <div class="chat-cell">
+      <a href="">
+        <div class="chat-cell-left-part">
+          <img alt="profile-photo" src="{% static 'branding/profile_photo.jpg' %}" />
+        </div>
+        <div class="new-chat-cell-right-part">
+          <h2>@username</h2>
+          <h3>John Smith</h3>
+        </div>
+      </a>
+    </div><!-- e/chat cell -->
+
+
+  </div><!-- e/chat index -->
+
+</div><!-- e/chat container -->
+{% endblock %}

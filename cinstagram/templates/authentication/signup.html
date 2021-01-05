@@ -1,0 +1,92 @@
+{% load static %}
+
+<!doctype html>
+<html>
+
+<head>
+  <title>Cinstagram</title>
+
+  <!-- Meta Info -->
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="cinstagram, instagram, instagram-clone, cloning, instagram, python, flask, nginx" />
+  <meta name="description" content="Instagram clone built with flask python and nginx" />
+  <meta name="author" content="demir antay, Demir Antay, @demirantay" />
+
+  <!-- FAVICON -->
+  <link rel="icon" href="{% static 'branding/app-logo.png' %}" />
+
+
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,700|Prata" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Literata&display=swap" rel="stylesheet">
+
+  <!-- FONT AWSOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- MY CSS LINKS -->
+  <link rel="stylesheet" type="text/css" href="" />
+
+  <!-- specific css links -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/authentication/signup_login_base.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'css/authentication/signup_login_content_card.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'css/authentication/signup_login_footer.css' %}" />
+
+  <style>
+    {% if invalid_credentials == True %}
+      .signup-login-content-card-signup-form input {
+        border-color: red;
+      }
+    {% elif empty_credentials == True %}
+      .signup-login-content-card-signup-form input {
+        border-color: red;
+      }
+    {% endif %}
+  </style>
+
+</head>
+
+<body>
+  <div class="signup-login-container">
+
+    <!-- SIGN UP CARD ###################################################### -->
+    <div class="signup-login-content-card">
+
+      <div class="signup-login-content-card-signup-child-card">
+        <img class="help-centre-top-nav-logo" src="{% static 'branding/cinstagram_logo_text.png' %}" alt="logo" />
+        <p class="meta-signup-info">Sign up to see photos and videos from your friends.</p>
+        <form class="signup-login-content-card-signup-form" method="POST" action="{% url 'authentication_signup' %}">
+            {% csrf_token %}
+            <input type="text" placeholder="Email" name="email"/><br />
+            <input type="text" placeholder="Full Name" name="fullName"/><br />
+            <input type="text" placeholder="Username" name="username"/><br />
+            <input type="password" placeholder="Password" name="password"/><br />
+            <input type="submit" value="Sign up" class="signup-form-submit-btn" name="signup_submit_btn"/><br />
+        </form>
+        <p class="meta-legal-info">
+            By signing up, you agree to our <a href=""><b>Terms and Legal Policies.</b></a>
+        </p>
+      </div><!-- /child card-->
+
+      <div class="signup-login-content-card-linker-card">
+        <p>
+            Have an account? <a href="{% url 'authentication_login' %}">Log in</a>
+        </p>
+      </div>
+
+      <div class="signup-login-content-card-app-links">
+          <p>Get the app.</p>
+          <a href="https://github.com/demirantay/cinstagram#android--ios"><img src="{% static 'branding/ios-android/ios-black-badge.png' %}" class="apple-store-badge" alt="apple-store-logo" /></a>
+          <a href="https://github.com/demirantay/cinstagram#android--ios"><img src="{% static 'branding/ios-android/google-play-badge.png' %}" class="google-store-badge" alt="google-store-logo" /></a>
+      </div>
+
+    </div><!-- e/main card -->
+
+
+  </div><!-- e/container-->
+</body>
+
+</html>

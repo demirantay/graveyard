@@ -1,0 +1,170 @@
+.about-content-card {
+  background-color: white;
+  height: auto;
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  /* Box shadow neccesities */
+  border-bottom: 0 none;
+  box-shadow: 0px 7px 25px -20px rgba(0,0,0,0.75);
+}
+
+.about-content-card-left-part {
+  display: inline-block;
+  width: 20%;
+  height: auto;
+  vertical-align: top;
+}
+
+.about-content-card-left-part h2 {
+  margin-left: 35px;
+  margin-bottom: 10px;
+}
+
+.about-content-card-left-part a {
+  display: block;
+  margin-left: 30px;
+  margin-bottom: 5px;
+  background-color: white;
+  width: 70%;
+  padding: 10px 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.about-content-card-left-part a:hover {
+  background-color: #E5E7E9;
+  transition: 0.3s ease;
+}
+
+.about-content-card-right-part {
+  display: inline-block;
+  width: 78%;
+  height: auto;
+  vertical-align: top;
+  border-left: 1px solid #E5E7E9;
+}
+
+.about-content-card-right-part h1, h2, h3, p {
+  margin-left: 30px;
+  margin-bottom: 10px;
+}
+
+.about-content-card-right-part p b {
+  font-weight: 900;
+}
+
+.about-content-card-right-part ul {
+  color: black;
+  margin-left: 50px;
+  margin-bottom: 10px;
+}
+
+.about-content-card-right-part ul a {
+  text-decoration: none;
+  color: #3498DB;
+}
+
+
+/* Mobile Small  --------------------------------------------------------- */
+@media screen and (min-width: 0px) and (max-width: 320px) {
+
+  .about-content-card-left-part {
+    display: block;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .about-content-card-right-part {
+    display: block;
+    width: 100%;
+    border-left: 0px;
+  }
+
+  .about-content-card-right-part h1, h2, h3, p {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .about-content-card-right-part ul {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}
+
+
+/* Mobile Medium  --------------------------------------------------------- */
+@media screen and (min-width: 321px) and (max-width: 375px) {
+  .about-content-card-left-part {
+    display: block;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .about-content-card-right-part {
+    display: block;
+    width: 100%;
+    border-left: 0px;
+  }
+
+  .about-content-card-right-part h1, h2, h3, p {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .about-content-card-right-part ul {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}
+
+
+/* Mobile Large - --------------------------------------------------------- */
+@media screen and (min-width: 376px) and (max-width: 425px) {
+  .about-content-card-left-part {
+    display: block;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .about-content-card-right-part {
+    display: block;
+    width: 100%;
+    border-left: 0px;
+  }
+
+  .about-content-card-right-part h1, h2, h3, p {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .about-content-card-right-part ul {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}
+
+
+/* Tablet - --------------------------------------------------------------- */
+@media screen and (min-width: 426px) and (max-width: 768px) {
+  /* nothing for now */
+}
+
+
+/* Laptop ------------------------------------------------------------------ */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  /* nothing for now */
+}
+
+
+/* Laptop Large -------------------------------------------------------------*/
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  /* nothing for now */
+}
+
+
+/* 4K Large Desktop ------------------------------------------------------- */
+@media screen and (min-width: 1441px) {
+
+}

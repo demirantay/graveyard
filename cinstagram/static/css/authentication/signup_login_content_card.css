@@ -1,0 +1,255 @@
+/* Signup realted cards -------------------------------------------------- */
+
+.signup-login-content-card {
+  background-color: #F4F8FE;
+  width: 100%;
+  height: auto;
+}
+
+.signup-login-content-card-signup-child-card {
+  border: 1px solid transparent;
+  width: 350px;
+  height: auto;
+  background-color: white;
+  margin: 0 auto;
+  margin-top: 10px;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 10px;
+
+  /* Box shadow neccesities */
+  border-bottom: 0 none;
+  box-shadow: 0px 7px 25px -20px rgba(0,0,0,0.75);
+}
+
+.help-centre-top-nav-logo {
+  height: 45px;
+  margin-bottom: 15px;
+}
+
+.meta-signup-info {
+  color: #999999;
+  font-weight: 900;
+  font-size: 17px;
+  margin: 0px 40px 20px 40px;
+}
+
+.signup-login-content-card-signup-form {
+  margin: 0 auto;
+}
+
+.signup-login-content-card-signup-form input {
+  font-size: 14px;
+  background: #fafafa;
+  padding: 9px 0px 7px 8px;
+  color: #262626;
+  border: 1px solid #EFEFEF;
+  margin-bottom: 5px;
+  border-radius: 3px;
+  margin-right: 40px;
+  margin-left: 40px;
+  width: 260px;
+}
+
+.signup-form-submit-btn {
+  color: white !important;
+  background-color: #3897F0 !important;
+  margin-top: 5px !important;
+  width: 270px !important;
+}
+
+.signup-form-submit-btn:hover {
+  transition: 0.5s ease;
+  opacity: 0.7;
+}
+
+.meta-legal-info {
+  color: #999999;
+  font-weight: bold;
+  margin: 10px 40px 20px 40px;
+  font-size: 15px;
+}
+
+.meta-legal-info a {
+  text-decoration: none;
+  color: #515A5A;
+  font-weight: bolder;
+}
+
+.signup-login-content-card-linker-card {
+  border: 1px solid transparent;
+  width: 350px;
+  height: auto;
+  background-color: white;
+  margin: 0 auto;
+  margin-top: 20px;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  /* Box shadow neccesities */
+  border-bottom: 0 none;
+  box-shadow: 0px 7px 25px -20px rgba(0,0,0,0.75);
+}
+
+.signup-login-content-card-linker-card p a {
+  color: #3E9AF1;
+  text-decoration: none;
+}
+
+.signup-login-content-card-app-links {
+  width: 350px;
+  margin: 0 auto;
+  margin-top: 25px;
+  text-align: center;
+}
+
+.apple-store-badge {
+  margin-top: 15px;
+  width: 135px;
+  vertical-align: middle;
+  display: inline-block;
+  height: 45px;
+  margin-bottom: 100px;
+}
+
+.google-store-badge {
+  margin-top: 15px;
+  margin-bottom: 100px;
+  width: 145px;
+  height: 65px;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+
+/* Login realted cards -------------------------------------------------- */
+.login-card-forgot-password-link {
+  color: #003569;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+/* Mobile Small  --------------------------------------------------------- */
+@media screen and (min-width: 0px) and (max-width: 320px) {
+
+  .signup-login-content-card-signup-child-card {
+    border: 0px;
+    width: 100%;
+    background-color: transparent;
+    padding-top: 20px;
+  }
+
+  .signup-login-content-card-signup-form {
+    margin: 0 auto;
+  }
+
+  .signup-login-content-card-signup-form input {
+    margin-right: 10px;
+    margin-left: 10px;
+    width: 260px;
+  }
+
+  .signup-login-content-card-linker-card {
+    border: 0px;
+    width: 100%;
+    background-color: transparent;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .signup-login-content-card-app-links {
+    width: 100%;
+  }
+}
+
+
+/* Mobile Medium  --------------------------------------------------------- */
+@media screen and (min-width: 321px) and (max-width: 375px) {
+  .signup-login-content-card-signup-child-card {
+    border: 0px;
+    width: 100%;
+    background-color: transparent;
+    padding-top: 20px;
+  }
+
+  .signup-login-content-card-signup-form {
+    margin: 0 auto;
+  }
+
+  .signup-login-content-card-signup-form input {
+    margin-right: 10px;
+    margin-left: 10px;
+    width: 260px;
+  }
+
+  .signup-login-content-card-linker-card {
+    border: 0px;
+    width: 100%;
+    background-color: transparent;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .signup-login-content-card-app-links {
+    width: 100%;
+  }
+}
+
+
+/* Mobile Large - --------------------------------------------------------- */
+@media screen and (min-width: 376px) and (max-width: 425px) {
+  .signup-login-content-card-signup-child-card {
+    border: 0px;
+    width: 100%;
+    background-color: transparent;
+    padding-top: 20px;
+  }
+
+  .signup-login-content-card-signup-form {
+    margin: 0 auto;
+  }
+
+  .signup-login-content-card-signup-form input {
+    margin-right: 10px;
+    margin-left: 10px;
+    width: 260px;
+  }
+
+  .signup-login-content-card-linker-card {
+    border: 0px;
+    width: 100%;
+    background-color: transparent;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .signup-login-content-card-app-links {
+    width: 100%;
+  }
+}
+
+
+/* Tablet - --------------------------------------------------------------- */
+@media screen and (min-width: 426px) and (max-width: 768px) {
+
+}
+
+
+/* Laptop ------------------------------------------------------------------ */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  /* nothing for now */
+}
+
+
+/* Laptop Large -------------------------------------------------------------*/
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  /* nothing for now */
+}
+
+
+/* 4K Large Desktop ------------------------------------------------------- */
+@media screen and (min-width: 1441px) {
+
+}

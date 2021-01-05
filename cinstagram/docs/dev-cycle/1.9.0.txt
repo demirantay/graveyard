@@ -1,0 +1,18 @@
+Discuss & Design
+----------
+
+Move the static templates to the main application
+
+Plan
+----------
+
+- [x] create dirs for all of the apps
+- [x] craete neccessay files that will be moved to static and template later on
+- [x] create views for all the pages
+- [x] create blueprints and link them to the app.py
+- [x] move the css statics
+- [x] Move the htmls statics
+- [x] fix static and template links  (img ... etc. not linking them together)
+- [x] link all of templates with targeted viewss - (I have done it but stopped
+      since some of the urls need to be modfiied in the guture with paramtetrs
+      to their urls ... etc. there is no pratical need for this at the moment)

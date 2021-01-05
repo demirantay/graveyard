@@ -1,0 +1,150 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block specific_css_links %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/home/home.css' %}" />
+
+<style>
+
+  .cell-picture {
+    width: 100%;
+    height: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+</style>
+{% endblock %}
+
+{% block content %}
+
+<div class="home-container">
+
+  <!-- left side: feed -->
+  <div class="home-post-feed">
+      <!-- Post cell -->
+      <div class="home-post-cell">
+        <div class="post-cell-top-part">
+          <a href="">
+            <img alt="profilePhoto" src="{% static 'branding/profile_photo.jpg' %}" />
+            <h3>username</h3>
+          </a>
+        </div>
+
+        <div class="post-cell-picture-part">
+          <div class="cell-picture" style="background-image: url('{% static 'branding/profile_photo.jpg' %}');"></div>
+        </div>
+
+        <div class="post-cell-options-part">
+          <form>
+            <button type="submit"><span class="fa fa-heart"></span></button>
+          </form>
+
+          <form>
+            <button type="submit"><span class="fa fa-bookmark"></span></button>
+          </form>
+
+          <form>
+            <button type="submit"><span class="fa fa-share"></span></button>
+          </form>
+        </div>
+
+        <div class="post-cell-comments-part">
+          <h2>125 likes</h2>
+          <div class="post-cell-caption">
+            <h3>username</h3>
+            <p>Photo by @amivitale | Remote regions of the Zambezi Delta area of Moza, </p>
+            <br />
+            <a href="">View all 252 comments</a>
+          </div>
+          <div class="post-cell-comments">
+            <!-- only 2 comments after that read mode ...link -->
+            <p><span>@gigee9</span> a feel good story here</p>
+            <p><span>@helloa</span> this is a very good post mate cheers!</p>
+            <span class="post-time">Nov, 9, 2019</span>
+          </div>
+        </div>
+
+        <div class="post-cell-add-comment-form-part">
+          <form>
+            <input type="text" placeholder="Add a comment..." />
+            <input class="comment-form-submit-btn" type="submit" value="Post" />
+          </form>
+        </div>
+      </div><!-- e/ post cell -->
+
+
+      <!-- more posts button -->
+      <div class="load-more-posts">
+        <form>
+          <button type="submit"><span class="fa fa-plus"></span></button>
+        </form>
+      </div>
+
+
+  </div> <!-- e/home post feed -->
+
+  <!-- right side: navigation -->
+  <div class="home-right-side-nav">
+
+    <!-- Profile Info -->
+    <div class="home-profile-box">
+      <a href="">
+        <img alt="profilePhoto" src="{{ current_user_settings.profile_photo.url }}"/>
+        <div class="home-profile-box-info">
+          <h3>{{ current_user.username }}</h3>
+          <h4>{{ current_user_settings.full_name }}</h4>
+        </div>
+      </a>
+    </div>
+
+    <!-- Suggestions box -->
+    <div class="home-suggestions-box">
+      <div class="home-suggestions-box-header">
+        <h2>SUGGESTIONS</h2>
+      </div>
+      <div class="home-suggestions-box-cell-container">
+
+        {% for suggestion in suggested_accounts %}
+          <div class="suggestion-cell">
+            <a href="{% url 'other_users_profile_posts_page' suggestion.follower_user.username %}">
+              <img alt="profile-photo" src="{{ suggestion.follower_user_settings.profile_photo.url }}" />
+              <div class="suggestion-cell-info-part">
+                <h2>{{ suggestion.follower_user.username }}</h2>
+                <h3>This user follows you</h3>
+              </div>
+
+              {% if suggestion.follower_user in accounts_current_user_following %}
+                <form method="POST" action="{% url 'home' %}">
+                  {% csrf_token %}
+                  <input type="hidden" value="{{ suggestion.follower_user.id }}" name="hidden_user_id" />
+                  <input type="submit" value="Following" name="unfollow_submit_btn"/>
+                </form>
+              {% else %}
+                <form method="POST" action="{% url 'home' %}">
+                  {% csrf_token %}
+                  <input type="hidden" value="{{ suggestion.follower_user.id }}" name="hidden_user_id" />
+                  <input type="submit" value="Follow" name="follow_submit_btn"/>
+                </form>
+              {% endif %}
+
+            </a>
+          </div><!-- e/ suggestion cell -->
+        {% endfor %}
+
+      </div>
+    </div><!-- e/suggestions box -->
+
+    <div class="right-nav-footer">
+      <a href="{% url 'about' %}">ABOUT US</a>
+      <a href="{% url 'help_centre_index' %}">HELP</a>
+      <a href="{% url 'api_web' %}">API</a>
+      <a href="{% url 'jobs' %}">JOBS</a>
+      <a href="{% url 'legal' %}">LEGAL</a>
+    </div>
+
+  </div><!-- e/home right side -->
+
+</div>
+{% endblock %}

@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block specific_css_links %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/search/search.css' %}" />
+{% endblock %}
+
+{% block content %}
+<div class="hashtag-search-container">
+
+  <!-- search bar -->
+  <div class="hashtag-search-bar">
+
+    <div class="search-navigation-links">
+      <a href="">accounts</a>
+      <a href="">hashtags</a>
+      <a href="">locations</a>
+    </div>
+
+    <form>
+      <input type="text" placeholder="Hashtag Search" />
+      <button type="submit"><span class="fa fa-search"></span></button>
+    </form>
+  </div>
+
+  <div class="hashtag-search-banner">
+    <h2>#HashTagName</h2>
+  </div>
+
+  <!-- grid view -->
+  <div class="search-grid-view">
+    <!-- after three posts always break -->
+    <div class="search-grid-view-post-cell" style="background-image: url('{% static 'branding/profile_photo.jpg' %}');">
+      <a href="">
+      <div class="search-post-cell-link-container">
+        <span class="fa fa-heart"> 106</span>
+        <span class="fa fa-comment"> 14</span>
+      </div>
+      </a>
+    </div>
+
+    <div class="search-grid-view-post-cell" style="background-image: url('{% static 'branding/profile_photo.jpg' %}');">
+      <a href="">
+      <div class="search-post-cell-link-container" >
+        <span class="fa fa-heart"> 106</span>
+        <span class="fa fa-comment"> 14</span>
+      </div>
+      </a>
+    </div>
+
+    <div class="search-grid-view-post-cell" style="background-image: url('{% static 'branding/profile_photo.jpg' %}');">
+      <a href="">
+      <div class="search-post-cell-link-container">
+        <span class="fa fa-heart"> 106</span>
+        <span class="fa fa-comment"> 14</span>
+      </div>
+      </a>
+    </div>
+
+    <br /> <!-- ALWAYS BREAK AFTER 3 POSTS -->
+
+  </div><!-- /grid view -->
+
+</div>
+{% endblock %}

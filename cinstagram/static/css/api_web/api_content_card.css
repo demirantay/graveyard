@@ -1,0 +1,148 @@
+.api-content-card {
+  position: relative;
+  height: auto;
+  width: 100%;
+}
+
+.api-content-card-left-part {
+  width: 20%;
+  height: 100%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.api-content-card-left-part a {
+  display: block;
+  padding: 18px;
+  background-color: black;
+  color: white;
+  margin-bottom: 3px;
+  text-decoration: none;
+  border: 3px solid black;
+  border-radius: 4px;
+}
+
+.api-content-card-left-part a:hover {
+  transition: 0.5s;
+  background-color: transparent;
+  -webkit-box-shadow: 0px 0px 20px 0px black;
+  -moz-box-shadow: 0px 0px 20px 0px black;
+  box-shadow: 0px 0px 20px 0px black;
+  color: black;
+}
+
+.api-content-card-right-part {
+  width: 78%;
+  height: auto;
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 40px;
+}
+
+.api-content-card-right-part h1, h2, h3, h4, h5, h6, a, p, ul, li, ol {
+  margin-left: 30px;
+  margin-top: 10px;
+  font-family: "Roboto";
+}
+
+
+/* Mobile Small  --------------------------------------------------------- */
+@media screen and (min-width: 0px) and (max-width: 320px) {
+  .api-content-card {
+    position: relative;
+    height: auto;
+  }
+
+  .api-content-card-left-part {
+    width: 90%;
+    height: auto;
+    display: block;
+    margin-bottom: 40px;
+  }
+
+  .api-content-card-right-part {
+    width: 100%;
+    display: block;
+  }
+
+  .api-content-card-right-part h1, h2, h3, h4, h5, h6, a, p, ul, li, ol {
+    margin-left: 30px;
+    margin-top: 10px;
+  }
+}
+
+
+/* Mobile Medium  --------------------------------------------------------- */
+@media screen and (min-width: 321px) and (max-width: 375px) {
+  .api-content-card {
+    position: relative;
+    height: auto;
+  }
+
+  .api-content-card-left-part {
+    width: 90%;
+    height: auto;
+    display: block;
+    margin-bottom: 40px;
+  }
+
+  .api-content-card-right-part {
+    width: 100%;
+    display: block;
+  }
+
+  .api-content-card-right-part h1, h2, h3, h4, h5, h6, a, p, ul, li, ol {
+    margin-left: 30px;
+    margin-top: 10px;
+  }
+}
+
+
+/* Mobile Large - --------------------------------------------------------- */
+@media screen and (min-width: 376px) and (max-width: 425px) {
+  .api-content-card {
+    position: relative;
+    height: auto;
+  }
+
+  .api-content-card-left-part {
+    width: 90%;
+    height: auto;
+    display: block;
+    margin-bottom: 40px;
+  }
+
+  .api-content-card-right-part {
+    width: 100%;
+    display: block;
+  }
+
+  .api-content-card-right-part h1, h2, h3, h4, h5, h6, a, p, ul, li, ol {
+    margin-left: 30px;
+    margin-top: 10px;
+  }
+}
+
+
+/* Tablet - --------------------------------------------------------------- */
+@media screen and (min-width: 426px) and (max-width: 768px) {
+
+}
+
+
+/* Laptop ------------------------------------------------------------------ */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  /* nothing for now */
+}
+
+
+/* Laptop Large -------------------------------------------------------------*/
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  /* nothing for now */
+}
+
+
+/* 4K Large Desktop ------------------------------------------------------- */
+@media screen and (min-width: 1441px) {
+  /* nothing for now */
+}

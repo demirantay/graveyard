@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<!-- ############### -->
+
+{% block specific_css_links %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/about/about.css' %}" />
+{% endblock %}
+
+<!-- ############### -->
+
+{% block content %}
+
+<div class="about-content-card">
+  <!-- left part -->
+  <div class="about-content-card-left-part">
+    <h2>ABOUT</h2>
+    <a href="{% url 'about' %}">Company</a>
+    <a href="{% url 'jobs' %}">Jobs</a>
+    <a href="{% url 'legal' %}">Legal</a>
+  </div>
+  <!-- right part -->
+  <div class="about-content-card-right-part">
+    <h1>About Us</h1>
+    <p>
+      Cinstagram is a fully fledged Instagram clone. The support for
+      IOS and Android will come in the future. Remember, this is just a
+      educational clone and Instagram is a registered trademark of Instagram
+      Inc. All of the static assets have been created by me and not copied
+      from the Instagram Inc. I am just cloning the functionality of the site
+      to improve my understanding of how large web applications work under
+      the hood.
+    </p>
+
+    <h2>Real About of Instagram Inc.</h2>
+
+    <p>
+      <b>Kevin Systrom (@kevin)</b> co-founded Instagram and served as CEO
+      for 8 years before leaving the company in September 2018 to pursue
+      his next passion project. With Kevin’s focus on simplicity and inspi
+      ring creativity through solving problems with thoughtful product des
+      ign, Instagram became the home for innovation on visual storytelling
+      launching dozens of products including Stories and IGTV.
+      <br />
+      <br />
+      Prior to founding Instagram, Kevin was part of the startup Odeo, whic
+      h later became Twitter, and spent two years at Google working on prod
+      ucts like Gmail and Google Reader. He graduated from Stanford Univer
+      sity with a BS in Management Science & Engineering.
+    </p>
+
+    <p>
+      <b>Mike Krieger</b> (@mikeyk) co-founded Instagram and served as Inst
+      agram's Head of Engineering for 8 years, before leaving the company i
+      n September 2018 to explore new projects. Mike focused on building a
+      broad range of creative products to empower the community on Instagra
+      m to connect with their interests and passions. In addition, Mike gr
+      ew the engineering organization to more than 400 employees in Instag
+      ram offices located in Menlo Park, New York and San Francisco.
+      <br />
+      <br />
+      A native of São Paulo, Brazil, Mike holds an MS in Symbolic Systems from Stanfo
+      rd University. Prior to founding Instagram, he worked at Meebo as a user experi
+      ence designer and front-end engineer.
+    </p>
+  </div>
+</div>
+
+
+{% endblock %}

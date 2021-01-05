@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block specific_css_links %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/help_centre/help_centre.css' %}" />
+{% endblock %}
+
+{% block content %}
+<div class="help-centre-content-card">
+  <!-- top part -->
+  <div class="help-centre-content-card-top-part">
+    <h1>Help Centre</h1>
+  </div>
+
+  <!-- left part -->
+  <div class="help-centre-content-card-left-part">
+    <a href="">Using Instagram</a>
+    <a href="">Managing Your Account</a>
+    <a href="">Instagram for Business</a>
+    <a href="">Troubleshooting and Login Help</a>
+    <a href="">Privacy and Safety Center</a>
+    <a href="">Threads</a>
+  </div>
+
+  <!-- right part -->
+  <div class="help-centre-content-card-right-part">
+    <h3>Signing Up and Getting Started</h3>
+    <ul>
+      <a href=""><li>Creating an Account and Username</li></a>
+      <a href=""><li>Creating an Account and Username</li></a>
+      <a href=""><li>Creating an Account and Username</li></a>
+    </ul>
+    <h3>Sharing Photos and Videos</h3>
+    <ul>
+      <a href=""><li>Creating an Account and Username</li></a>
+      <a href=""><li>Creating an Account and Username</li></a>
+      <a href=""><li>Creating an Account and Username</li></a>
+      <a href=""><li>Creating an Account and Username</li></a>
+    </ul>
+    <h3>Your Profile</h3>
+    <h3>Your Profile</h3>
+    <h3>Exploring Photos and Videos</h3>
+    <h3>Direct Messaging</h3>
+    <h3>Stories</h3>
+    <h3>Feed</h3>
+    <h3>IGTV</h3>
+    <h3>Instagram Checkout</h3>
+  </div>
+
+</div>
+
+{% endblock %}

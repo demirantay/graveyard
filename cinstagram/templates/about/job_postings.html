@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<!-- ############### -->
+
+{% block specific_css_links %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/about/about.css' %}" />
+{% endblock %}
+
+<!-- ############### -->
+
+{% block content %}
+
+
+<div class="about-content-card">
+  <!-- left part -->
+  <div class="about-content-card-left-part">
+    <h2>ABOUT</h2>
+    <a href="{% url 'about' %}">Company</a>
+    <a href="{% url 'jobs' %}">Jobs</a>
+    <a href="{% url 'legal' %}">Legal</a>
+  </div>
+  <!-- right part -->
+  <div class="about-content-card-right-part">
+    <h1>Work At Instagram</h1>
+
+    <p>
+     Our small teams inspire creativity around the world by helping over 500 million people capture and share beautiful photos and videos. Join us!
+    </p>
+
+    <!-- Teams -->
+    <ul>
+        <a href="#data-and-analytics"><li>Data & Analytics</li></a>
+        <a href="#design-ux"><li>Design & User Experience, Instagram, Research</li></a>
+        <a href="#business"><li>Business Development & Partnerships</li></a>
+        <a href="#software-engineering"><li>Software Engineering</li></a>
+        <a href="#legal-finance"><li>Instagram, Legal, Finance, Facilities & Admin</li></a>
+        <a href="#instagram-software-engineering"><li>Instagram, Software Engineering</li></a>
+        <a href="#legal-finance"><li>Data & Analytics, Instagram</li></a>
+        <a href="#instagram-software-engineering"><li>Sales & Marketing</li></a>
+        <a href="#communucations"><li>Communications & Public Policy</li></a>
+        <a href="#creative"><li>Creative</li></a>
+        <a href="#product-management"><li>Product Management</li></a>
+        <a href="#research"><li>Research</li></a>
+        <a href="#instagram"><li>Instagram</li></a>
+    </ul>
+
+    <!-- team specific jobs -->
+    <h2>Jobs</h2>
+
+    <h3 id="data-and-analytics">Data & Analytics</h3>
+    <ul>
+        <a href=""><li>Job Title and Its location</li></a>
+        <a href=""><li>Job Title and Its location</li></a>
+    </ul>
+
+    <br />
+    <h3 id="design-ux">Design & User Experience, Instagram, Research</h3>
+    <ul>
+        <a href=""><li>Job Title and Its location</li></a>
+        <a href=""><li>Job Title and Its location</li></a>
+    </ul>
+
+    <br />
+    <h3 id="business">Business Development & Partnerships</h3>
+    <ul>
+        <a href=""><li>Job Title and Its location</li></a>
+        <a href=""><li>Job Title and Its location</li></a>
+    </ul>
+
+    <br />
+    <h3 id="software-engineering">Software Engineering</h3>
+
+    <br />
+    <h3 id="legal-finance">Instagram, Legal, Finance, Facilities & Admin</h3>
+
+    <br />
+    <h3 id="instagram-software-engineering">Instagram, Software Engineering</h3>
+
+    <br />
+    <h3 id="instagram-data-analytics">Data & Analytics, Instagram</h3>
+
+    <br />
+    <h3 id="sales-and-marketing">Sales & Marketing</h3>
+
+    <br />
+    <h3 id="communucations">Communications & Public Policy</h3>
+
+    <br />
+    <h3 id="creative">Creative</h3>
+
+    <br />
+    <h3 id="product-management">Product Management</h3>
+
+    <br />
+    <h3 id="research">Research</h3>
+
+    <br />
+    <h3 id="instagram">Instagram</h3>
+
+  </div>
+</div>
+
+
+{% endblock %}

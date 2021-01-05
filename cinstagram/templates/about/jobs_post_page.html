@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<!-- ############### -->
+
+{% block specific_css_links %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/about/about.css' %}" />
+{% endblock %}
+
+<!-- ############### -->
+
+{% block content %}
+
+
+<div class="about-content-card">
+  <!-- left part -->
+  <div class="about-content-card-left-part">
+    <h2>ABOUT</h2>
+    <a href="{% url 'about' %}">Company</a>
+    <a href="{% url 'jobs' %}">Jobs</a>
+    <a href="{% url 'legal' %}">Legal</a>
+  </div>
+  <!-- right part -->
+  <div class="about-content-card-right-part">
+    <h1>Jobs at Cinstagram</h1>
+
+    <br />
+
+    <h2>Job Heading:e.g. Experience Designer, Instagram</h2>
+    <p><b>San Francisco, California, US</b></p>
+
+    <p>
+      Cinstagram is a global community of more than 1 billion, which means jobs here offer countless ways to make an impact in a fast growing organization. Instagram was built to connect people to the people and interests they love. Our app has played a critical part in forming meaningful communities where people can connect with each other and share what matters most to them.
+
+The brand design team creates and directs the vision of Facebook's physical spaces, event and moments. Responsible for the creative direction of our physical manifestations, our global lead helps define a vision for production and execution. Focused on creating the overall experience and design of our partners, attendees, guests and audiences across the globe.This role is in search of an experienced designer with the ability to bring the physical formations to life. In search of a strong design minded designer not only with the traditional skillsets, but with an innovative approach that represents Instagram's forward looking goals.This global Experience Designer manages external agency partners to dictate design direction while project manages from initial ideation all the way through completion of fabrication. Oversees all tier 0/tier 1 and special projects, selecting creative teams to from and run initial idea through to final concept.
+    </p>
+
+    <h3>Responsibilities</h3>
+    <ul>
+      <li>Review and approve creative work and ideas giving feedback to the creative team, making sure the output is to the highest possible FB standard and aligned with the Instagram brand.</li>
+      <li>Participate in, and lead pitches and presentations to clients internal teams.</li>
+      <li>Participate in, and lead pitches and presentations to clients internal teams.</li>
+      <li>Participate in, and lead pitches and presentations to clients internal teams.</li>
+    </ul>
+
+    <h3>Minimum Qualifications</h3>
+    <ul>
+      <li>Review and approve creative work and ideas giving feedback to the creative team, making sure the output is to the highest possible FB standard and aligned with the Instagram brand.</li>
+      <li>Participate in, and lead pitches and presentations to clients internal teams.</li>
+      <li>Participate in, and lead pitches and presentations to clients internal teams.</li>
+      <li>Participate in, and lead pitches and presentations to clients internal teams.</li>
+    </ul>
+
+    <h3>Email: to apply</h3>
+
+
+  </div>
+</div>
+
+
+{% endblock %}

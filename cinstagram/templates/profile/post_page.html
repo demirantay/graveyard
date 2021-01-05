@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block specific_css_links %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/profile/profile.css' %}" />
+{% endblock %}
+
+{% block content %}
+<div class="post-container">
+
+  <!-- left side -->
+  <!--<div class="post-left-side" style="background-image: url('{% static 'branding/profile_photo.jpg' %}');">-->
+  <div class="post-left-side" style="background-image: url('{{ post.photo.url }}');">
+  </div>
+
+
+  <!-- right side -->
+  <div class="post-right-side">
+    <!-- post owner banner -->
+    <div class="post-owner-banner">
+      <a href="{% url 'profile_posts_page' %}"><div class="post-owner-profile-photo" style="background-image: url('{{ current_user_settings.profile_photo.url }}');" ></div></a>
+      <a href="{% url 'profile_posts_page' %}"><h3>{{ current_user.username }}</h3></a>
+      <!--
+      THIS FROM IS COMMENTED SINCE THIS IS YOUR OWN POSTS AND YOU CANNOT FOLLOW YOURSELF
+
+      <form method="POST" action="">
+          {% csrf_token %}
+          <input type="submit" value="follow" />
+      </form>
+      -->
+    </div>
+
+    <div class="comment-scroll-container">
+      <!-- caption banner -->
+      <div class="post-caption">
+        <a href="{% url 'profile_posts_page' %}"><div class="caption-owner-profile-photo" style="background-image: url('{{ current_user_settings.profile_photo.url }}');"></div></a>
+        <a href="{% url 'profile_posts_page' %}"><h3>{{ current_user.username }}</h3></a>
+        <p>{{ post.caption }}</p>
+      </div>
+
+      <!-- post comments -->
+      <div class="post-comments">
+
+        {% for comment in post_comments %}
+          <div class="comment-cell">
+            <a href=""><div class="comment-owner-profile-photo" style="background-image: url('{{ comment.comment_owner_settings.profile_photo.url }}');"></div></a>
+            <a href=""><h3>{{ comment.comment_owner.username }}</h3></a>
+            <p>
+              {{ comment.comment }}
+            </p>
+          </div><!-- e/comment cell -->
+        {% endfor %}
+
+      </div>
+    </div><!-- e/comment-scroll-container -->
+
+    <!-- like, comment, bookmark options -->
+    <div class="post-options">
+      <!-- like form -->
+      <form class="post-like-form" method="POST" action="{% url 'profile_single_post_page' post.id %}">
+        {% csrf_token %}
+        <input type="hidden" value="{{ post.id }}" name="hidden_post_id"  />
+        <!--<button type="submit" name="post_like_form_submit_btn"><span class="fa fa-heart"></span></button>-->
+        <input type="submit" name="post_like_form_submit_btn"><span class="fa fa-heart"></span>
+      </form>
+
+      <!-- bookmark form -->
+      <form class="post-bookmark-form" method="POST" action="{% url 'profile_single_post_page' post.id %}">
+        {% csrf_token %}
+        <input type="hidden" value="{{ post.id }}" name="hidden_post_id"  />
+        <!--<button type="submit" name="post_bookmark_form_submit_btn"><span class="fa fa-bookmark"></span></button>-->
+        <input type="submit" name="post_bookmark_form_submit_btn" /><span class="fa fa-bookmark"></span>
+      </form>
+
+      <!-- comment form  -->
+      <form class="post-comment-form" method="POST" action="{% url 'profile_single_post_page' post.id %}">
+        {% csrf_token %}
+        <input type="submit" name="post_comment_form_submit_btn" /><span class="fa fa-comment"></span>
+        <!--<button type="submit" name="post_comment_form_submit_btn"><span class="fa fa-comment"></span></button>-->
+        <input type="hidden" value="{{ post.id }}" name="hidden_post_id"  />
+        <input type="text"  placeholder="Comment ..." name="comment_content"/>
+      </form>
+    </div>
+
+
+  </div><!-- e/post-right side -->
+
+</div><!-- post-container -->
+{% endblock %}

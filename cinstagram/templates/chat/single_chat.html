@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block specific_css_links %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/chat/chat.css' %}" />
+{% endblock %}
+
+{% block content %}
+<div class="chat-container">
+
+  <!-- top nav -->
+  <div class="single-chat-top-nav">
+    <a href="{% url 'chat_index' %}"><span class="fa fa-arrow-left"></span></a>
+    <img alt="profile_photo" src="{% static 'branding/profile_photo.jpg' %}"/>
+    <h1>username</h1>
+    <form>
+        <button type="submit"><span class="fa fa-trash"></span></button>
+    </form>
+  </div>
+
+  <!-- chat body -->
+  <div class="single-chat-body">
+
+    <!-- current logged in users message bubble -->
+    <div class="logged-in-user-chat-bubbles">
+        <p>Lorem Ipsum Sit amet nhal. Verim a</p>
+    </div>
+
+    <div class="clear-float"></div>
+
+    <!-- other users message bubble -->
+    <div class="messaged-user-chat-bubbles">
+        <p>Lorem Ipsum sit amet dolora. alllarim sko.</p>
+    </div>
+
+  </div>
+
+  <!-- message form -->
+  <div class="single-chat-message-form">
+    <form>
+      <input type="text" placeholder="Type a message ..." />
+      <button type="submit"><span class="fa fa-paper-plane"></span></button>
+    </form>
+  </div>
+
+</div>
+{% endblock %}

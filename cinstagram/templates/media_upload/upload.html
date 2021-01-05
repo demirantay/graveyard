@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block specific_css_links %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/upload/upload.css' %}" />
+{% endblock %}
+
+{% block content %}
+<div class="upload-content-card">
+
+  <form class="upload-content-form" method="POST" action="{% url 'upload_page' %}" enctype="multipart/form-data" >
+    {% csrf_token %}
+    <!-- + upload button -->
+    <input type="file" name="upload_file" id="upload_file" class="upload_file"  />
+    <label for="upload_file" class="upload-file-label"><span class="fa fa-plus"></span></label>
+    <br />
+    <br />
+
+    <!-- photo preview with filter slection -->
+    <div class="photo-preview" id="photo_preview_id"></div>
+    <script>
+      let photo_preview = document.getElementById("photo_preview_id");
+      let uploaded_photo = document.getElementById("upload_file");
+
+      //photo_preview.style.backgroundImage = 'url("{% static 'branding/profile_photo.jpg' %}")';
+
+      uploaded_photo.onchange = function() {
+        photo_preview.style.backgroundImage = "url('"+ window.URL.createObjectURL(this.files[0]) +"')";
+        photo_preview.style.backgroundColor= "black";
+      }
+
+    </script>
+
+    <div class="filters">
+      <div class="filtered-photo-preview" style="background-image: url('{% static 'branding/profile_photo.jpg' %}');"></div>
+      <div class="filtered-photo-preview" style="background-image: url('{% static 'branding/profile_photo.jpg' %}');"></div>
+      <div class="filtered-photo-preview" style="background-image: url('{% static 'branding/profile_photo.jpg' %}');"></div>
+      <div class="filtered-photo-preview" style="background-image: url('{% static 'branding/profile_photo.jpg' %}');"></div>
+    </div>
+
+    <!-- caption, tag, location info -->
+    <textarea name="caption" placeholder="Write a caption ..."></textarea>
+    <input name="location" type="text" placeholder="Add a location" class="location_input" />
+
+    <!-- publish part -->
+    <div class="upload-form-footer">
+      <input type="submit" value="Publish" class="submit_post_button" name="media_upload_submit_btn" />
+    </div>
+
+  </form>
+
+</div>
+{% endblock %}

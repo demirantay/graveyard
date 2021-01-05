@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p, a {
+  font-family: "Roboto";
+}
+
+p {
+  font-family: "Roboto";
+}
+
+
+.api-container {
+  position: relative;
+  height: auto;
+
+  background-color: white;
+
+  padding-left: 10%;
+  padding-right: 10%;
+
+  padding-top: 100px;
+}
+
+
+
+
+/* Mobile Small  --------------------------------------------------------- */
+@media screen and (min-width: 0px) and (max-width: 320px) {
+  .api-container {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+
+/* Mobile Medium  --------------------------------------------------------- */
+@media screen and (min-width: 321px) and (max-width: 375px) {
+  .api-container {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+
+/* Mobile Large - --------------------------------------------------------- */
+@media screen and (min-width: 376px) and (max-width: 425px) {
+  .api-container {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+
+/* Tablet - --------------------------------------------------------------- */
+@media screen and (min-width: 426px) and (max-width: 768px) {
+  .api-container {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+
+/* Laptop ------------------------------------------------------------------ */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  /* nothing for now */
+}
+
+
+/* Laptop Large -------------------------------------------------------------*/
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  /* nothing for now */
+}
+
+
+/* 4K Large Desktop ------------------------------------------------------- */
+@media screen and (min-width: 1441px) {
+  /* nothing for now */
+}
